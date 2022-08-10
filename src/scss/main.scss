@@ -1,0 +1,38 @@
+@import "vars";
+@import "fonts";
+@import "grid";
+@import "base";
+
+// components
+@import "./components/svg-icons";
+@import "./components/header";
+@import "./components/heading";
+@import "./components/circle";
+@import "./components/footer";
+@import "./components/socials";
+@import "./components/button";
+@import "./components/chip";
+@import "./components/video";
+@import "./components/form";
+
+//swiper styles
+@import "./components/swiper-core";
+@import "./components/swiper-custom";
+
+//modules
+@import "./modules/sections";
+@import "./modules/modules";
+@import "./modules/hero";
+@import "./modules/video";
+@import "./modules/how";
+@import "./modules/steps";
+@import "./modules/team";
+@import "./modules/keys";
+@import "./modules/news";
+@import "./modules/intro";
+
+
+
+
+
+

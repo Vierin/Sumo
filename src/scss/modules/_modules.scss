@@ -1,0 +1,40 @@
+.module {
+    position: relative;
+
+    &__bg {
+        position: absolute;
+        inset: 0 0 0 0;
+        z-index: -1;
+    }
+
+    &--slider {
+        overflow: hidden;
+    }
+
+    &--steps {
+        padding: 32px 0 $padding;
+    }
+
+    &--padding {
+        padding: $padding 0;
+    }
+
+    &--news {
+        padding-top: 102px;
+    }
+
+    &--works {
+        padding-top: 123px;
+    }
+
+    &--keys {
+        padding-bottom: 48px;
+    }
+
+    &--how {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}

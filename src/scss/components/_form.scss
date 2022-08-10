@@ -1,0 +1,54 @@
+.form {
+    margin: 48px 0 48px;
+
+    &__item {
+        display: flex;
+        margin-bottom: 8px;
+
+        p {
+            font-weight: 500;
+            font-size: 36px;
+            line-height: 130%;
+            letter-spacing: 0.02em;
+            width: 100%;
+            max-width: fit-content;
+            margin-right: 16px;
+        }
+    }
+
+    &__input {
+        width: 55%;
+        position: relative;
+        margin-top: 2px;
+
+        input {
+            font-family: $font-main;
+            width: 100%;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 150%;
+            letter-spacing: 0.02em;
+            padding: 5px 10px;
+            border-bottom: 1px solid rgba($color-dark, .3);
+        }
+
+        label {
+            position: absolute;
+            left: 50%;
+            top: 12px;
+            transform: translateX(-50%);
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 130%;
+            letter-spacing: 0.02em;
+            color: $color-dark;
+            opacity: .3;
+            width: fit-content;
+            pointer-events: none;
+
+            .is-error {
+                color: $color-red;
+            }
+        }
+    }
+}

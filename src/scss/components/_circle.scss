@@ -1,0 +1,53 @@
+.circle {
+    width: 163px;
+    height: 163px;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    &--l {
+        width: 242px;
+        height: 242px;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0 0 0 0;
+        filter: blur(20px);
+        border-radius: 50%;
+        z-index: -1;
+
+        .circle--l & {
+            filter: blur(100px);
+        }
+    }
+
+    &--violet:before {
+        background: $color-violet;
+    }
+
+    &--blue:before {
+        background: $color-blue;
+    }
+
+    p {
+        margin: 0;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: $color-white;
+        font-size: 14px;
+        line-height: 1.2;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &:first-of-type {
+            margin-bottom: 10px;
+        }
+    }
+
+
+}

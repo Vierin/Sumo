@@ -1,0 +1,76 @@
+.hero {
+    height: 100vh;
+
+    &__wrap {
+        background: $color-gray-light;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+        padding-bottom: 40px;
+    }
+
+    &__circle {
+        position: absolute;
+        left: 62px;
+        top: 220px;
+    }
+
+    &__desc {
+        max-width: 476px;
+    }
+
+    &__top {
+        width: 100vw;
+        height: 140px;
+        background: $color-gray-light;
+    }
+
+    &__title {
+        margin-bottom: -8px;
+        margin-top: -3px;
+        position: relative;
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            height: 100%;
+            background: $color-gray-light;
+            right: 99%;
+            width: 100vw;
+        }
+
+        &::after {
+            right: auto;
+            left: 99%;
+        }
+
+        svg {
+            width: 690px;
+            height: 176px;
+        }
+    }
+
+    &__subtitle {
+        text-transform: uppercase;
+        color: $color-dark;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 130%;
+    }
+
+    &__text {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 150%;
+        letter-spacing: 0.02em;
+        color: rgba($color-dark, .8);
+        margin-top: 120px;
+    }
+
+    &__bg {
+        position: absolute;
+        inset: 0 0 0 0;
+        background: url("../media/bg-video.jpg");
+        z-index: -1;
+    }
+}

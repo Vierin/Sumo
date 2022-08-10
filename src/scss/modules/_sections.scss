@@ -1,0 +1,33 @@
+.section {
+    &--dark,
+    &--violet {
+        color: $color-white;
+    }
+
+    &--violet {
+        background: $color-violet;
+    }
+
+    &--white {
+        background: $color-white;
+    }
+
+    &--padding-l {
+        padding: 120px 0;
+    }
+
+    &__bg {
+        position: fixed;
+        inset: 0 0 0 0;
+        z-index: -1;
+        background: url("../media/bg-video.jpg") no-repeat;
+        background-size: cover;
+    }
+
+    &__scroll {
+        position: absolute;
+        bottom: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}

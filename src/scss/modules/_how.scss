@@ -1,0 +1,32 @@
+.how {
+    position: relative;
+
+    &__wrap {
+        display: flex;
+        padding-top: 32px;
+
+        & > * {
+            max-width: 178px;
+        }
+    }
+
+    &__icon {
+        margin-bottom: 16px;
+    }
+
+    &__info {
+        margin-right: auto;
+        font-size: 12px;
+        line-height: 130%;
+        color: rgba($color-white, .6);
+    }
+
+    &__item {
+        margin-left: 20px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 150%;
+        letter-spacing: 0.02em;
+    }
+
+}

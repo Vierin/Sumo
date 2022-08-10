@@ -1,0 +1,45 @@
+.news {
+    position: relative;
+
+    &__img {
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 130%;
+        letter-spacing: 0.02em;
+        margin: 16px 0;
+    }
+
+    &__date {
+        color: $color-dark;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 150%;
+        letter-spacing: 0.02em;
+    }
+
+    &__btn {
+        margin-top: 32px;
+    }
+
+    &__type {
+        position: absolute;
+        top: 16px;
+        left: 16px;
+        color: $color-white;
+        padding: 7px 12px;
+        border-radius: 100px;
+
+        &--cases {
+            background: #5D009F;
+        }
+
+        &--news {
+            background: #3AADCC;
+        }
+    }
+}

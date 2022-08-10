@@ -1,0 +1,45 @@
+.footer {
+    background: $color-black;
+    padding: 72px 0 23px;
+
+    .container {
+        max-width: 1170px;
+        margin: 0 auto;
+    }
+
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__col {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__copyright {
+        margin-top: auto;
+    }
+
+    a {
+        color: $color-white;
+        font-size: 14px;
+        line-height: 1.5;
+        font-weight: 500;
+    }
+
+    p {
+        color: rgba($color-white, .6);
+        font-size: 12px;
+        line-height: 15px;
+        font-weight: 500;
+        display: flex;
+    }
+
+
+    img {
+        width: 59px;
+        object-fit: contain;
+    }
+}

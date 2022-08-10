@@ -1,0 +1,29 @@
+.heading {
+
+    &__title {
+        font-weight: 700;
+        font-size: 64px;
+        line-height: 110%;
+    }
+
+    &__subtitle {
+        margin-top: 16px;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 150%;
+        letter-spacing: 0.02em;
+    }
+
+    &__span {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 130%;
+        letter-spacing: 0.02em;
+    }
+
+    &__btn {
+        margin-top: 40px;
+    }
+}

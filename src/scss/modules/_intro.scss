@@ -1,0 +1,40 @@
+.intro {
+    height: 80vh;
+    color: $color-white;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 103px;
+
+    &__title {
+        font-weight: 700;
+        font-size: 64px;
+        line-height: 110%;
+        max-width: $grid-m;
+        margin-left: auto;
+        margin-bottom: 40px;
+    }
+
+    &__wrap {
+        width: 100%;
+    }
+
+    &__desc {
+        position: relative;
+        padding-top: 32px;
+        display: flex;
+    }
+
+    &__info {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 130%;
+        letter-spacing: 0.02em;
+        color: rgba($color-white, .6);
+        margin-right: auto;
+    }
+
+    &__txt {
+        margin-left: 20px;
+        max-width: $grid-s;
+    }
+}

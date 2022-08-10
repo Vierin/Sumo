@@ -1,0 +1,40 @@
+.team {
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+
+    & > * {
+        max-width: $grid-s;
+    }
+
+    &__desc {
+        & > span {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 150%;
+            letter-spacing: 0.02em;
+        }
+    }
+
+    &__quote {
+        p {
+            margin: 48px 0 24px;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 150%;
+            letter-spacing: 0.02em;
+        }
+
+        span {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 150%;
+            letter-spacing: 0.02em;
+            color: rgba($color-white, .6);
+        }
+    }
+
+    &__btn {
+        margin-top: 64px;
+    }
+}

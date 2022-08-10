@@ -1,0 +1,43 @@
+$grid: 972px;
+$grid-m: 575px;
+$grid-s: 278px;
+
+.grid {
+    margin: 0 auto;
+    width: 100%;
+    max-width: $grid;
+    position: relative;
+
+    &-xl {
+        max-width: 1170px;
+    }
+
+    &-l {
+        max-width: 679px;
+        width: 100%;
+    }
+
+    &-m {
+        width: 100%;
+        max-width: $grid-m;
+    }
+
+    &-s {
+        width: 100%;
+        max-width: $grid-s;
+    }
+
+    &--col {
+        flex-direction: column;
+
+        &.grid--end {
+            align-items: flex-end;
+        }
+    }
+
+    &--end {
+        display: flex;
+        justify-content: flex-end;
+        margin-left: auto;
+    }
+}

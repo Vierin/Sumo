@@ -1,0 +1,13 @@
+.svg-arr {
+    &-top {
+        transform: rotate(180deg);
+    }
+
+    &-btn {
+        transform: rotate(220deg);
+    }
+}
+
+.svg-arr-slider {
+    pointer-events: none;
+}

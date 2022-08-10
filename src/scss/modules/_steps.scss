@@ -1,0 +1,41 @@
+.steps {
+    &__info {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 150%;
+        letter-spacing: 0.02em;
+        margin-bottom: 40px;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.step {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
+    margin-right: 19px;
+
+    &:last-of-type {
+        margin-right: 0;
+    }
+
+    span {
+        display: block;
+        background: $color-white;
+        color: $color-dark;
+        width: fit-content;
+        padding: 5px 14px;
+        border-radius: 100px;
+        margin-bottom: 16px;
+    }
+
+    &__text {
+        color: rgba($color-white, .6);
+        max-width: 179px;
+    }
+}
