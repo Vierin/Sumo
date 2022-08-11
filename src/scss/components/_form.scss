@@ -43,7 +43,8 @@
             letter-spacing: 0.02em;
             color: $color-dark;
             opacity: .3;
-            width: fit-content;
+            width: 100%;
+            text-align: center;
             pointer-events: none;
 
             .is-error {

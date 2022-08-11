@@ -7,9 +7,19 @@
 		@@include('html/header.html',{})
 		<main>
 			<section class="section section--hero">
-				<div class="section__bg">
+				<div class="section__bg video">
 					<div class="section__scroll">
 						<img class="svg-arr-scroll" src="arrow.svg">
+					</div>
+
+					<div class="circle circle--violet video__circle">
+						<div class="circle__wrap">
+							<p>about <br> sumo labs</p>
+							<p>
+								<img class="svg-play" src="play.svg">
+								<span>1:32</span>
+							</p>
+						</div>
 					</div>
 				</div>
 
@@ -73,22 +83,54 @@
 				</div>
 			</section>
 
-
-			<!-- <section class="module module--video">
-				<div class="video">
-					<div class="circle circle--violet video__circle">
-						<div class="circle__wrap">
-							<p>about <br> sumo labs</p>
-							<p>
-								<img class="svg-play" src="play.svg">
-								<span>1:32</span>
-							</p>
+			<section class="section section--white">
+				<div class="module module--circles grid grid--end">
+					<div class="grid-m">
+						<div class="heading ">
+							<h2 class="heading__title">Eliminating <br> the barriers</h2>
+							<p class="heading__subtitle">In patient and health professional <br> relationships</p>
 						</div>
+
+						<div class="circles">
+							<div class="circles__item circles__item--1">
+								<p>Patient</p>
+								<div class="circle circle--violet"></div>
+							</div>
+							<div class="circles__logo">
+								<img src="@media/logo.png" alt="">
+							</div>
+							<div class="circles__item circles__item--2">
+								<p>Clinic</p>
+								<div class="circle circle--blue"></div>
+							</div>
+
+							<div class="circles__svg">
+								<div class="circles__arrow circles__arrow--1">
+									<img src="arr-cirlce.svg" class="svg-arr-circle">
+								</div>
+								<div class="circles__arrow circles__arrow--2">
+									<img src="arr-cirlce.svg" class="svg-arr-circle">
+								</div>
+							</div>
+						</div>
+
+						<div class="text text--two-cols">
+							<p class="text__title">T³ Platform — precise big data analytics</p>
+							<p>The T³ data science platform creates connections between patients and clinicians in a way that diminishes previous barriers and difficulties in service. With specialisation in musculoskeletal healthcare, SUMO can be a field leader in healthcare data analytics.</p>
+							<p>Our platform is designed to exceed the expectations of the specific industry and business of its users. Gain back time and eliminate the stress of time-consuming administrative functions. Get precise analytics on patient trends, payment trends, and various datasets. Obtain necessary patient information while remaining within HIPAA guidelines to improve proactive diagnoses.</p>
+						</div>
+						<button class="button button--with-dot button--black">
+							<span class="button__text">Read more</span>
+							<img class="svg-arr-btn" src="arr-btn.svg">
+						</button>
 					</div>
 				</div>
-			</section> -->
 
-			<section class="section section--dark">
+
+
+			</section>
+
+			<section class="section section--dark js-dark">
 
 				<div class="module module--how module--padding">
 					<div class="grid grid--end">
@@ -141,7 +183,7 @@
 
 			</section>
 
-			<section class="section section--violet">
+			<section class="section section--violet js-dark">
 
 				<div class="module module--works">
 					<div class="grid grid--end">
@@ -150,7 +192,7 @@
 							<h2 class="heading__title">Consolidation of <br> information</h2>
 							<button class="heading__btn button button--with-arr">
 								<span class="button__text">read more</span>
-								<img class="svg-arr-btn" src="arrow.svg">
+								<img class="svg-arr-btn" src="arr-btn.svg">
 							</button>
 						</div>
 					</div>
@@ -243,7 +285,7 @@
 								</blockquote>
 								<button class="team__btn button button--with-arr">
 									<span class="button__text">read more</span>
-									<img class="svg-arr-btn" src="arrow.svg">
+									<img class="svg-arr-btn" src="arr-btn.svg">
 								</button>
 							</div>
 							<div class="team__video video">
@@ -357,7 +399,7 @@
 								<p class="heading__subtitle">Our recent client Cases <br> and News</p>
 								<button class="heading__btn button button--with-arr">
 									<span class="button__text">read more</span>
-									<img class="svg-arr-btn" src="arrow.svg">
+									<img class="svg-arr-btn" src="arr-btn.svg">
 								</button>
 							</div>
 						</div>
@@ -381,6 +423,7 @@
 										<p class="news__date">08 March, 2022 </p>
 										<button class="button button--with-dot news__btn">
 											<span class="button__text">read more</span>
+											<img class="svg-arr-btn" src="arr-btn.svg">
 										</button>
 									</div>
 									<div class="swiper-slide">
@@ -396,6 +439,7 @@
 										<p class="news__date">08 March, 2022</p>
 										<button class="button button--with-dot news__btn">
 											<span class="button__text">read more</span>
+											<img class="svg-arr-btn" src="arr-btn.svg">
 										</button>
 									</div>
 									<div class="swiper-slide">
@@ -411,6 +455,7 @@
 										<p class="news__date">08 March, 2022</p>
 										<button class="button button--with-dot news__btn">
 											<span class="button__text">read more</span>
+											<img class="svg-arr-btn" src="arr-btn.svg">
 										</button>
 									</div>
 									<div class="swiper-slide">
@@ -426,6 +471,7 @@
 										<p class="news__date">08 March, 2022</p>
 										<button class="button button--with-dot news__btn">
 											<span class="button__text">read more</span>
+											<img class="svg-arr-btn" src="arr-btn.svg">
 										</button>
 									</div>
 								</div>
@@ -443,16 +489,6 @@
 					</div>
 
 				</div>
-			</section>
-
-			<section>
-				<!-- <picture>
-					<source srcset="@media/bg-project.webp" type="image/webp">
-					<source srcset="@media/bg-project.jpg">
-					<img src="@media/bg-project.jpg" alt="img">
-				</picture> -->
-
-				<!-- <img class="svg-arrow-link" src="arrow.svg"> -->
 			</section>
 
 		</main>

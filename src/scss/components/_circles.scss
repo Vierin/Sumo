@@ -1,0 +1,89 @@
+.circles {
+    margin: 76px 0 72px;
+    height: 400px;
+    display: flex;
+    position: relative;
+    min-width: 675px;
+
+    &__svg {
+        position: absolute;
+        inset: 0 0 0 0;
+        z-index: 5;
+
+        .circles__arrow {
+            position: absolute;
+            top: 0;
+            z-index: 2;
+            transform-origin: 50% 50%;
+            animation: spin 2s infinite linear;
+
+            svg {
+                width: 400px;
+                height: 400px;
+            }
+
+            &--1 {
+                left: 0;
+                animation-delay: 1s;
+            }
+
+            &--2 {
+                right: 0;
+            }
+        }
+    }
+
+    &__logo {
+        z-index: 4;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__item {
+        position: absolute;
+        top: 0;
+        height: 400px;
+        width: 400px;
+
+        &--1 {
+            left: 0;
+            z-index: 3;
+
+            p {
+                left: 42%;
+            }
+        }
+
+        &--2 {
+            right: 0;
+
+            p {
+                right: 27%;
+            }
+        }
+
+        .circle {
+            width: calc(100% + 40px);
+            height: calc(100% + 40px);
+            margin: -20px;
+            z-index: 0;
+
+            &::before {
+                filter: blur(50px);
+            }
+        }
+
+        p {
+            position: absolute;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 5;
+            color: $color-white;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 120%;
+        }
+    }
+}

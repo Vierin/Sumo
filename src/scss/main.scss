@@ -2,6 +2,7 @@
 @import "fonts";
 @import "grid";
 @import "base";
+@import "animations";
 
 // components
 @import "./components/svg-icons";
@@ -14,6 +15,8 @@
 @import "./components/chip";
 @import "./components/video";
 @import "./components/form";
+@import "./components/circles";
+@import "./components/text";
 
 //swiper styles
 @import "./components/swiper-core";

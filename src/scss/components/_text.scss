@@ -1,0 +1,31 @@
+.text {
+    &__title {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 130%;
+        margin-bottom: 16px;
+        padding-bottom: 16px;
+        border-bottom: 1px solid rgba($color-dark, .2);
+
+        .text--two-cols & {
+            width: 100%;
+        }
+    }
+
+    &--two-cols {
+        display: flex;
+        flex-wrap: wrap;
+
+        p {
+            width: calc(50% - 10px);
+
+            &:nth-child(odd) {
+                margin-right: 20px;
+            }
+        }
+    }
+
+    p {
+        color: $color-dark;
+    }
+}

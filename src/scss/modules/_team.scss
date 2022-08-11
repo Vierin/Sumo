@@ -5,7 +5,15 @@
 
     & > * {
         max-width: $grid-s;
+        width: $grid-s;
     }
+
+    &__video {
+        overflow: hidden;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+
 
     &__desc {
         & > span {

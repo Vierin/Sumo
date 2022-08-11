@@ -8,6 +8,27 @@
         margin: -30px;
         height: 60px;
         width: 60px;
+        padding: 0;
+
+        .team__video & {
+            transition: transform .3s $easing;
+        }
+    }
+
+    &__poster {
+        transition: transform .3s $easing;
+    }
+
+    &.team__video {
+        @include hover {
+            .video__poster {
+                transform: scale(1.1);
+            }
+
+            .video__btn {
+                transform: scale(1.1);
+            }
+        }
     }
 
     &__caption {

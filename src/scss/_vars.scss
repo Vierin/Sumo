@@ -8,3 +8,13 @@ $color-dark: #0E0E0E;
 $color-blue: #3AADCC;
 
 $padding: 72px;
+
+$easing: ease-out;
+$elastic: cubic-bezier(0.64, 0.57, 0.67, 1.53);
+
+//mixins
+@mixin hover {
+    .mod_no-touchevents &:hover {
+        @content;
+    }
+}
