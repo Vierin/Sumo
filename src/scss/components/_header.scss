@@ -12,17 +12,18 @@
             &:last-of-type {
                 position: absolute;
                 inset: 0 0 0 0;
-                opacity: 0;
+                opacity: 1;
+
+                .is-section-white & {
+                    opacity: 0;
+                }
             }
         }
 
-        &.whiteLogo .svg-logo:first-of-type {
-            opacity: 0;
-        }
-
-        &.whiteLogo .svg-logo:last-of-type {
+        .is-section-white & .svg-logo:first-of-type {
             opacity: 1;
         }
+
     }
 
     &__wrap {
@@ -38,16 +39,4 @@
             padding: 0 120px;
         }
     }
-
-    &__btn {
-        background: $color-white;
-        text-transform: uppercase;
-        padding: 8px 23px;
-        border-radius: 100px;
-        font-weight: 500;
-        font-size: 12px;
-        line-height: 130%;
-    }
-
-
 }

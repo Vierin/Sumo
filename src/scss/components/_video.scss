@@ -1,6 +1,36 @@
 .video {
     position: relative;
 
+    &__circle {
+
+        .is-scrolled & {
+            cursor: pointer;
+        }
+
+        &.is-active {
+            position: absolute;
+        }
+
+        svg path {
+            transition: stroke-width .4s $easing;
+        }
+
+        & > span {
+            filter: blur(10px);
+            transition: filter .4s $easing;
+        }
+
+        @include hover {
+            & > span {
+                filter: blur(15px);
+            }
+
+            svg path {
+                stroke-width: 2px;
+            }
+        }
+    }
+
     &__btn {
         position: absolute;
         top: 50%;

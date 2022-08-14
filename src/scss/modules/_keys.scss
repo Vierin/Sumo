@@ -6,6 +6,8 @@
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
+        z-index: 2;
+        pointer-events: none;
     }
 
     &__title {

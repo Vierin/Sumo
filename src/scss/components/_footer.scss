@@ -7,6 +7,29 @@
         justify-content: space-between;
     }
 
+    &__arr {
+        cursor: pointer;
+        border-radius: 50%;
+
+        svg {
+            width: 48px;
+            height: 48px;
+            pointer-events: none;
+
+            path {
+                transition: transform .4s $easing;
+            }
+        }
+
+        @include hover {
+
+            path {
+                transform: translateY(5px);
+            }
+        }
+
+    }
+
     &__col {
         display: flex;
         flex-direction: column;

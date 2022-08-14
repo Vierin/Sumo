@@ -1,15 +1,22 @@
 .swiper {
 
+
+    &__border {
+        z-index: 4;
+        pointer-events: none;
+        position: relative;
+    }
+
     &--laptop {
         position: absolute;
-        top: calc(50% - 14px);
-        left: calc(50% + 5px);
+        top: calc(50% - 20px);
+        left: 50%;
         transform: translate(-50%, -50%);
-        width: calc(972px - 192px);
+        width: 754px;
         max-height: 87%;
         height: 100%;
         overflow: hidden;
-        z-index: 2;
+        z-index: 5;
     }
 
     &--multi {
@@ -42,6 +49,16 @@
             top: 100px;
             z-index: 2;
             left: calc(100% + 149px);
+        }
+
+        svg path {
+            transition: transform .3s $easing;
+        }
+
+        @include hover {
+            svg path {
+                transform: translateX(5px);
+            }
         }
     }
 

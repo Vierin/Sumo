@@ -1,11 +1,22 @@
 .hero {
     height: 100vh;
+    position: relative;
 
     &__wrap {
         background: $color-gray-light;
         border-bottom-left-radius: 30px;
         border-bottom-right-radius: 30px;
         padding-bottom: 40px;
+    }
+
+    &-intro {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        transform: translateY(10%);
+        pointer-events: none;
+        opacity: 0;
     }
 
     &__circle {
@@ -29,11 +40,13 @@
         margin-top: -3px;
         position: relative;
 
+
         &::before,
         &::after {
             content: "";
             position: absolute;
             height: 100%;
+            top: 0;
             background: $color-gray-light;
             right: 99%;
             width: 100vw;
@@ -47,6 +60,7 @@
         svg {
             width: 690px;
             height: 176px;
+            pointer-events: none;
         }
     }
 
@@ -68,9 +82,28 @@
     }
 
     &__bg {
-        position: absolute;
+        position: fixed;
         inset: 0 0 0 0;
-        background: url("../media/bg-video.jpg");
         z-index: -1;
+        background: url("../media/bg-video.jpg") no-repeat;
+        background-size: cover;
+    }
+
+    &__scroll {
+        position: absolute;
+        bottom: 40px;
+        left: calc(50% - 20px);
+        cursor: pointer;
+
+        svg {
+            pointer-events: none;
+            transition: transform .4s $easing;
+        }
+
+        @include hover {
+            svg {
+                transform: scale(1.3);
+            }
+        }
     }
 }

@@ -12,8 +12,22 @@
         height: 242px;
     }
 
-    &::before {
-        content: "";
+    &--xl {
+        width: 430px;
+        height: 430px;
+    }
+
+    &__wrap {
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity .4s $easing;
+
+        .is-scrolled & {
+            opacity: 1;
+        }
+    }
+
+    & > span {
         position: absolute;
         inset: 0 0 0 0;
         filter: blur(20px);
@@ -25,11 +39,58 @@
         }
     }
 
-    &--violet:before {
+    &--swiper {
+        position: absolute;
+        top: 50%;
+        left: -25%;
+        transform: translateY(-50%);
+        z-index: 0;
+
+        span {
+            filter: blur(40px);
+        }
+    }
+
+    &--keys {
+        position: relative;
+        left: 40px;
+        top: 20px;
+
+        span {
+            filter: blur(40px);
+        }
+    }
+
+    &--form {
+        position: absolute;
+        left: -30%;
+        top: 45%;
+
+        span {
+            filter: blur(50px);
+        }
+    }
+
+    &--bottom {
+        position: absolute;
+        bottom: -17%;
+        right: -29%;
+
+        span {
+            filter: blur(40px);
+        }
+    }
+
+
+    &--violet > span {
         background: $color-violet;
     }
 
-    &--blue:before {
+    &--violet-2 > span {
+        background: $color-violet-2;
+    }
+
+    &--blue > span {
         background: $color-blue;
     }
 

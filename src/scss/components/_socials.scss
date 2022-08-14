@@ -4,5 +4,13 @@
 
     &__item {
         margin-right: 16px;
+
+        a {
+            transition: transform .3s $easing;
+
+            @include hover {
+                transform: scale(1.3);
+            }
+        }
     }
 }

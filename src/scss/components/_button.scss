@@ -63,6 +63,40 @@
         margin-top: 32px;
     }
 
+    &--form {
+        background: rgba(14, 14, 14, 0.2);
+        border: none !important;
+
+        svg rect {
+            fill: $color-white;
+            stroke: $color-white !important;
+        }
+    }
+
+    &--header {
+        background: $color-white;
+        text-transform: uppercase;
+        padding: 8px 23px;
+        border-radius: 100px;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 130%;
+        transition: background .3s $easing;
+
+        .button__text {
+            color: $color-dark;
+            transition: color .3s $easing;
+        }
+
+        @include hover {
+            background: $color-violet;
+
+            span {
+                color: $color-white;
+            }
+        }
+    }
+
     &--with-dot {
         border: 1px solid rgba(14, 14, 14, 0.3);
         border-radius: 100px;
