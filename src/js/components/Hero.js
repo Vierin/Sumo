@@ -37,7 +37,7 @@ export class Hero {
                         setTimeout(() => {
                             html.classList.remove('is-scrolling');
                             // ScrollTrigger.refresh(true);
-                        }, 2000)
+                        }, 400)
                     }});
                 } else if(self.progress < 0.02) {
                     html.classList.remove('is-scrolling', 'is-scrolled');
