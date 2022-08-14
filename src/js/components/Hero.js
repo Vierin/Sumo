@@ -26,7 +26,7 @@ export class Hero {
             start: "top top",
             end: "75% center",
             onUpdate: self => {
-                if(self.progress > 0.03) {
+                if(self.progress > 0.02) {
                     if(!html.classList.contains('is-scrolled')) {
                         html.classList.add('is-scrolling', 'is-scrolled');
                     }
@@ -37,9 +37,9 @@ export class Hero {
                         setTimeout(() => {
                             html.classList.remove('is-scrolling');
                             // ScrollTrigger.refresh(true);
-                        }, 400)
+                        }, 2000)
                     }});
-                } else if(self.progress < 0.03) {
+                } else if(self.progress < 0.02) {
                     html.classList.remove('is-scrolling', 'is-scrolled');
                     gsap.to(this.head, {yPercent: 0, opacity: 1, duration});
                     gsap.to(this.intro, {yPercent: 10, opacity: 0, duration});

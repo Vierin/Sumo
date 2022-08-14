@@ -50,18 +50,6 @@ details[open] summary:after {
 	transform: scale(1, -1);
 }
 
-ul {
-	width: 100%;
-	position: absolute;
-	top: calc(100% + .5rem);
-	left: 0;
-	padding: 1rem;
-	margin: 0;
-	box-sizing: border-box;
-	border-radius: 5px;
-	max-height: 200px;
-	overflow-y: auto;
-}
 
 li {
 	margin: 0;
@@ -108,6 +96,16 @@ ul.list {
     background: #FFFFFF;
     border: 0.5px solid $color-dark;
     border-radius: 16px;
+	width: 100%;
+	position: absolute;
+	top: calc(100% + .5rem);
+	left: 0;
+	padding: 1rem;
+	margin: 0;
+	box-sizing: border-box;
+	border-radius: 5px;
+	max-height: 200px;
+	overflow-y: auto;
 }
 
 label {
