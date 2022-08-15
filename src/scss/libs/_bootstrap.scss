@@ -65,24 +65,7 @@ sup {
     line-height: 0;
     vertical-align: baseline;
 }
-sub {
-    bottom: -0.25em;
-}
-sup {
-    top: -0.5em;
-}
-a {
-    color: #0d6efd;
-    text-decoration: underline;
-}
-a:hover {
-    color: #0a58ca;
-}
-a:not([href]):not([class]),
-a:not([href]):not([class]):hover {
-    color: inherit;
-    text-decoration: none;
-}
+
 code,
 kbd,
 pre,
@@ -106,9 +89,6 @@ code {
     font-size: 0.875em;
     color: #d63384;
     word-wrap: break-word;
-}
-a > code {
-    color: inherit;
 }
 kbd {
     padding: 0.2rem 0.4rem;
