@@ -37,6 +37,73 @@
     -ms-user-select: none;
     user-select: none;
 }
+
+// time
+.datepicker__time {
+    display: flex;
+    align-items: center;
+    height: 36px;
+
+    p {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 150%;
+        color: $color-dark;
+        margin-right: auto;
+    }
+
+    .time,
+    .time-format {
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 120%;
+        padding: 5px 10px;
+        background: rgba($color-dark, .1);
+        border-radius: 6px;
+    }
+
+    .time-format {
+        position: relative;
+        margin-left: 6px;
+        padding: 0;
+
+
+        input[type=radio] {
+            // display: none;
+        }
+
+        input[type=radio]#time-pm:checked + label {
+
+        }
+
+
+
+        label {
+            position: relative;
+            z-index: 2;
+            padding: 8px;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 150%;
+            display: inline-block;
+            cursor: pointer;
+
+            &[for=time-am]::after {
+                content: "";
+                position: absolute;
+                top: 2px;
+                left: 2px;
+                height: calc(100% - 4px);
+                width: 100%;
+                background: $color-white;
+                border-radius: 4px;
+                z-index: -1;
+            }
+        }
+    }
+}
+
+
 .datepicker {
     font-weight: 500;
     padding: 16px;
@@ -85,7 +152,6 @@
             .next {
                 min-width: 16px;
                 margin: 0 12px;
-                background: url('./media/svg/chevron.svg');
                 font-size: 1px;
                 position: relative;
 
@@ -145,7 +211,7 @@
             text-align: left;
             font-weight: 500;
             position: relative;
-            width: 50%;
+            width: 55%;
             margin-right: auto;
 
             &::after,

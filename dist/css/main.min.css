@@ -178,6 +178,11 @@ input[type=number] {
   -moz-appearance: textfield;
 }
 
+input[type=time]::-webkit-calendar-picker-indicator {
+  background: none;
+  display: none;
+}
+
 @keyframes spin {
   from {
     transform: rotate(0deg);
@@ -10404,6 +10409,54 @@ fieldset:disabled .btn {
   user-select: none;
 }
 
+.datepicker__time {
+  display: flex;
+  align-items: center;
+  height: 36px;
+}
+.datepicker__time p {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 150%;
+  color: #0E0E0E;
+  margin-right: auto;
+}
+.datepicker__time .time,
+.datepicker__time .time-format {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 120%;
+  padding: 5px 10px;
+  background: rgba(14, 14, 14, 0.1);
+  border-radius: 6px;
+}
+.datepicker__time .time-format {
+  position: relative;
+  margin-left: 6px;
+  padding: 0;
+}
+.datepicker__time .time-format label {
+  position: relative;
+  z-index: 2;
+  padding: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 150%;
+  display: inline-block;
+  cursor: pointer;
+}
+.datepicker__time .time-format label[for=time-am]::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height: calc(100% - 4px);
+  width: 100%;
+  background: #fff;
+  border-radius: 4px;
+  z-index: -1;
+}
+
 .datepicker {
   font-weight: 500;
   padding: 16px;
@@ -10448,7 +10501,6 @@ fieldset:disabled .btn {
 .datepicker thead tr:nth-child(2) .next {
   min-width: 16px;
   margin: 0 12px;
-  background: url("./media/svg/chevron.svg");
   font-size: 1px;
   position: relative;
 }
@@ -10496,7 +10548,7 @@ fieldset:disabled .btn {
   text-align: left;
   font-weight: 500;
   position: relative;
-  width: 50%;
+  width: 55%;
   margin-right: auto;
 }
 .datepicker .datepicker-days thead tr .datepicker-switch::after, .datepicker .datepicker-days thead tr .datepicker-switch::before {
@@ -11384,6 +11436,20 @@ fieldset:disabled .btn {
 .form__input--small {
   width: 30%;
 }
+.form__input--datepicker {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.form__input--datepicker #datepicker {
+  max-width: 120px;
+}
+.form__input--datepicker .input--time {
+  width: 65px;
+}
+.form__input--datepicker .input--time input[type=time] {
+  color: rgba(14, 14, 14, 0.3);
+}
 .form__input input {
   padding: 5px 10px;
   border-bottom: 1px solid rgba(14, 14, 14, 0.3);
@@ -11466,7 +11532,9 @@ fieldset:disabled .btn {
 }
 .form__checkbox input[type=checkbox] {
   visibility: hidden;
-  display: none;
+  height: 1px;
+  width: 1px;
+  opacity: 0;
 }
 .form__checkbox input[type=checkbox]:checked + label::after {
   transform: scale(1);
@@ -11666,6 +11734,11 @@ input[type=radio] {
   pointer-events: none;
   text-align: center;
   color: rgba(14, 14, 14, 0.3);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
 }
 
 input[type=radio]:checked {

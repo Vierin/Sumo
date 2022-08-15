@@ -99,6 +99,11 @@ input[type=radio] {
     pointer-events: none;
 	text-align: center;
 	color: rgba($color-dark, .3);
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	-o-appearance: none;
+	appearance: none;
 }
 
 input[type=radio]:checked {

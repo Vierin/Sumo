@@ -37,6 +37,24 @@
             width: 30%;
         }
 
+        &--datepicker {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+
+            #datepicker {
+                max-width: 120px;
+            }
+
+            .input--time {
+                width: 65px;
+
+                input[type=time] {
+                    color: rgba($color-dark, .3);
+                }
+            }
+        }
+
         input {
             padding: 5px 10px;
             border-bottom: 1px solid rgba($color-dark, .3);
@@ -48,6 +66,8 @@
             letter-spacing: 0.02em;
             transition: border .3s $easing;
             text-align: center;
+
+
 
             &::placeholder {
                 text-align: center;
@@ -134,7 +154,9 @@
 
         input[type=checkbox] {
             visibility: hidden;
-            display: none;
+            height: 1px;
+            width: 1px;
+            opacity: 0;
         }
 
         input[type=checkbox]:checked+label::after {
