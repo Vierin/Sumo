@@ -1,6 +1,8 @@
 .footer {
     background: $color-black;
     padding: 72px 0 23px;
+    z-index: 2;
+    position: relative;
 
     &__wrap {
         display: flex;

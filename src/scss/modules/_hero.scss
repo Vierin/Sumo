@@ -1,6 +1,13 @@
 .hero {
-    height: 100vh;
+    // height: 100vh;
     position: relative;
+
+    &-head,
+    &-intro {
+        height: 100vh;
+        z-index: 2;
+    }
+
 
     &__wrap {
         background: $color-gray-light;
@@ -10,13 +17,14 @@
     }
 
     &-intro {
-        position: absolute;
+        height: 100vh;
+        display: flex;
+        align-items: flex-end;
         width: 100%;
         left: 0;
         bottom: 0;
-        transform: translateY(10%);
+        z-index: 2;
         pointer-events: none;
-        opacity: 0;
     }
 
     &__circle {
@@ -84,16 +92,17 @@
     &__bg {
         position: fixed;
         inset: 0 0 0 0;
-        z-index: -1;
+        z-index: 0;
         background: url("../media/bg-video.jpg") no-repeat;
         background-size: cover;
     }
 
     &__scroll {
-        position: absolute;
+        position: fixed;
         bottom: 40px;
         left: calc(50% - 20px);
         cursor: pointer;
+        z-index: 2;
 
         svg {
             pointer-events: none;

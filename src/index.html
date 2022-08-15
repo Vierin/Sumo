@@ -6,10 +6,20 @@
 	<body>
 		@@include('html/header.html',{})
 		<main>
+
+			<!-- <section class="panel red">
+				ONE
+			  </section>
+			  <section class="panel orange">
+				TWO
+			  </section>
+			  <section class="panel purple">
+				THREE
+			  </section> -->
 			<section class="section section--hero">
 				<div class="hero" data-component="Hero">
 
-					<div class="module module--hero-head hero-head js-hero-head">
+					<div class="module module--hero-head hero-head js-hero-head js-section">
 						<div class="hero__top"></div>
 						<div class="grid grid-xl grid--end">
 							<div class="hero__title">
@@ -50,7 +60,7 @@
 					</div>
 
 
-					<div class="module module--hero-intro hero-intro js-hero-intro">
+					<div class="module module--hero-intro hero-intro js-hero-intro js-section js-dark">
 						<div class="grid">
 
 							<div class="intro">
@@ -76,10 +86,6 @@
 
 
 					<div class="hero__bg video">
-						<div class="hero__scroll js-arr-down">
-							<img class="svg-arr-scroll" src="arrow.svg">
-						</div>
-
 						<div class="circle circle--violet video__circle js-circle-area">
 							<span></span>
 							<div class="circle__wrap">
@@ -91,11 +97,15 @@
 							</div>
 						</div>
 					</div>
+
+					<div class="hero__scroll js-arr-down">
+						<img class="svg-arr-scroll" src="arrow.svg">
+					</div>
 				</div>
 
 			</section>
 
-			<section class="section section--white js-white" id="circles">
+			<section class="section section--white js-section" id="circles">
 				<div class="module module--circles grid grid--end">
 					<div class="grid-m">
 						<div class="heading">
@@ -146,234 +156,237 @@
 
 			</section>
 
-			<section class="section section--dark">
+			<div class="js-dark">
+				<section class="section section--dark">
 
-				<div class="module module--how module--padding">
-					<div class="grid grid--end">
-						<div class="heading grid-m">
-							<h2 class="heading__title">How SUMO Can Help You</h2>
-							<p class="heading__subtitle">Industries in healthcare need capacity, speed, security, functionality, and more to meet today’s standards in the medical field.</p>
-						</div>
-					</div>
-
-					<div class="how">
-						<span class="line"></span>
-
-						<div class="grid how__wrap">
-							<p class="how__info">Industries in healthcare need capacity, speed, security, functionality, and more to meet today’s standards in the medical field.</p>
-
-							<div class="how__item">
-								<div class="how__icon">
-									<img src="how-1.svg" class="svg-how-1">
-								</div>
-								<p>Patients cannot be provided with the most accurate diagnosis due to a lack of information</p>
-							</div>
-
-							<div class="how__item">
-								<div class="how__icon">
-									<img src="how-2.svg" class="svg-how-2">
-								</div>
-								<p>Patients and insurance companies could underestimate or overestimate the amount of coverage that is needed</p>
-							</div>
-
-							<div class="how__item">
-								<div class="how__icon">
-									<img src="how-3.svg" class="svg-how-3">
-								</div>
-								<p>Healthcare professionals struggling to track patients’ post-op care and healing processes</p>
+					<div class="module module--how module--padding">
+						<div class="grid grid--end">
+							<div class="heading grid-m">
+								<h2 class="heading__title">How SUMO Can Help You</h2>
+								<p class="heading__subtitle">Industries in healthcare need capacity, speed, security, functionality, and more to meet today’s standards in the medical field.</p>
 							</div>
 						</div>
-					</div>
 
+						<div class="how">
+							<span class="line"></span>
 
+							<div class="grid how__wrap">
+								<p class="how__info">Industries in healthcare need capacity, speed, security, functionality, and more to meet today’s standards in the medical field.</p>
 
+								<div class="how__item">
+									<div class="how__icon">
+										<img src="how-1.svg" class="svg-how-1">
+									</div>
+									<p>Patients cannot be provided with the most accurate diagnosis due to a lack of information</p>
+								</div>
 
-					<div class="module__bg">
-						<picture>
-							<source srcset="@media/bg-how.webp" type="image/webp">
-							<source srcset="@media/bg-how.jpg">
-							<img src="@media/bg-how.jpg" alt="img">
-						</picture>
-					</div>
-				</div>
+								<div class="how__item">
+									<div class="how__icon">
+										<img src="how-2.svg" class="svg-how-2">
+									</div>
+									<p>Patients and insurance companies could underestimate or overestimate the amount of coverage that is needed</p>
+								</div>
 
-			</section>
-
-			<section class="section section--violet">
-
-				<div class="module module--works">
-					<div class="grid grid--end">
-						<div class="heading grid-m">
-							<span class="heading__span">How SUMO Works </span>
-							<h2 class="heading__title">Consolidation of <br> information</h2>
-							<button class="heading__btn button button--with-arr">
-								<span class="button__text">read more</span>
-								<img class="svg-arr-btn" src="arr-btn.svg">
-							</button>
+								<div class="how__item">
+									<div class="how__icon">
+										<img src="how-3.svg" class="svg-how-3">
+									</div>
+									<p>Healthcare professionals struggling to track patients’ post-op care and healing processes</p>
+								</div>
+							</div>
 						</div>
-					</div>
 
-					<div class="chip">
-						<div class="chip__lines">
-							<img class="svg-chip-lines" src="chip-lines.svg">
-						</div>
-						<div class="chip__item">
-							<img class="svg-chip" src="chip.svg">
-						</div>
-					</div>
-				</div>
 
-				<div class="module module--slider">
-					<div class="swiper-wrap grid">
-						<div class="swiper__border">
+
+
+						<div class="module__bg">
 							<picture>
-								<source srcset="@media/laptop.webp" type="image/webp">
-								<source srcset="@media/laptop.png">
-								<img src="@media/laptop.png" alt="img">
+								<source srcset="@media/bg-how.webp" type="image/webp">
+								<source srcset="@media/bg-how.jpg">
+								<img src="@media/bg-how.jpg" alt="img">
 							</picture>
 						</div>
-
-
-						<div class="circle circle--violet-2 circle--xl circle--swiper">
-							<span></span>
-						</div>
-					</div>
-					<div class="swiper grid swiper--laptop" data-component="SwiperSlider">
-						<div class="swiper-wrapper">
-							<div class="swiper-slide">
-								<picture>
-									<source srcset="@media/slide-1.webp" type="image/webp">
-									<source srcset="@media/slide-1.jpg">
-									<img src="@media/slide-1.jpg" alt="img">
-								</picture>
-							</div>
-							<div class="swiper-slide">
-								<picture>
-									<source srcset="@media/slide-1.webp" type="image/webp">
-									<source srcset="@media/slide-1.jpg">
-									<img src="@media/slide-1.jpg" alt="img">
-								</picture>
-							</div>
-							<div class="swiper-slide">
-								<picture>
-									<source srcset="@media/slide-1.webp" type="image/webp">
-									<source srcset="@media/slide-1.jpg">
-									<img src="@media/slide-1.jpg" alt="img">
-								</picture>
-							</div>
-						</div>
 					</div>
 
-					<div class="swiper-btns">
-						<div class="swiper-button-prev">
-							<img class="svg-arr-slider" src="arr-slider.svg">
-						</div>
-						  <div class="swiper-button-next">
-							<img class="svg-arr-slider" src="arr-slider.svg">
-						</div>
-					</div>
-				</div>
+				</section>
 
-				<div class="module module--steps">
-					<div class="grid grid-m steps">
-						<p class="steps__info">Operate efficiently using T3 data science platform saving time, increasing patient satisfaction and trust, and improving musculoskeletal care.</p>
-						<ul class="steps__list">
-							<li class="step">
-								<span>Step 1</span>
-								<p class="step__text">At the start of the service, SUMO staff can extract data and implement it into the platform as initial uploads.</p>
-							</li>
-							<li class="step">
-								<span>Step 2</span>
-								<p class="step__text">Create lightweight datasets, organise data, and adjust the platform to your specific needs.</p>
-							</li>
-							<li class="step">
-								<span>Step 3</span>
-								<p class="step__text">Track and analyse all data analytics to improve processes and decision-making.</p>
-							</li>
-						</ul>
-					</div>
-				</div>
+				<section class="section section--violet">
 
-				<div class="module module--team module--padding">
-					<span class="line"></span>
-
-					<div class="grid">
-
-						<div class="team grid-m">
-							<div class="team__desc">
-								<span>The SUMO Team</span>
-								<blockquote class="team__quote">
-									<p>“Sumo offers technology that handles tremendous data throughput reliably & securely”</p>
-									<span>Jim McAvoy <br> CEO and founder SUMO</span>
-								</blockquote>
-								<button class="team__btn button button--with-arr">
+					<div class="module module--works">
+						<div class="grid grid--end">
+							<div class="heading grid-m">
+								<span class="heading__span">How SUMO Works </span>
+								<h2 class="heading__title">Consolidation of <br> information</h2>
+								<button class="heading__btn button button--with-arr">
 									<span class="button__text">read more</span>
 									<img class="svg-arr-btn" src="arr-btn.svg">
 								</button>
 							</div>
-							<div class="team__video video">
-								<img class="video__poster" src="@media/team.png" alt="team">
+						</div>
 
-								<button class="video__btn">
-									<img class="svg-play-circle" src="play-circle.svg">
-								</button>
-
-								<div class="video__caption">
-									<p>Data drives effective <br> population health</p>
-									<span class="video__time">1:30</span>
-								</div>
+						<div class="chip">
+							<div class="chip__lines">
+								<img class="svg-chip-lines" src="chip-lines.svg">
+							</div>
+							<div class="chip__item">
+								<img class="svg-chip" src="chip.svg">
 							</div>
 						</div>
 					</div>
-				</div>
 
-				<div class="module module--keys module--padding">
-					<span class="line"></span>
+					<div class="module module--slider">
+						<div class="swiper-wrap grid">
+							<div class="swiper__border">
+								<picture>
+									<source srcset="@media/laptop.webp" type="image/webp">
+									<source srcset="@media/laptop.png">
+									<img src="@media/laptop.png" alt="img">
+								</picture>
+							</div>
 
-					<div class="grid">
 
-						<div class="keys">
-							<p class="keys__title">
-								Key factors <br> of SUMO software <br> operation
-							</p>
-
-							<div class="circle circle--blue circle--l circle--keys js-circle" data-blur="40">
+							<div class="circle circle--violet-2 circle--xl circle--swiper">
 								<span></span>
 							</div>
+						</div>
+						<div class="swiper grid swiper--laptop" data-component="SwiperSlider">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<picture>
+										<source srcset="@media/slide-1.webp" type="image/webp">
+										<source srcset="@media/slide-1.jpg">
+										<img src="@media/slide-1.jpg" alt="img">
+									</picture>
+								</div>
+								<div class="swiper-slide">
+									<picture>
+										<source srcset="@media/slide-1.webp" type="image/webp">
+										<source srcset="@media/slide-1.jpg">
+										<img src="@media/slide-1.jpg" alt="img">
+									</picture>
+								</div>
+								<div class="swiper-slide">
+									<picture>
+										<source srcset="@media/slide-1.webp" type="image/webp">
+										<source srcset="@media/slide-1.jpg">
+										<img src="@media/slide-1.jpg" alt="img">
+									</picture>
+								</div>
+							</div>
+						</div>
 
-							<div class="keys__grid grid-m">
-								<div class="key">
-									<p class="key__title">Cloud Software Program</p>
-									<p class="key__txt">The technology for SUMO consists of a cloud-native stack to support the high capacity and high-velocity data that continues to grow. Cloud storage has proven to be better for big data companies and industries versus traditional desktop storage and systems.</p>
+						<div class="swiper-btns">
+							<div class="swiper-button-prev">
+								<img class="svg-arr-slider" src="arr-slider.svg">
+							</div>
+							  <div class="swiper-button-next">
+								<img class="svg-arr-slider" src="arr-slider.svg">
+							</div>
+						</div>
+					</div>
+
+					<div class="module module--steps">
+						<div class="grid grid-m steps">
+							<p class="steps__info">Operate efficiently using T3 data science platform saving time, increasing patient satisfaction and trust, and improving musculoskeletal care.</p>
+							<ul class="steps__list">
+								<li class="step">
+									<span>Step 1</span>
+									<p class="step__text">At the start of the service, SUMO staff can extract data and implement it into the platform as initial uploads.</p>
+								</li>
+								<li class="step">
+									<span>Step 2</span>
+									<p class="step__text">Create lightweight datasets, organise data, and adjust the platform to your specific needs.</p>
+								</li>
+								<li class="step">
+									<span>Step 3</span>
+									<p class="step__text">Track and analyse all data analytics to improve processes and decision-making.</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="module module--team module--padding">
+						<span class="line"></span>
+
+						<div class="grid">
+
+							<div class="team grid-m">
+								<div class="team__desc">
+									<span>The SUMO Team</span>
+									<blockquote class="team__quote">
+										<p>“Sumo offers technology that handles tremendous data throughput reliably & securely”</p>
+										<span>Jim McAvoy <br> CEO and founder SUMO</span>
+									</blockquote>
+									<button class="team__btn button button--with-arr">
+										<span class="button__text">read more</span>
+										<img class="svg-arr-btn" src="arr-btn.svg">
+									</button>
 								</div>
-								<div class="key">
-									<p class="key__title">T³ Platform</p>
-									<p class="key__txt">With the needs of different industries varying wildly, SUMO was created with a T³ platform so that users can tailor the platform to the data analytics they need to track and make decisions based on. The platform completes the heavy lifting so that calculating outcomes and treatment planning are noticeably enhanced.</p>
-								</div>
-								<div class="key">
-									<p class="key__title">Artificial Intelligence</p>
-									<p class="key__txt">Artificial intelligence (AI) has immensely grown where many functions in healthcare can be automated. Health risk assessments known as HRAs can be automated in SUMO to improve patient evaluations for better treatment. Other AI functions can include user support and other functions tailored to your needs.</p>
-								</div>
-								<div class="key">
-									<p class="key__title">Clinical Graph Structure</p>
-									<p class="key__txt">The clinical graph structure in SUMO promotes improved visibility that can help see data in a way not previously available. The connection of data from various sources such as clinics, wearable technology, medical professionals, and more for each patient creates a more thorough explanation of their medical background. This can result in better treatment, health plan selections, and proactive diagnoses.</p>
-								</div>
-								<div class="key">
-									<p class="key__title">Expertise Support</p>
-									<p class="key__txt">The SUMO team consists of senior doctors and professors with specialisations in musculoskeletal and orthopedic care. They can provide the support needed to make SUMO a successful tool for you.</p>
-								</div>
-								<div class="key">
-									<p class="key__title">Data Outcomes</p>
-									<p class="key__txt">With the unique approach for each user of SUMO, data outcomes are tailored to the analytics you need. Specific datasets can be chosen when running data analytics. The versatility of SUMO allows for various integrations. With ways to monitor health such as wearable technology, data can go directly to the SUMO software and be used in health analysis for the patient using it.</p>
+								<div class="team__video video">
+									<img class="video__poster" src="@media/team.png" alt="team">
+
+									<button class="video__btn">
+										<img class="svg-play-circle" src="play-circle.svg">
+									</button>
+
+									<div class="video__caption">
+										<p>Data drives effective <br> population health</p>
+										<span class="video__time">1:30</span>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
 
-			</section>
+					<div class="module module--keys module--padding">
+						<span class="line"></span>
 
-			<section class="section section--padding-l section--white js-white">
+						<div class="grid">
+
+							<div class="keys">
+								<p class="keys__title">
+									Key factors <br> of SUMO software <br> operation
+								</p>
+
+								<div class="circle circle--blue circle--l circle--keys js-circle" data-blur="40">
+									<span></span>
+								</div>
+
+								<div class="keys__grid grid-m">
+									<div class="key">
+										<p class="key__title">Cloud Software Program</p>
+										<p class="key__txt">The technology for SUMO consists of a cloud-native stack to support the high capacity and high-velocity data that continues to grow. Cloud storage has proven to be better for big data companies and industries versus traditional desktop storage and systems.</p>
+									</div>
+									<div class="key">
+										<p class="key__title">T³ Platform</p>
+										<p class="key__txt">With the needs of different industries varying wildly, SUMO was created with a T³ platform so that users can tailor the platform to the data analytics they need to track and make decisions based on. The platform completes the heavy lifting so that calculating outcomes and treatment planning are noticeably enhanced.</p>
+									</div>
+									<div class="key">
+										<p class="key__title">Artificial Intelligence</p>
+										<p class="key__txt">Artificial intelligence (AI) has immensely grown where many functions in healthcare can be automated. Health risk assessments known as HRAs can be automated in SUMO to improve patient evaluations for better treatment. Other AI functions can include user support and other functions tailored to your needs.</p>
+									</div>
+									<div class="key">
+										<p class="key__title">Clinical Graph Structure</p>
+										<p class="key__txt">The clinical graph structure in SUMO promotes improved visibility that can help see data in a way not previously available. The connection of data from various sources such as clinics, wearable technology, medical professionals, and more for each patient creates a more thorough explanation of their medical background. This can result in better treatment, health plan selections, and proactive diagnoses.</p>
+									</div>
+									<div class="key">
+										<p class="key__title">Expertise Support</p>
+										<p class="key__txt">The SUMO team consists of senior doctors and professors with specialisations in musculoskeletal and orthopedic care. They can provide the support needed to make SUMO a successful tool for you.</p>
+									</div>
+									<div class="key">
+										<p class="key__title">Data Outcomes</p>
+										<p class="key__txt">With the unique approach for each user of SUMO, data outcomes are tailored to the analytics you need. Specific datasets can be chosen when running data analytics. The versatility of SUMO allows for various integrations. With ways to monitor health such as wearable technology, data can go directly to the SUMO software and be used in health analysis for the patient using it.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</section>
+			</div>
+
+
+			<section class="section section--padding-l section--white">
 				<div class="module module--form">
 					<div class="grid grid--end grid--col">
 

@@ -22,7 +22,7 @@
         opacity: 0;
         transition: opacity .4s $easing;
 
-        .is-scrolled & {
+        .hero.is-active & {
             opacity: 1;
         }
     }
@@ -33,6 +33,7 @@
         filter: blur(20px);
         border-radius: 50%;
         z-index: -1;
+        pointer-events: none;
 
         .circle--l & {
             filter: blur(100px);

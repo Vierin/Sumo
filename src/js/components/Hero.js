@@ -1,7 +1,9 @@
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/src/ScrollTrigger.js";
+import ScrollToPlugin from 'gsap/src/ScrollToPlugin.js'
 
 gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollToPlugin);
 
 export class Hero {
     constructor() {
@@ -13,41 +15,45 @@ export class Hero {
     }
 
 
+
+
     init() {
         this.head = this.view.querySelector('.js-hero-head');
         this.intro = this.view.querySelector('.js-hero-intro');
         const duration = .5;
         const html = document.documentElement;
 
-        ScrollTrigger.create({
-            trigger: this.view,
-            markers: false,
-            pin: true,
-            start: "top top",
-            end: "75% center",
-            onUpdate: self => {
-                if(self.progress > 0.02) {
-                    if(!html.classList.contains('is-scrolled')) {
-                        html.classList.add('is-scrolling', 'is-scrolled');
-                    }
-                    document.querySelector('.js-header').classList.remove('is-section-white');
-                    gsap.to(this.head, {yPercent: -100, opacity: .5, duration});
-                    ScrollTrigger.refresh(true);
-                    gsap.to(this.intro, {yPercent: 0, opacity: 1, duration, onComplete: () => {
-                        setTimeout(() => {
-                            html.classList.remove('is-scrolling');
-                            // ScrollTrigger.refresh(true);
-                        }, 400)
-                    }});
-                } else if(self.progress < 0.02) {
-                    html.classList.remove('is-scrolling', 'is-scrolled');
-                    gsap.to(this.head, {yPercent: 0, opacity: 1, duration});
-                    gsap.to(this.intro, {yPercent: 10, opacity: 0, duration});
-                    document.querySelector('.js-header').classList.add('is-section-white');
-                }
+        const target = this.view.querySelector('.js-hero-intro').offsetTop;
+        ///test
+        let panels = gsap.utils.toArray(".js-section"),
+            scrollTween;
 
-            }
-        })
+        panels.forEach((panel, i) => {
+            ScrollTrigger.create({
+                trigger: panel,
+                start: "top bottom",
+                markers: false,
+                end: "+=200%",
+                onToggle: self => {
+                    if(self.isActive && !scrollTween) {
+                        if(self.trigger.classList.contains('js-dark')) {
+                            document.querySelector('.js-header').classList.add('is-section-dark');
+                            this.view.classList.add('is-active');
+                        } else {
+                            document.querySelector('.js-header').classList.remove('is-section-dark');
+                            this.view.classList.remove('is-active');
+                        }
+
+                        scrollTween = gsap.to(window, {
+                                scrollTo: {y: i * innerHeight, autoKill: false},
+                                duration: 1,
+                                onComplete: () => scrollTween = null,
+                                overwrite: true
+                        });
+                    }
+                }
+            });
+        });
 
         this.moveCircle();
     }

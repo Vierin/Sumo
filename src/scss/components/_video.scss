@@ -3,7 +3,7 @@
 
     &__circle {
 
-        .is-scrolled & {
+        .hero.is-active & {
             cursor: pointer;
         }
 

@@ -6,23 +6,33 @@
     &__logo {
         position: relative;
 
-        .svg-logo {
+        .svg-black,
+        .svg-white {
             transition: opacity .2s $easing;
+        }
 
-            &:last-of-type {
-                position: absolute;
-                inset: 0 0 0 0;
-                opacity: 1;
 
-                .is-section-white & {
-                    opacity: 0;
-                }
+        .svg-black {
+            position: absolute;
+            inset: 0 0 0 0;
+            z-index: 0;
+            opacity: 1;
+
+            .is-section-dark & {
+                opacity: 0;
             }
         }
 
-        .is-section-white & .svg-logo:first-of-type {
-            opacity: 1;
+        .svg-white {
+            z-index: 2;
+            opacity: 0;
+
+            .is-section-dark & {
+                opacity: 1;
+            }
         }
+
+
 
     }
 

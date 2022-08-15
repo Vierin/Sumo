@@ -104,51 +104,25 @@ export class Page {
     changeLogo() {
 
         const header = document.querySelector('.js-header');
-        const whites = document.querySelectorAll('.js-white');
+        const darks = document.querySelectorAll('.js-dark');
 
-        whites.forEach((section) => {
+        darks.forEach((section) => {
             gsap.to(section, {
               scrollTrigger: {
                 trigger: section,
                 markers: false,
-                start: `230px 35px`,
-                end: `${section.clientHeight + 230}px top` ,
+                start: `top 35px`,
+                end: `bottom top` ,
                 onToggle: self => {
-                    // ScrollTrigger.refresh(true);
                     if(self.isActive) {
-                        header.classList.add('is-section-white');
+                        header.classList.add('is-section-dark');
                     } else {
-                        header.classList.remove('is-section-white');
+                        header.classList.remove('is-section-dark');
                     }
-
                 }
               }
             });
           });
-
-
-
-
-
-        // const blacks = [...document.querySelectorAll('.black')].map(e => ({top: e.top, bottom: e.bottom}));
-
-
-
-        // document.addEventListener('scroll', () => {
-
-
-        //     let position = (header.getBoundingClientRect().bottom + header.getBoundingClientRect().top) / 2 + window.scrollY;
-        //     for (let i = 0; i < whites.length; i++) {
-        //         if (position >= whites[i].top && position <= whites[i].bottom) {
-        //             header.classList.remove('is-black');
-        //             header.classList.add('is-white');
-        //             return;
-        //         }
-        //     }
-
-        //     header.classList.remove('is-white');
-        //     header.classList.add('is-black');
-        // });
     }
 
 }

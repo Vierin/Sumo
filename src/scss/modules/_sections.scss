@@ -1,9 +1,11 @@
 .section {
     overflow: hidden;
+    position: relative;
 
     &--dark,
     &--violet {
         color: $color-white;
+        z-index: 2;
     }
 
     &--violet {
@@ -12,9 +14,18 @@
 
     &--white {
         background: $color-gray-light;
+        z-index: 2;
     }
 
     &--padding-l {
         padding: 120px 0;
     }
 }
+
+.panel {
+    height: 100vh;
+    position: sticky;
+    top: 0;
+
+
+  }
