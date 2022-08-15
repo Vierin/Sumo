@@ -162,6 +162,21 @@ button {
   background: none;
   font-family: "gilroy", sans-serif;
 }
+button:focus {
+  outline: none;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
 
 @keyframes spin {
   from {
@@ -346,19 +361,6 @@ tr {
   border-color: inherit;
   border-style: solid;
   border-width: 0;
-}
-
-label {
-  display: inline-block;
-}
-
-button {
-  border-radius: 0;
-}
-
-button:focus {
-  outline: dotted 1px;
-  outline: -webkit-focus-ring-color auto 5px;
 }
 
 button,
@@ -11369,6 +11371,11 @@ fieldset:disabled .btn {
   max-width: fit-content;
   margin-right: 16px;
 }
+.form__item #datepicker input {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+}
 .form__input {
   width: 55%;
   position: relative;
@@ -11386,8 +11393,27 @@ fieldset:disabled .btn {
   font-size: 16px;
   line-height: 150%;
   letter-spacing: 0.02em;
+  transition: border 0.3s ease-out;
+  text-align: center;
+}
+.form__input input::placeholder {
+  text-align: center;
+  color: rgba(14, 14, 14, 0.3);
+  font-size: 12px;
+  line-height: 130%;
+  letter-spacing: 0.02em;
+}
+.form__input input:focus::placeholder {
+  opacity: 0;
+}
+.mod_no-touchevents .form__input input:hover {
+  border-color: #0E0E0E;
+}
+.form__input input:focus + label {
+  opacity: 0;
 }
 .form__input label:not(.option) {
+  display: block;
   position: absolute;
   left: 50%;
   top: 12px;
@@ -11401,6 +11427,7 @@ fieldset:disabled .btn {
   width: 100%;
   text-align: center;
   pointer-events: none;
+  transition: opacity 0.2s ease-out;
 }
 .form__input label:not(.option) .is-error {
   color: #E75656;
@@ -11591,9 +11618,9 @@ summary:after {
   height: 0;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
-  border-top: 5px solid #000;
+  border-top: 5px solid rgba(14, 14, 14, 0.3);
   transform-origin: center center;
-  transition: transform ease-in-out 0.2s;
+  transition: transform ease-in-out 0.2s, border 0.3s ease-out;
 }
 
 summary:focus {
@@ -11604,22 +11631,27 @@ details[open] summary:after {
   transform: scale(1, -1);
 }
 
-li {
-  margin: 0;
-  padding: 1rem 0;
-}
-
-li:first-child {
-  padding-top: 0;
-}
-
-li:last-child {
-  padding-bottom: 0;
-  border-bottom: none;
-}
-
 summary.radios {
   counter-reset: radios;
+}
+.mod_no-touchevents summary.radios:hover input {
+  border-color: #0E0E0E;
+}
+.mod_no-touchevents summary.radios:hover input[type=radio]:after {
+  color: #0E0E0E;
+}
+.mod_no-touchevents summary.radios:hover:after {
+  border-top: 5px solid #0E0E0E;
+}
+
+.custom-select[open] input {
+  border-color: #0E0E0E;
+}
+.custom-select[open] input[type=radio]:after {
+  color: #0E0E0E;
+}
+.custom-select[open]:after {
+  border-top: 5px solid #0E0E0E;
 }
 
 summary.radios:before {
@@ -11632,6 +11664,8 @@ input[type=radio] {
   display: none;
   margin: 0;
   pointer-events: none;
+  text-align: center;
+  color: rgba(14, 14, 14, 0.3);
 }
 
 input[type=radio]:checked {
@@ -11642,6 +11676,7 @@ input[type=radio]:after {
   content: attr(title);
   display: inline;
   font-size: 1rem;
+  transition: color 0.3s ease-out;
 }
 
 ul.list {
@@ -11653,28 +11688,41 @@ ul.list {
   position: absolute;
   top: calc(100% + 0.5rem);
   left: 0;
-  padding: 1rem;
+  padding: 24px;
   margin: 0;
   box-sizing: border-box;
-  border-radius: 5px;
   max-height: 200px;
   overflow-y: auto;
 }
 
-label {
+.form__input--select label {
   width: 100%;
   display: flex;
   cursor: pointer;
   justify-content: space-between;
+  transition: color 0.3s ease-out;
 }
-
-label span {
+.mod_no-touchevents .form__input--select label:hover {
+  color: #5D009F;
+}
+.form__input--select label span {
   --display: none;
   display: var(--display);
   width: 1rem;
   height: 1rem;
   border: 1px solid #727272;
   border-radius: 3px;
+}
+.form__input--select li {
+  margin: 0;
+  padding: 8px 0;
+}
+.form__input--select li:first-child {
+  padding-top: 0;
+}
+.form__input--select li:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
 }
 
 @font-face {

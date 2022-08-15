@@ -24,9 +24,9 @@ export class Form {
     }
 
 
-    select() {
-        this.view.
-    }
+    // select() {
+    //     this.view.
+    // }
 
 
 
