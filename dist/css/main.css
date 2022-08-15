@@ -183,6 +183,11 @@ input[type=time]::-webkit-calendar-picker-indicator {
   display: none;
 }
 
+input:focus {
+  background: transparent;
+  outline: 0;
+}
+
 @keyframes spin {
   from {
     transform: rotate(0deg);
@@ -10434,11 +10439,12 @@ fieldset:disabled .btn {
   position: relative;
   margin-left: 6px;
   padding: 0;
+  display: flex;
 }
 .datepicker__time .time-format label {
   position: relative;
   z-index: 2;
-  padding: 8px;
+  padding: 8px 10px;
   font-weight: 500;
   font-size: 14px;
   line-height: 150%;
@@ -10451,10 +10457,14 @@ fieldset:disabled .btn {
   top: 2px;
   left: 2px;
   height: calc(100% - 4px);
-  width: 100%;
+  width: calc(100% - 2px);
   background: #fff;
   border-radius: 4px;
   z-index: -1;
+  transition: transform 0.3s ease-out;
+}
+.datepicker__time .time-format input#time-am:not(:checked) + label:after {
+  transform: translateX(calc(100% - 1px));
 }
 
 .datepicker {

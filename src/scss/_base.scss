@@ -104,3 +104,8 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     background: none;
     display: none;
 }
+
+input:focus  {
+    background: transparent;
+    outline: 0;
+}

@@ -66,22 +66,21 @@
         position: relative;
         margin-left: 6px;
         padding: 0;
+        display: flex;
 
 
         input[type=radio] {
             // display: none;
         }
 
-        input[type=radio]#time-pm:checked + label {
 
-        }
 
 
 
         label {
             position: relative;
             z-index: 2;
-            padding: 8px;
+            padding: 8px 10px;
             font-weight: 500;
             font-size: 14px;
             line-height: 150%;
@@ -94,11 +93,16 @@
                 top: 2px;
                 left: 2px;
                 height: calc(100% - 4px);
-                width: 100%;
+                width: calc(100% - 2px);
                 background: $color-white;
                 border-radius: 4px;
                 z-index: -1;
+                transition: transform .3s $easing;
             }
+        }
+
+        input#time-am:not(:checked) + label:after {
+            transform: translateX(calc(100% - 1px));
         }
     }
 }
