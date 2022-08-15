@@ -10462,6 +10462,7 @@ fieldset:disabled .btn {
   border-radius: 4px;
   z-index: -1;
   transition: transform 0.3s ease-out;
+  pointer-events: none;
 }
 .datepicker__time .time-format input#time-am:not(:checked) + label:after {
   transform: translateX(calc(100% - 1px));
@@ -11348,6 +11349,8 @@ fieldset:disabled .btn {
   margin: -70px;
   width: 140px;
   height: 140px;
+  background: #fff;
+  border-radius: 25px;
 }
 
 .video {
