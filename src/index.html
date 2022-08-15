@@ -461,7 +461,13 @@
 								<div class="form__item">
 									<p>Best time to contact</p>
 									<div class="form__input dtpicker">
-										<input id="dtpicker" width="276" />
+										<div class="input-group date" id="datepicker">
+											<input type="text">
+											<span class="input-group-append">
+												<span class="input-group-text bg-white d-block">
+												</span>
+											</span>
+										</div>
 									</div>
 								</div>
 
@@ -590,8 +596,13 @@
 
 		</main>
 		@@include('html/footer.html',{})
-		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-		<script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+		<script>
+			 $('#datepicker').datepicker({
+				format: 'dd M, D',
+				orientation: "bottom left",
+				todayHighlight: true
+			});
+		</script>
 		<script src="js/app.min.js"></script>
 	</body>
 </html>

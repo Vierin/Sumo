@@ -4,6 +4,10 @@
 @import "base";
 @import "animations";
 
+//bootstrap
+@import "./libs/bootstrap";
+@import "./libs/datepicker";
+
 // components
 @import "./components/svg-icons";
 @import "./components/header";
@@ -18,7 +22,6 @@
 @import "./components/circles";
 @import "./components/text";
 @import "./components/select";
-@import "./components/dtpicker";
 
 //swiper styles
 @import "./components/swiper-core";

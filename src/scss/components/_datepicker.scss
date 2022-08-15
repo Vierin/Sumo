@@ -1,0 +1,10 @@
+.datepicker {
+    .input-group-append {
+        display: none;
+    }
+
+    td.today {
+        background: $color-violet !important;
+        border-radius: 50%;
+    }
+}

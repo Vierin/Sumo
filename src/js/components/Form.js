@@ -1,5 +1,7 @@
 import { gsap } from "gsap";
 // import { breakpoint } from './Breakpoint.js';
+import $ from "jquery";
+// import * as datapicker from "bootstrap-datepicker";
 
 export class Form {
     constructor() {
@@ -12,7 +14,7 @@ export class Form {
 
 
     init() {
-       
+
 
     }
 

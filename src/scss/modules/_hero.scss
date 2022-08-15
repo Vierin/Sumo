@@ -106,12 +106,14 @@
 
         svg {
             pointer-events: none;
-            transition: transform .4s $easing;
+            path {
+                transition: transform .4s $easing;
+            }
         }
 
         @include hover {
-            svg {
-                transform: scale(1.3);
+            svg path {
+                transform: translateY(5px);
             }
         }
     }
