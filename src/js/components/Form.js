@@ -20,7 +20,7 @@ export class Form {
             console.log(inp.value);
         });
 
-        this.select();
+        // this.select();
     }
 
 
