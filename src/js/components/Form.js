@@ -14,8 +14,18 @@ export class Form {
 
 
     init() {
+        this.inputs = this.view.querySelectorAll('input');
+
+        this.inputs.forEach(inp => {
+            console.log(inp.value);
+        });
+
+        this.select();
+    }
 
 
+    select() {
+        this.view.
     }
 
 
