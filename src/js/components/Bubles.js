@@ -21,7 +21,7 @@ export class Bubles {
             const random = gsap.utils.random(-300, 300);
             ScrollTrigger.create({
                 trigger: this.view,
-                markers: true,
+                markers: false,
                 onUpdate: self => {
                     gsap.set(bb, {y: self.progress * random, transformOrigin: "50% 50%"})
                 }
