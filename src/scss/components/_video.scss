@@ -1,7 +1,16 @@
 .video {
     position: relative;
 
+
     &__circle {
+        position: absolute;
+        left: 64vw;
+        top: 17vh;
+
+        @media(max-width: 1450px) {
+            left: 70vw;
+            top: 15vh;
+        }
 
         .hero.is-active & {
             cursor: pointer;

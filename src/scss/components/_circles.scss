@@ -5,6 +5,12 @@
     position: relative;
     min-width: 675px;
 
+    @media(max-height: 720px) {
+        height: 320px;
+        min-width: 550px;
+        width: 550px;
+    }
+
     &__svg {
         position: absolute;
         inset: 0 0 0 0;
@@ -20,6 +26,11 @@
             svg {
                 width: 400px;
                 height: 400px;
+
+                @media(max-height: 720px) {
+                    height: 320px;
+                    width: 320px;
+                }
             }
 
             &--1 {
@@ -46,6 +57,11 @@
         top: 0;
         height: 400px;
         width: 400px;
+
+        @media(max-height: 720px) {
+            height: 320px;
+            width: 320px;
+        }
 
         &--1 {
             left: 0;

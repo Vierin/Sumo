@@ -18,26 +18,24 @@
 			  </section> -->
 			<section class="section section--hero">
 				<div class="hero" data-component="Hero">
-
+					<div class="js-area"></div>
 					<div class="module module--hero-head hero-head js-hero-head js-section">
 						<div class="hero__top"></div>
 						<div class="grid grid-xl grid--end">
 							<div class="hero__title">
-								<div class="js-area">
-									<svg xmlns="http://www.w3.org/2000/svg" width="679" height="174" viewBox="10 9 115 23">
-										<defs>
-											<mask id="mask" x="0" y="0" width="100" height="28">
-											<rect x="10" y="0" width="115" height="37" fill="#fff"/>
-											<use href="#text"/>
-											</mask>
-										</defs>
-										<rect x="5" y="5" width="120" height="30" mask="url(#mask)" fill="#F1F1F1"/>
-										<g id="text" mask="url(#mask)">
-											<text font-family="gilroy" font-weight="700" x="12" y="18" dy="1">A HEALTHCARE</text>
-											<text font-family="gilroy" font-weight="700" x="12" y="30" dy="1.5">INNOVATOR</text>
-										</g>
-									</svg>
-								</div>
+								<svg xmlns="http://www.w3.org/2000/svg" width="679" height="174" viewBox="10 9 115 23">
+									<defs>
+										<mask id="mask" x="0" y="0" width="100" height="28">
+										<rect x="10" y="0" width="115" height="37" fill="#fff"/>
+										<use href="#text"/>
+										</mask>
+									</defs>
+									<rect x="5" y="5" width="120" height="30" mask="url(#mask)" fill="#F1F1F1"/>
+									<g id="text" mask="url(#mask)">
+										<text font-family="gilroy" font-weight="700" x="12" y="18" dy="1">A HEALTHCARE</text>
+										<text font-family="gilroy" font-weight="700" x="12" y="30" dy="1.5">INNOVATOR</text>
+									</g>
+								</svg>
 							</div>
 						</div>
 
@@ -99,6 +97,7 @@
 					</div>
 
 					<div class="hero__scroll js-arr-down">
+						<span></span>
 						<img class="svg-arr-scroll" src="arrow.svg">
 					</div>
 				</div>
@@ -152,8 +151,9 @@
 					</div>
 				</div>
 
-
-
+				<div class="module module--bubles" data-component="Bubles">
+					<img src="bubles.svg" class="svg-bubles">
+				</div>
 			</section>
 
 			<div class="js-dark">
@@ -225,7 +225,7 @@
 						</div>
 
 						<div class="chip">
-							<div class="chip__lines">
+							<div class="chip__lines" data-component="Lines">
 								<img class="svg-chip-lines" src="chip-lines.svg">
 							</div>
 							<div class="chip__item">
@@ -400,29 +400,29 @@
 								<p class="heading__subtitle">Join our growing community of healthcare <br> leaders and stay informed with the latest news <br> and updates from SUMO.</p>
 							</div>
 
-							<div class="form" data-component="Form">
+							<form class="form" id="form" action="" data-component="Form">
 								<div class="form__item">
 									<p>Hi! My name is</p>
 									<div class="form__input">
-										<input id="name" type="text" required placeholder="Enter your name & last name*">
+										<input id="name" type="text" placeholder="Enter your name & last name*">
 									</div>
 								</div>
 								<div class="form__item">
 									<p>and I work company</p>
 									<div class="form__input">
-										<input id="company" type="text" required placeholder="Company name type here*">
+										<input id="company" type="text" placeholder="Company name type here*">
 									</div>
 								</div>
 								<div class="form__item">
 									<p>You can reach me at</p>
 									<div class="form__input">
-										<input id="email" type="email" required placeholder="Enter your email*">
+										<input id="email" type="email" placeholder="Enter your email*">
 									</div>
 								</div>
 								<div class="form__item">
 									<p>or my telephone number</p>
 									<div class="form__input form__input--small">
-										<input id="number" type="number" required placeholder="Enter your phone*">
+										<input id="number" type="number" placeholder="Enter your phone*">
 									</div>
 								</div>
 								<div class="form__item">
@@ -430,23 +430,23 @@
 									<div class="form__input form__input--select">
 										<details class="custom-select">
 											<summary class="radios">
-												<input type="radio" name="item" id="default" title="Select*" checked>
-												<input type="radio" name="item" id="item1" title="Medical Facilities">
-												<input type="radio" name="item" id="item2" title="Insurance Companies">
-												<input type="radio" name="item" id="item3" title="Manufacturers">
+												<input type="radio" name="inter" id="default" title="Select*" checked>
+												<input type="radio" name="inter" id="inter1" title="Medical Facilities">
+												<input type="radio" name="inter" id="inter2" title="Insurance Companies">
+												<input type="radio" name="inter" id="inter3" title="Manufacturers">
 											</summary>
 											<ul class="list">
 												<li>
-													<label class="option" for="item1">
+													<label class="option" for="inter1">
 														Medical Facilities
 														<span></span>
 													</label>
 												</li>
 												<li>
-													<label class="option" for="item2">Insurance Companies</label>
+													<label class="option" for="inter2">Insurance Companies</label>
 												</li>
 												<li>
-													<label class="option" for="item3">Manufacturers</label>
+													<label class="option" for="inter3">Manufacturers</label>
 												</li>
 											</ul>
 										</details>
@@ -454,7 +454,7 @@
 
 
 								</div>
-								<div class="form__item">
+								<!-- <div class="form__item">
 									<p>Best time to contact</p>
 									<div class="form__input form__input--datepicker">
 										<div class="input-group date" id="datepicker">
@@ -469,7 +469,7 @@
 										</div>
 
 									</div>
-								</div>
+								</div> -->
 
 								<div class="form__item form__item--row">
 									<div class="form__checkbox">
@@ -477,14 +477,16 @@
 										<label for="privacy">I agree with the Privacy Policy</label>
 									</div>
 									<div class="form__btn">
-										<button class="button button--form button--with-dot">
+										<button type="sumbit" class="button button--form button--with-dot">
 											<span class="button__text">SEND inquiry</span>
-											<img class="svg-arr-btn" src="arr-btn.svg">
+											<span class="button__circle">
+												<img class="svg-arr-btn" src="arr-btn.svg">
+											</span>
 										</button>
 									</div>
 								</div>
 
-							</div>
+							</form>
 						</div>
 
 					</div>

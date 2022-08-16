@@ -28,18 +28,25 @@ details[open] summary:before {
 	left: 0;
 }
 
-summary:after {
-	content: '';
-	position: absolute;
-    top: calc(50% - 3px);
-    right: 10px;
-	width: 0;
-	height: 0;
-	border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-top: 5px solid rgba($color-dark, .3);
-	transform-origin: center center;
-	transition: transform ease-in-out .2s, border .3s $easing;
+summary {
+
+	&:after {
+		content: '';
+		position: absolute;
+		top: calc(50% - 3px);
+		right: 10px;
+		width: 0;
+		height: 0;
+		border-left: 5px solid transparent;
+		border-right: 5px solid transparent;
+		border-top: 5px solid rgba($color-dark, .3);
+		transform-origin: center center;
+		transition: transform ease-in-out .2s, border .3s $easing;
+	}
+
+	&.error::after  {
+		border-top: 5px solid $color-dark;
+	}
 }
 
 summary:focus {
@@ -104,6 +111,15 @@ input[type=radio] {
 	-ms-appearance: none;
 	-o-appearance: none;
 	appearance: none;
+
+	.error & {
+		color: $color-red;
+		border-color: rgba($color-red, .3);
+	}
+
+	.is-active & {
+		color: $color-dark;
+	}
 }
 
 input[type=radio]:checked {
@@ -131,6 +147,10 @@ ul.list {
 	box-sizing: border-box;
 	max-height: 200px;
 	overflow-y: auto;
+
+	.error & {
+		border-color: $color-red;
+	}
 }
 
 .form__input--select {

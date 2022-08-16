@@ -196,6 +196,20 @@ input:focus {
     transform: rotate(359deg);
   }
 }
+@keyframes scroll {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  30% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  100% {
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+  }
+}
 /*!
 * Bootstrap v5.0.0-alpha3 (https://getbootstrap.com/)
 * Copyright 2011-2020 The Bootstrap Authors
@@ -10918,7 +10932,7 @@ fieldset:disabled .btn {
 .header {
   position: fixed;
   inset: 0 0 auto 0;
-  z-index: 3;
+  z-index: 8;
 }
 .header__logo {
   position: relative;
@@ -11018,6 +11032,9 @@ fieldset:disabled .btn {
 .circle--l .circle > span {
   filter: blur(100px);
 }
+.safari .circle--l .circle > span {
+  filter: blur(100px) !important;
+}
 .circle--swiper {
   position: absolute;
   top: 50%;
@@ -11027,6 +11044,9 @@ fieldset:disabled .btn {
 }
 .circle--swiper span {
   filter: blur(40px);
+}
+.safari .circle--swiper span {
+  filter: blur(40px) !important;
 }
 .circle--keys {
   position: relative;
@@ -11220,10 +11240,30 @@ fieldset:disabled .btn {
 .button--form {
   background: rgba(14, 14, 14, 0.2);
   border: none !important;
+  position: relative;
+}
+.button--form .button__circle {
+  position: absolute;
+  right: 10px;
+  height: 46px;
+  width: 46px;
+  background: #fff;
+  border-radius: 50%;
+  transform: scale(0.24);
+  transition: transform 0.4s cubic-bezier(0.64, 0.57, 0.67, 1.53);
+}
+.mod_no-touchevents .button--form:hover .button__circle {
+  transform: scale(1);
+}
+.button--form svg {
+  background: none !important;
+  right: 0 !important;
+}
+.button--form svg path {
+  fill: #000;
 }
 .button--form svg rect {
-  fill: #fff;
-  stroke: #fff !important;
+  opacity: 0;
 }
 .button--header {
   background: #fff;
@@ -11258,7 +11298,7 @@ fieldset:disabled .btn {
   transform: scale(0.24);
   transition: transform 0.4s cubic-bezier(0.64, 0.57, 0.67, 1.53);
 }
-.button--with-dot svg rect {
+.module--news .button--with-dot svg rect {
   stroke: #000;
 }
 .button--with-dot svg path {
@@ -11328,6 +11368,17 @@ fieldset:disabled .btn {
 
 .video {
   position: relative;
+}
+.video__circle {
+  position: absolute;
+  left: 64vw;
+  top: 17vh;
+}
+@media (max-width: 1450px) {
+  .video__circle {
+    left: 70vw;
+    top: 15vh;
+  }
 }
 .hero.is-active .video__circle {
   cursor: pointer;
@@ -11399,6 +11450,7 @@ fieldset:disabled .btn {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 40px;
 }
 .form__item p {
   font-weight: 500;
@@ -11418,9 +11470,28 @@ fieldset:disabled .btn {
   width: 55%;
   position: relative;
   margin-top: 2px;
+  overflow: hidden;
 }
 .form__input--small {
   width: 30%;
+}
+.form__input--select {
+  overflow: visible;
+}
+.form__input:not(.form__input--select)::after {
+  content: "";
+  position: absolute;
+  right: 2px;
+  top: 8px;
+  height: 20px;
+  width: 20px;
+  background: url("../media/svg/check-green.svg") no-repeat;
+  background-size: contain;
+  transform: translateX(30px);
+  transition: transform 0.4s ease-out;
+}
+.form__input.success:after {
+  transform: translateX(0);
 }
 .form__input--datepicker {
   display: flex;
@@ -11436,6 +11507,12 @@ fieldset:disabled .btn {
 .form__input--datepicker .input--time input[type=time] {
   color: rgba(14, 14, 14, 0.3);
 }
+.form__input.error input {
+  border-color: rgba(231, 86, 86, 0.3);
+}
+.form__input.error input::placeholder {
+  color: #E75656;
+}
 .form__input input {
   padding: 5px 10px;
   border-bottom: 1px solid rgba(14, 14, 14, 0.3);
@@ -11447,6 +11524,7 @@ fieldset:disabled .btn {
   letter-spacing: 0.02em;
   transition: border 0.3s ease-out;
   text-align: center;
+  position: relative;
 }
 .form__input input::placeholder {
   text-align: center;
@@ -11454,12 +11532,16 @@ fieldset:disabled .btn {
   font-size: 12px;
   line-height: 130%;
   letter-spacing: 0.02em;
+  transition: color 0.3s ease-out;
 }
 .form__input input:focus::placeholder {
   opacity: 0;
 }
 .mod_no-touchevents .form__input input:hover {
   border-color: #0E0E0E;
+}
+.mod_no-touchevents .form__input input:hover::placeholder {
+  color: #0E0E0E;
 }
 .form__input input:focus + label {
   opacity: 0;
@@ -11492,6 +11574,7 @@ fieldset:disabled .btn {
   font-size: 14px;
   line-height: 150%;
   cursor: pointer;
+  overflow: hidden;
 }
 .form__checkbox label::before, .form__checkbox label::after {
   content: "";
@@ -11501,7 +11584,7 @@ fieldset:disabled .btn {
   height: 18px;
   width: 18px;
   border-radius: 5px;
-  transition: background 0.4s ease-out;
+  transition: transform 0.3s ease-out;
 }
 .form__checkbox label::before {
   border: 1px solid rgba(14, 14, 14, 0.3);
@@ -11513,8 +11596,10 @@ fieldset:disabled .btn {
   height: 20px;
   background-size: cover;
   z-index: 0;
-  transform: scale(0);
-  transition: transform 0.3s ease-out;
+  transform: translateY(-105%);
+}
+.form__checkbox.error label {
+  color: #E75656;
 }
 .form__checkbox input[type=checkbox] {
   visibility: hidden;
@@ -11523,7 +11608,10 @@ fieldset:disabled .btn {
   opacity: 0;
 }
 .form__checkbox input[type=checkbox]:checked + label::after {
-  transform: scale(1);
+  transform: translateY(0);
+}
+.form__checkbox input[type=checkbox]:checked + label::before {
+  transform: translateY(120%);
 }
 
 .input-group {
@@ -11541,6 +11629,13 @@ fieldset:disabled .btn {
   position: relative;
   min-width: 675px;
 }
+@media (max-height: 720px) {
+  .circles {
+    height: 320px;
+    min-width: 550px;
+    width: 550px;
+  }
+}
 .circles__svg {
   position: absolute;
   inset: 0 0 0 0;
@@ -11556,6 +11651,12 @@ fieldset:disabled .btn {
 .circles__svg .circles__arrow svg {
   width: 400px;
   height: 400px;
+}
+@media (max-height: 720px) {
+  .circles__svg .circles__arrow svg {
+    height: 320px;
+    width: 320px;
+  }
 }
 .circles__svg .circles__arrow--1 {
   left: 0;
@@ -11576,6 +11677,12 @@ fieldset:disabled .btn {
   top: 0;
   height: 400px;
   width: 400px;
+}
+@media (max-height: 720px) {
+  .circles__item {
+    height: 320px;
+    width: 320px;
+  }
 }
 .circles__item--1 {
   left: 0;
@@ -11676,6 +11783,9 @@ summary:after {
   transform-origin: center center;
   transition: transform ease-in-out 0.2s, border 0.3s ease-out;
 }
+summary.error::after {
+  border-top: 5px solid #0E0E0E;
+}
 
 summary:focus {
   outline: none;
@@ -11726,6 +11836,13 @@ input[type=radio] {
   -o-appearance: none;
   appearance: none;
 }
+.error input[type=radio] {
+  color: #E75656;
+  border-color: rgba(231, 86, 86, 0.3);
+}
+.is-active input[type=radio] {
+  color: #0E0E0E;
+}
 
 input[type=radio]:checked {
   display: block;
@@ -11752,6 +11869,9 @@ ul.list {
   box-sizing: border-box;
   max-height: 200px;
   overflow-y: auto;
+}
+.error ul.list {
+  border-color: #E75656;
 }
 
 .form__input--select label {
@@ -12203,8 +12323,20 @@ button.swiper-pagination-bullet {
 .module--circles {
   padding: 81px 0 120px;
 }
+@media (max-height: 720px) {
+  .module--circles {
+    padding-top: 50px;
+  }
+}
 .module--steps {
   padding: 32px 0 72px;
+}
+.module--bubles {
+  position: absolute;
+  inset: 5px 35px 5px 35px;
+}
+.module--bubles svg {
+  overflow: visible;
 }
 .module--padding {
   padding: 72px 0;
@@ -12231,6 +12363,19 @@ button.swiper-pagination-bullet {
 .hero-head, .hero-intro {
   height: 100vh;
   z-index: 2;
+}
+.hero .js-area {
+  width: calc(100vw - 500px);
+  height: 500px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 6;
+}
+@media (max-width: 1400px) {
+  .hero .js-area {
+    width: calc(100vw - 400px);
+  }
 }
 .hero__wrap {
   background: #F1F1F1;
@@ -12313,20 +12458,21 @@ button.swiper-pagination-bullet {
   cursor: pointer;
   z-index: 2;
 }
+.hero__scroll span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  animation: scroll 2s infinite cubic-bezier(0.42, 0, 0.58, 1);
+}
 .hero__scroll svg {
   pointer-events: none;
 }
 .hero__scroll svg path {
   transition: transform 0.4s ease-out;
-}
-.mod_no-touchevents .hero__scroll:hover svg path {
-  transform: translateY(5px);
-}
-
-.video__circle {
-  position: absolute;
-  top: 161px;
-  left: 1225px;
 }
 
 .how {

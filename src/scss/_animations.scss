@@ -2,3 +2,10 @@
     from { transform: rotate(0deg); }
     to { transform: rotate(359deg); }
 }
+
+@keyframes scroll {
+    0%   {opacity: 0;}
+    10%   {opacity: 1;}
+    30%   {clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);}
+    100%  {clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);}
+}
