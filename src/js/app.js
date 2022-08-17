@@ -45,6 +45,14 @@ export class Page {
             this.moveCircle(circle);
         });
 
+        this.animateCircle()
+
+    }
+
+    animateCircle() {
+        const circle = document.querySelector('.js-svg-circle circle');
+        gsap.set(circle, {strokeDasharray: 1260});
+        gsap.from(circle, {strokeDashoffset: '1260px'}, {strokeDashoffset: '0px', duration: 4});
     }
 
     getBrowser() {

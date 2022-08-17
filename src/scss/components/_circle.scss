@@ -30,6 +30,9 @@
     & > span {
         position: absolute;
         inset: 0 0 0 0;
+        -webkit-filter: blur(20px);
+        -moz-filter: blur(20px);
+        -ms-filter: blur(20px);
         filter: blur(20px);
         border-radius: 50%;
         z-index: -1;

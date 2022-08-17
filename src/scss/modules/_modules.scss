@@ -26,6 +26,7 @@
     &--bubles {
         position: absolute;
         inset: 5px 35px 5px 35px;
+        pointer-events: none;
 
         svg {
             overflow: visible;

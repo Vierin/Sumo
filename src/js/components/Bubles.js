@@ -1,7 +1,4 @@
 import { gsap } from "gsap";
-import ScrollTrigger from "gsap/src/ScrollTrigger.js";
-
-gsap.registerPlugin(ScrollTrigger);
 
 export class Bubles {
     constructor() {
@@ -15,20 +12,19 @@ export class Bubles {
 
     init() {
         this.bubles = this.view.querySelectorAll('.buble');
-
-
+        this.randomArr = [];
         this.bubles.forEach(bb => {
-            const random = gsap.utils.random(-300, 300);
-            ScrollTrigger.create({
-                trigger: this.view,
-                markers: false,
-                onUpdate: self => {
-                    gsap.set(bb, {y: self.progress * random, transformOrigin: "50% 50%"})
-                }
-            })
+            this.randomArr.push(Math.random() - .5);
         });
 
-
+        this.view.parentElement.addEventListener('mousemove', e => {
+            this.bubles.forEach((bb, i) => {
+                this.randomArr
+                console.log(Math.random());
+                const x = e.clientX * this.randomArr[i] * .5;
+                const y = e.clientY * this.randomArr[i] * .5;
+                gsap.to(bb, {x, y})
+            });
+        })
     }
-
 }
