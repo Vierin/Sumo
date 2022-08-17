@@ -96,7 +96,7 @@ export class Page {
                 x: 0,
                 y: 0,
                 scale: 1,
-                filter: `blur(${startBlur}px)`
+                // filter: `blur(${startBlur}px)`
             })
         })
 
@@ -110,7 +110,7 @@ export class Page {
                 x: x * .3,
                 y: y * .3,
                 scale: .8,
-                filter: `blur(${startBlur * .5}px)`
+                // filter: `blur(${startBlur * .5}px)`
             })
         })
     }

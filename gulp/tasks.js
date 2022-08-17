@@ -171,14 +171,11 @@ export const scss = () => {
 			)
 		)
 		.pipe(
-			app.plugins.if(
-				app.isBuild,
-				autoprefixer({
-					grid: true,
-					overrideBrowserslist: ["last 3 versions"],
-					cascade: true
-				})
-			)
+			autoprefixer({
+				grid: true,
+				overrideBrowserslist: ["last 3 versions"],
+				cascade: false
+			})
 		)
 		.pipe(
 			app.plugins.if(
