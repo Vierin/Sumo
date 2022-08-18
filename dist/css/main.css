@@ -201,6 +201,15 @@ input:focus {
   outline: 0;
 }
 
+.js-rect {
+  width: 300px;
+  height: 300px;
+}
+.js-rect img {
+  width: 100%;
+  height: 100%;
+}
+
 @-webkit-keyframes spin {
   from {
     -webkit-transform: rotate(0deg);
@@ -2658,7 +2667,7 @@ textarea.form-control-lg {
   -moz-appearance: none;
   appearance: none;
   -webkit-print-color-adjust: exact;
-  color-adjust: exact;
+  print-color-adjust: exact;
   -webkit-transition: background-color 0.15s ease-in-out, background-position 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   transition: background-color 0.15s ease-in-out, background-position 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
   -o-transition: background-color 0.15s ease-in-out, background-position 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -12358,6 +12367,9 @@ fieldset:disabled .btn {
   z-index: -1;
   pointer-events: none;
 }
+.safari .circle > span {
+  display: none;
+}
 .circle--l .circle > span {
   -webkit-filter: blur(100px);
   filter: blur(100px);
@@ -12378,10 +12390,6 @@ fieldset:disabled .btn {
 .circle--swiper span {
   -webkit-filter: blur(40px);
   filter: blur(40px);
-}
-.safari .circle--swiper span {
-  -webkit-filter: blur(40px) !important;
-  filter: blur(40px) !important;
 }
 .circle--keys {
   position: relative;
@@ -12418,6 +12426,21 @@ fieldset:disabled .btn {
 }
 .circle--blue > span {
   background: #3AADCC;
+}
+.circle__svg {
+  display: none;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+.circle__svg svg {
+  width: 100%;
+  height: 100%;
+}
+.safari .circle__svg {
+  display: block;
 }
 .circle p {
   margin: 0;
@@ -12814,15 +12837,22 @@ fieldset:disabled .btn {
 .video__circle > span {
   -webkit-filter: blur(10px);
   filter: blur(10px);
-  -webkit-transition: -webkit-filter 0.4s ease-out;
-  transition: -webkit-filter 0.4s ease-out;
-  -o-transition: filter 0.4s ease-out;
-  transition: filter 0.4s ease-out;
-  transition: filter 0.4s ease-out, -webkit-filter 0.4s ease-out;
+  -webkit-transition: -webkit-filter 0.4s ease-out, -webkit-transform 0.4s ease-out;
+  transition: -webkit-filter 0.4s ease-out, -webkit-transform 0.4s ease-out;
+  -o-transition: filter 0.4s ease-out, transform 0.4s ease-out;
+  transition: filter 0.4s ease-out, transform 0.4s ease-out;
+  transition: filter 0.4s ease-out, transform 0.4s ease-out, -webkit-filter 0.4s ease-out, -webkit-transform 0.4s ease-out;
 }
 .mod_no-touchevents .video__circle:hover > span {
   -webkit-filter: blur(15px);
   filter: blur(15px);
+}
+.safari .mod_no-touchevents .video__circle:hover > span {
+  -webkit-filter: none !important;
+  filter: none !important;
+  -webkit-transform: scale(1.15);
+  -ms-transform: scale(1.15);
+  transform: scale(1.15);
 }
 .mod_no-touchevents .video__circle:hover svg path {
   stroke-width: 2px;
@@ -13206,9 +13236,9 @@ fieldset:disabled .btn {
   position: absolute;
   top: 0;
   z-index: 2;
-  -webkit-transform-origin: 50% 50%;
-  -ms-transform-origin: 50% 50%;
-  transform-origin: 50% 50%;
+  -webkit-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1);
 }
 .circles__svg .circles__arrow svg {
   width: 400px;

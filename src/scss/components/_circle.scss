@@ -38,6 +38,10 @@
         z-index: -1;
         pointer-events: none;
 
+        .safari & {
+            display: none;
+        }
+
         .circle--l & {
             filter: blur(100px);
 
@@ -56,10 +60,6 @@
 
         span {
             filter: blur(40px);
-
-            .safari & {
-                filter: blur(40px) !important;
-            }
         }
     }
 
@@ -100,10 +100,27 @@
 
     &--violet-2 > span {
         background: $color-violet-2;
+
     }
 
     &--blue > span {
         background: $color-blue;
+    }
+
+    &__svg {
+        display: none;
+        width: 100%;
+        height: 100%;
+        transform: scale(1.2);
+
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .safari & {
+            display: block;
+        }
     }
 
     p {

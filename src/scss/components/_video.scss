@@ -26,12 +26,19 @@
 
         & > span {
             filter: blur(10px);
-            transition: filter .4s $easing;
+            transition: filter .4s $easing, transform .4s $easing;
         }
 
         @include hover {
             & > span {
                 filter: blur(15px);
+            }
+
+            .safari & {
+                & > span {
+                    filter: none !important;
+                    transform: scale(1.15);
+                }
             }
 
             svg path {

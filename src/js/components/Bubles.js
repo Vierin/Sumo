@@ -19,8 +19,6 @@ export class Bubles {
 
         this.view.parentElement.addEventListener('mousemove', e => {
             this.bubles.forEach((bb, i) => {
-                this.randomArr
-                console.log(Math.random());
                 const x = e.clientX * this.randomArr[i] * .5;
                 const y = e.clientY * this.randomArr[i] * .5;
                 gsap.to(bb, {x, y})

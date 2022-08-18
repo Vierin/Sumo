@@ -20,8 +20,7 @@
             position: absolute;
             top: 0;
             z-index: 2;
-            transform-origin: 50% 50%;
-            // animation: spin 2s infinite linear;
+            transform: scale(-1, 1);
 
             svg {
                 width: 400px;

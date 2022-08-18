@@ -6,16 +6,6 @@
 	<body>
 		@@include('html/header.html',{})
 		<main>
-
-			<!-- <section class="panel red">
-				ONE
-			  </section>
-			  <section class="panel orange">
-				TWO
-			  </section>
-			  <section class="panel purple">
-				THREE
-			  </section> -->
 			<section class="section section--hero">
 				<div class="hero" data-component="Hero">
 					<div class="js-area"></div>
@@ -53,8 +43,10 @@
 
 						<div class="circle circle--blue circle--l hero__circle js-circle" data-blur="20">
 							<span></span>
+							<div class="circle__svg">
+								<img src="circle-blue.svg">
+							</div>
 						</div>
-
 					</div>
 
 
@@ -86,6 +78,9 @@
 					<div class="hero__bg video">
 						<div class="circle circle--violet video__circle js-circle-area">
 							<span></span>
+							<div class="circle__svg">
+								<img src="circle-violet.svg">
+							</div>
 							<div class="circle__wrap">
 								<p>about <br> sumo labs</p>
 								<p>
@@ -136,7 +131,7 @@
 										<circle cx='200' cy='200' r='199' stroke='white' stroke-width='1' fill="none"/>
 									</svg>
 								</div>
-								<div class="circles__arrow circles__arrow--2">
+								<div class="circles__arrow circles__arrow--2 js-path">
 									<img src="arr-cirlce.svg" class="svg-arr-circle">
 								</div>
 							</div>

@@ -41,7 +41,6 @@ export class Hero {
                         if(self.trigger.classList.contains('js-dark')) {
                             document.querySelector('.js-header').classList.add('is-section-dark');
                             this.view.classList.add('is-active');
-                            gsap.to(this.circle, {top: this.startTop + "px", left: this.startLeft + "px"})
                         } else {
                             document.querySelector('.js-header').classList.remove('is-section-dark');
                             this.view.classList.remove('is-active');
@@ -66,15 +65,7 @@ export class Hero {
         const area = this.view.querySelector('.js-area');
         this.circle = this.view.querySelector('.js-circle-area');
 
-        // console.log(circle);
         const half = this.circle.clientWidth * .5;
-        this.startTop = this.circle.offsetTop;
-        this.startLeft = this.circle.offsetLeft;
-
-        // area.addEventListener('mouseout', (e) => {
-        //     // gsap.to(circle, {top: startTop + "px", left: startLeft + "px"})
-
-        // })
 
         area.addEventListener('mousemove', (e) => {
             let x = e.clientX - half;
