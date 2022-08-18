@@ -4,6 +4,10 @@
     align-items: flex-end;
     padding-bottom: 103px;
 
+    @media(max-height: 790px) {
+        padding-bottom: 8vh;
+    }
+
     &__title {
         font-weight: 700;
         font-size: 64px;
@@ -11,6 +15,10 @@
         max-width: $grid-m;
         margin-left: auto;
         margin-bottom: 40px;
+
+        @media(max-height: 790px) {
+            margin-bottom: 30px;
+        }
     }
 
     &__wrap {

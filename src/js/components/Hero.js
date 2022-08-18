@@ -41,6 +41,9 @@ export class Hero {
                         if(self.trigger.classList.contains('js-dark')) {
                             document.querySelector('.js-header').classList.add('is-section-dark');
                             this.view.classList.add('is-active');
+                            if(window.innerHeight < 800) {
+                                gsap.to(this.circle, {top: this.startTop + "px", left: this.startLeft + "px"})
+                            }
                         } else {
                             document.querySelector('.js-header').classList.remove('is-section-dark');
                             this.view.classList.remove('is-active');
@@ -64,6 +67,9 @@ export class Hero {
     moveCircle() {
         const area = this.view.querySelector('.js-area');
         this.circle = this.view.querySelector('.js-circle-area');
+
+        this.startTop = this.circle.offsetTop;
+        this.startLeft = this.circle.offsetLeft;
 
         const half = this.circle.clientWidth * .5;
 

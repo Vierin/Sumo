@@ -59,11 +59,13 @@ export class Page {
 
         circlesWrap.forEach(wrap => {
             const circle = wrap.querySelector('circle');
+            const arr = wrap.querySelector('.arr');
             const l = circle.getTotalLength();
 
             gsap.set(circle, {strokeDasharray: l});
             gsap.timeline({repeat: -1})
-                .fromTo(circle, {strokeDashoffset: l, rotate: 0}, {strokeDashoffset: 0, rotate: 360, duration: 5, transformOrigin: "50% 50%", ease: "power2.inOut"});
+                .fromTo([arr, circlesWrap], {rotate: 0}, {rotate: 360, duration: 5, ease: "power2.inOut"}, 0)
+                .fromTo(circle, {strokeDashoffset: l}, {strokeDashoffset: 0, duration: 5, transformOrigin: "50% 50%", ease: "power2.inOut"}, 0);
         });
 
     }

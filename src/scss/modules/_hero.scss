@@ -19,6 +19,10 @@
         @media(max-width: 1400px) {
             width: calc(100vw - 400px);
         }
+
+        @media(max-height: 790px) {
+            height: 50vh;
+        }
     }
 
     &__wrap {
@@ -115,6 +119,10 @@
         left: calc(50% - 20px);
         cursor: pointer;
         z-index: 2;
+
+        @media(max-height: 790px) {
+            bottom: 25px;
+        }
 
         span {
             position: absolute;

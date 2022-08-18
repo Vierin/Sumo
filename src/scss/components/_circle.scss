@@ -53,9 +53,9 @@
 
     &--swiper {
         position: absolute;
-        top: 50%;
+        top: calc(50% - 215px);
         left: -25%;
-        transform: translateY(-50%);
+        // transform: translateY(-50%);
         z-index: 0;
 
         span {
@@ -78,6 +78,10 @@
         left: -30%;
         top: 45%;
 
+        @media(max-width: 1450px) {
+            left: -15%;
+        }
+
         span {
             filter: blur(50px);
         }
@@ -91,6 +95,10 @@
         span {
             filter: blur(40px);
         }
+    }
+
+    &--animate {
+        animation: pulse 3s infinite linear;
     }
 
 
