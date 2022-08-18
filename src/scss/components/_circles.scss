@@ -11,6 +11,14 @@
         width: 550px;
     }
 
+    .circle__svg {
+        display: none;
+
+        .safari {
+            display: block;
+        }
+    }
+
     &__svg {
         position: absolute;
         inset: 0 0 0 0;
@@ -84,10 +92,19 @@
             height: calc(100% + 40px);
             margin: -20px;
             z-index: 0;
+            animation: pulse 3s infinite linear;
+
+            .safari & {
+                display: none;
+            }
 
             &::before {
                 filter: blur(50px);
             }
+        }
+
+        &.circles__item--2 .circle {
+            animation-delay: 1.5s;
         }
 
         p {

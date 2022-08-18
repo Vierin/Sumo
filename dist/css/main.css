@@ -263,6 +263,34 @@ input:focus {
     clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
   }
 }
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.85);
+    transform: scale(0.85);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.85);
+    transform: scale(0.85);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
 /*!
 * Bootstrap v5.0.0-alpha3 (https://getbootstrap.com/)
 * Copyright 2011-2020 The Bootstrap Authors
@@ -13227,6 +13255,12 @@ fieldset:disabled .btn {
     width: 550px;
   }
 }
+.circles .circle__svg {
+  display: none;
+}
+.circles .circle__svg .safari {
+  display: block;
+}
 .circles__svg {
   position: absolute;
   inset: 0 0 0 0;
@@ -13297,10 +13331,19 @@ fieldset:disabled .btn {
   height: calc(100% + 40px);
   margin: -20px;
   z-index: 0;
+  -webkit-animation: pulse 3s infinite linear;
+  animation: pulse 3s infinite linear;
+}
+.safari .circles__item .circle {
+  display: none;
 }
 .circles__item .circle::before {
   -webkit-filter: blur(50px);
   filter: blur(50px);
+}
+.circles__item.circles__item--2 .circle {
+  -webkit-animation-delay: 1.5s;
+  animation-delay: 1.5s;
 }
 .circles__item p {
   position: absolute;

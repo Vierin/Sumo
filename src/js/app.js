@@ -6,6 +6,7 @@ import { Hero } from './components/Hero.js';
 import { Lines } from './components/Lines.js';
 import { Bubles } from './components/Bubles.js';
 import { getBrowser } from './components/Browsers.js';
+import { Sticky } from './components/Sticky.js';
 
 import { gsap } from "gsap";
 // import ScrollTrigger from "gsap/src/ScrollTrigger.js";
@@ -41,6 +42,7 @@ export class Page {
         new Lines();
         new Lines();
         new Bubles();
+        new Sticky();
 
 
         this.isSafari = document.documentElement.classList.contains('safari');
@@ -53,7 +55,9 @@ export class Page {
     }
 
     animateCircleArr() {
-        const circle = document.querySelector('.js-svg-circle circle');
+        const circleWrap = document.querySelector('.js-svg-circle');
+        // const bg =
+        const circle = circleWrap.querySelector('circle');
         const l = circle.getTotalLength();
 
         gsap.set(circle, {strokeDasharray: l});

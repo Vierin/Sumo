@@ -24,7 +24,7 @@ export class Lines {
 
             const tl = gsap.timeline({repeat: -1, delay: i * .8});
             tl
-            // .fromTo(line, {opacity: 1},{opacity: 0, duration: .4})
+            .fromTo(line, {opacity: 0},{opacity: 1, duration: .4})
             .from(line, {
                 duration: 4,
                 ease: "linear",
@@ -32,7 +32,7 @@ export class Lines {
                     path: path,
                     align: path,
                     autoRotate: true,
-                    // alignOrigin: [0.05, 0.1],
+                    alignOrigin: i == 2 ? [0.5, 1.2] : null,
                     start: .5,
                     end: 0
                 }

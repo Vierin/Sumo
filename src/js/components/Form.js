@@ -102,13 +102,15 @@ export class Form {
         form.addEventListener('submit',(e) => {
             e.preventDefault();
 
-
             //clear errors
             form.querySelectorAll('input').forEach(i => {
                 i.parentElement.classList.remove('error', 'succes');
             })
 
-            validatePhoneNumber(phone);
+            if(phone) {
+                validatePhoneNumber(phone);
+            }
+
             isChecked(check);
             checkLength(name,3,15);
             checkLength(company,2,20);
