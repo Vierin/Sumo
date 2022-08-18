@@ -13291,6 +13291,9 @@ fieldset:disabled .btn {
 }
 .circles__svg .circles__arrow--2 {
   right: 0;
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 .circles__logo {
   z-index: 4;

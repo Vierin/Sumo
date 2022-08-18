@@ -55,14 +55,17 @@ export class Page {
     }
 
     animateCircleArr() {
-        const circleWrap = document.querySelector('.js-svg-circle');
-        // const bg =
-        const circle = circleWrap.querySelector('circle');
-        const l = circle.getTotalLength();
+        const circlesWrap = document.querySelectorAll('.js-svg-circle');
 
-        gsap.set(circle, {strokeDasharray: l});
-        gsap.timeline({repeat: -1})
-            .fromTo(circle, {strokeDashoffset: l, rotate: 0}, {strokeDashoffset: 0, rotate: 360, duration: 5, transformOrigin: "50% 50%", ease: "power2.inOut"});
+        circlesWrap.forEach(wrap => {
+            const circle = wrap.querySelector('circle');
+            const l = circle.getTotalLength();
+
+            gsap.set(circle, {strokeDasharray: l});
+            gsap.timeline({repeat: -1})
+                .fromTo(circle, {strokeDashoffset: l, rotate: 0}, {strokeDashoffset: 0, rotate: 360, duration: 5, transformOrigin: "50% 50%", ease: "power2.inOut"});
+        });
+
     }
 
     moveCircle(circle) {
