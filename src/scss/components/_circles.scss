@@ -30,6 +30,7 @@
             z-index: 2;
             transform: scale(-1, 1);
 
+
             .arr {
                 position: absolute;
                 height: 100%;
@@ -42,9 +43,9 @@
                     height: 6px;
                     width: 1px;
                     background: $color-white;
-                    top: 48%;
+                    top: 49.5%;
                     right: 0;
-                    transform-origin: bottom;
+                    transform-origin: top;
                     transform: rotate(45deg);
                 }
 
@@ -54,7 +55,7 @@
             }
 
             .js-svg-circle {
-
+                transform: scale(-1, 1);
             }
 
             svg {
@@ -73,11 +74,12 @@
 
             &--1 {
                 left: 0;
+                transform: scale(-1, 1) rotate(110deg);
             }
 
             &--2 {
                 right: 0;
-                transform: rotate(180deg);
+                transform: scale(-1, 1) rotate(-65deg);
             }
         }
     }
@@ -124,9 +126,9 @@
             margin: -20px;
             z-index: 0;
 
-            .safari & {
-                display: none;
-            }
+            // .safari & {
+            //     display: none;
+            // }
 
             &::before {
                 filter: blur(50px);

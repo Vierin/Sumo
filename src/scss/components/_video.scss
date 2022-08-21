@@ -7,6 +7,17 @@
         left: 64vw;
         top: 17vh;
 
+        .safari & {
+            transform: scale(1.3);
+
+            .circle__svg {
+                width: 160px;
+            }
+            g {
+                filter: none;
+            }
+        }
+
         @media(max-width: 1450px) {
             left: 70vw;
             top: 15vh;

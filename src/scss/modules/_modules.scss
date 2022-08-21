@@ -25,8 +25,12 @@
 
     &--bubles {
         position: absolute;
-        inset: 5px 35px 5px 35px;
+        inset: 13% 35px 13% 35px;
         pointer-events: none;
+
+        // @media(max-height: 750px) {
+        //     inset: 13% 35px 13% 35px;
+        // }
 
         svg {
             overflow: visible;

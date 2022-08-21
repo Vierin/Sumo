@@ -18,8 +18,8 @@ export class Sticky {
             ScrollTrigger.create({
                 trigger: el,
                 markers: false,
-                start: "top center",
-                end: "90% center",
+                start: "top 16px",
+                end: "87% 20px",
                 pin: true
             })
         });

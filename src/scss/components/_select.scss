@@ -129,8 +129,12 @@ input[type=radio]:checked {
 input[type=radio]:after {
 	content: attr(title);
 	display: inline;
-	font-size: 1rem;
+	font-size: 12px;
 	transition: color .3s $easing;
+
+	.is-active & {
+		font-size: 16px;
+	}
 }
 
 ul.list {
@@ -160,6 +164,7 @@ ul.list {
 		cursor: pointer;
 		justify-content: space-between;
 		transition: color .3s $easing;
+		font-weight: 500;
 
 		@include hover {
 			color: $color-violet;

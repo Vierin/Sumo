@@ -64,8 +64,10 @@ export class Page {
 
             gsap.set(circle, {strokeDasharray: l});
             gsap.timeline({repeat: -1})
-                .fromTo([arr, circlesWrap], {rotate: 0}, {rotate: 360, duration: 5, ease: "power2.inOut"}, 0)
-                .fromTo(circle, {strokeDashoffset: l}, {strokeDashoffset: 0, duration: 5, transformOrigin: "50% 50%", ease: "power2.inOut"}, 0);
+                .fromTo(circlesWrap, {opacity: 0}, {opacity: 1, duration: .3}, 0)
+                .fromTo([circlesWrap], {rotate: 0}, {rotate: 360, duration: 5, ease: "power2.inOut"}, "-=.2")
+                .fromTo(circle, {strokeDashoffset: 0}, {strokeDashoffset: l, duration: 5, transformOrigin: "50% 50%", ease: "power2.inOut"}, "-=5.2")
+                .to(circlesWrap, {opacity: 0, duration: .3}, "-=1");
         });
 
     }

@@ -53,7 +53,7 @@
             background: url('../media/svg/check-green.svg') no-repeat;
             background-size: contain;
             transform: translateX(30px);
-            transition: transform .4s $easing;
+            transition: opacity .4s $easing;
         }
 
         &.success:after {
@@ -187,12 +187,10 @@
 
             &::after {
                 background: url("../media/check.png") no-repeat;
-                width: 20px;
-                height: 20px;
                 background-size: cover;
                 z-index: 0;
-                transform: translateY(-105%);
-
+                opacity: 0;
+                transition: opacity .3s $easing;
             }
         }
 
@@ -209,11 +207,7 @@
 
         input[type=checkbox]:checked+label {
             &::after {
-                transform: translateY(0);
-            }
-
-            &::before {
-                transform: translateY(120%);
+                opacity: 1;
             }
         }
     }

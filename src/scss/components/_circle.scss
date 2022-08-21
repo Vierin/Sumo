@@ -38,16 +38,18 @@
         z-index: -1;
         pointer-events: none;
 
-        .safari & {
-            display: none;
-        }
-
         .circle--l & {
             filter: blur(100px);
 
             .safari & {
                 filter: blur(100px) !important;
             }
+        }
+    }
+
+    &.js-circle > span {
+        .safari & {
+            display: none;
         }
     }
 

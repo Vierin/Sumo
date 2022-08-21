@@ -1,0 +1,38 @@
+1) What is sumo?
+hero - 2
+section with line with animation - 4
+slider small - 1.5
+form + validation + thanks message = 2
+bubles - .5
+slider rightside = 4
+=== 14
+
+2) Industries
+header + bubles - 1
+form - .5
+slider + animation = 4
+=== 5.5
+
+3) insurance
+hero - 1.5
+laptop with line + text - 2
+bg section - 1.5
+Patient data - 2 
+animation ???
+=== 7
+
+4) news == 3
+5) articles 
+main - 4
+slider + bubles - 1
+=== 5
+
+6) 404 === 2
+7) contacts 
+form 2
+main + bubles 2
+=== 4
+
+8) text page === 1.5
+
+9) about
