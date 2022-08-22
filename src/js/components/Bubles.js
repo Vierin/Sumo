@@ -12,18 +12,6 @@ export class Bubles {
 
     init() {
         this.bubles = this.view.querySelectorAll('.buble');
-        // this.randomArr = [];
-        // this.bubles.forEach(bb => {
-        //     this.randomArr.push(Math.random() - .5);
-        // });
-
-        // this.view.parentElement.addEventListener('mousemove', e => {
-        //     this.bubles.forEach((bb, i) => {
-        //         const x = e.clientX * this.randomArr[i] * .5;
-        //         const y = e.clientY * this.randomArr[i] * .5;
-        //         gsap.to(bb, {x, y})
-        //     });
-        // })
 
         this.bubles.forEach(bb => {
 

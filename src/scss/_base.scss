@@ -9,6 +9,7 @@ body {
     overflow-x: hidden;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    background: $color-gray-light;
 
     &::-webkit-scrollbar {
         display: none;
@@ -30,6 +31,10 @@ p {
     font-size: 14px;
     line-height: 150%;
     letter-spacing: 0.02em;
+
+    & + & {
+        margin-top: 16px;
+    }
 }
 
 img {
@@ -54,8 +59,18 @@ select {
     outline: none;
     border: none;
     background: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
+.datepicker__time {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
 
 ul {
     padding: 0;

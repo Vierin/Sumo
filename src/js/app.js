@@ -1,12 +1,12 @@
 import { Animations } from "./components/Animations.js";
 import { SwiperSlider } from "./components/SwiperSlider.js";
-import { SwiperMulti } from "./components/SwiperMulti.js";
 import { Form } from './components/Form.js';
 import { Hero } from './components/Hero.js';
 import { Lines } from './components/Lines.js';
 import { Bubles } from './components/Bubles.js';
 import { getBrowser } from './components/Browsers.js';
 import { Sticky } from './components/Sticky.js';
+import { WhatItems } from './components/WhatItems.js';
 
 import { gsap } from "gsap";
 // import ScrollTrigger from "gsap/src/ScrollTrigger.js";
@@ -33,25 +33,52 @@ export class Page {
 
         //components
         new SwiperSlider();
-        new SwiperMulti();
-        this.changeLogo();
-        this.backToTop();
-        this.scrollDown();
         new Form();
         new Hero();
         new Lines();
-        new Lines();
         new Bubles();
         new Sticky();
+        new WhatItems();
 
+        //group in one folder
+        this.toggleMore();
+        this.changeLogo();
+        this.backToTop();
+        this.scrollDown();
+        this.animateCircleArr();
 
         this.isSafari = document.documentElement.classList.contains('safari');
         const circles = document.querySelectorAll('.js-circle');
         circles.forEach(circle => {
             this.moveCircle(circle);
         });
+    }
 
-        this.animateCircleArr();
+    toggleMore() {
+        const moreItems = document.querySelectorAll('[data-more]');
+
+
+        moreItems.forEach(more => {
+            const text = more.querySelector('.more__text');
+            const btn = more.querySelector('.more__btn');
+            const startHeight = text.clientHeight;
+
+            btn.addEventListener('click', () => {
+                if(!more.classList.contains('is-open')) {
+                    more.classList.add('is-open');
+                    gsap.timeline()
+                        .to(btn, {marginTop: startHeight + 48, duration: .6})
+                        .to(text.children, {opacity: 1, stagger: 0.1, duration: .3}, "-=.3")
+                } else {
+                    more.classList.remove('is-open');
+                    gsap.timeline()
+                        .to(text.children, {opacity: 0, duration: .2})
+                        .to(btn, {marginTop: 32, duration: .4} )
+                }
+
+
+            })
+        });
     }
 
     animateCircleArr() {
@@ -73,7 +100,15 @@ export class Page {
     }
 
     moveCircle(circle) {
-        this.isSafari
+        // set position
+        if(circle.hasAttribute("data-position")) {
+            console.log(1);
+            const positions = circle.dataset.position.split(", ");
+            circle.style.top = positions[0] + "%";
+            circle.style.left = positions[1] + "%";
+        }
+        // set position
+
         const el = this.isSafari ? circle.querySelector('.circle__svg') : circle.querySelector('span');
         let startX,
             startY,
@@ -108,7 +143,8 @@ export class Page {
     }
 
     scrollDown() {
-        document.querySelector('.js-arr-down').addEventListener('click', () => {
+        const arr = document.querySelector('.js-arr-down');
+        !arr ? null : arr.addEventListener('click', () => {
             if(!document.documentElement.classList.contains('is-scrolled')) {
                 window.scrollBy({
                     top: 100,

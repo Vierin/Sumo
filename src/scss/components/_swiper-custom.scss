@@ -19,11 +19,28 @@
         z-index: 5;
     }
 
+    &--cards {
+        width: $grid-s;
+        margin: 64px 0 200px;
+        position: relative;
+    }
+
     &--multi {
         margin-top: 71px;
         width: 377px;
         margin-right: auto;
         position: relative;
+    }
+
+    &--what {
+        width: 477px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+
+        .swiper-wrapper {
+            order: 2;
+        }
     }
 
     &-btns {
@@ -36,13 +53,123 @@
         display: flex;
         justify-content: space-between;
 
+        .swiper--what & {
+            width: 477px;
+            top: auto;
+            left: 100px;
+            transform: none;
+            bottom: 24px;
+            border-top: 1px solid rgba($color-dark, .3);
+            text-transform: uppercase;
+        }
 
+        .swiper--cards & {
+            width: 810px;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    &__close {
+        border-radius: 50%;
+        height: 48px;
+        width: 48px;
+        background: $color-black;
+        position: absolute;
+        left: 677px;
+        top: 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: rotate(45deg);
+        cursor: pointer;
+
+        .cross {
+            transition: .3s $easing;
+
+            &::after,
+            &::before {
+                width: 15px;
+                background-color: $color-white;
+            }
+        }
+
+        @include hover {
+            .cross {
+                transform: rotate(90deg);
+            }
+        }
+    }
+
+    &__pagination {
+        order: 1;
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 24px;
+        margin-bottom: 35px;
+        position: relative;
+
+        .js-progress {
+            height: 1px;
+            background: rgba($color-black, 0.15);
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+        }
+
+        .js-progress-line {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            height: 2px;
+            background: $color-violet;
+        }
+
+        div.js-pag {
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 150%;
+            color: $color-dark;
+            padding: 15px 0;
+            opacity: .3;
+            cursor: pointer;
+            transition: opacity .4s $easing;
+
+            &.is-active {
+                opacity: 1;
+            }
+        }
     }
 
     &-button-next,
     &-button-prev {
         cursor: pointer;
         transition: opacity .4s ease-in-out;
+
+        svg {
+            pointer-events: none;
+        }
+
+        .swiper--what & {
+            display: flex;
+            align-items: center;
+            margin-top: 12px;
+
+            path {
+                stroke: $color-dark;
+            }
+        }
+
+        .swiper--cards & {
+            svg {
+                circle {
+                    fill: $color-violet;
+                }
+
+                path {
+                    fill: $color-white;
+                }
+            }
+        }
 
         .swiper--multi & {
             position: absolute;

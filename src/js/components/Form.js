@@ -41,8 +41,8 @@ export class Form {
         const phone = document.getElementById('number');
         const company = document.getElementById('company');
         const check = document.getElementById('privacy');
-
-
+        const date = document.querySelector('#datepicker input');
+        const time = document.querySelector('.input--time input');
 
         function showError(input) {
             const formControl = input.parentElement;
@@ -99,12 +99,20 @@ export class Form {
             }
         }
 
+        function checkDateTime(input) {
+            if(input.value != '' && input.value != "00:00") {
+                showSucces(input);
+            } else {
+                showError(input);
+            }
+        }
+
         form.addEventListener('submit',(e) => {
             e.preventDefault();
 
             //clear errors
             form.querySelectorAll('input').forEach(i => {
-                i.parentElement.classList.remove('error', 'succes');
+                i.parentElement.classList.remove('error', 'success');
             })
 
             if(phone) {
@@ -116,8 +124,13 @@ export class Form {
             checkLength(company,2,20);
             checkEmail(email);
             checkList();
+
+            checkDateTime(date);
+            checkDateTime(time);
         });
     }
+
+
 
     insertTime() {
         const box = document.querySelector('.datepicker-days');
@@ -153,6 +166,8 @@ export class Form {
         timeInput.addEventListener('input', () => {
             timeInputInside.value = timeInput.value;
 
+            timeInputInside.parentElement.classList.remove('error');
+            timeInputInside.parentElement.classList.add('is-active');
         })
     }
 

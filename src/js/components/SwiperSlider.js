@@ -2,29 +2,44 @@ import { gsap } from "gsap";
 import { Swiper } from "swiper";
 // import { breakpoint } from './Breakpoint.js';
 
+export let swiper;
 export class SwiperSlider {
     constructor() {
-        this.view = document.querySelector('[data-component="SwiperSlider"]');
+        this.views = document.querySelectorAll('[data-component="SwiperSlider"]');
 
-        if(this.view) {
-            this.init();
+        if(this.views) {
+            this.views.forEach(view => {
+                this.init(view);
+            });
         }
     }
 
 
     init(view) {
-        this.btnPrev = this.view.parentElement.querySelector('.swiper-button-prev');
-        this.btnNext = this.view.parentElement.querySelector('.swiper-button-next');
-        this.slides = this.view.querySelectorAll('.swiper-slide');
+        const options = {};
+        if(view.dataset.options) {
+            const arr = view.dataset.options.split(', ');
 
-        const swiper = new Swiper(this.view, {
+            arr.forEach(el => {
+                const items = el.split(':');
+                options[items[0]] = items[1].trim();
+            });
+        }
+
+
+
+        this.btnPrev = view.parentElement.querySelector('.swiper-button-prev');
+        this.btnNext = view.parentElement.querySelector('.swiper-button-next');
+        this.slides = view.querySelectorAll('.swiper-slide');
+
+        swiper = new Swiper(view, {
             speed: 400,
             allowTouchMove: false,
-            spaceBetween: this.view.dataset.space ? this.view.dataset.space : 0,
-            initialSlide: this.view.dataset.slide ? this.view.dataset.slide : 0,
+            spaceBetween: options.spaceBetween ? +options.spaceBetween : 0,
+            initialSlide: options.initialSlide ? +options.initialSlide : 0,
             on: {
                 init: () => {
-                    this.btnPrev.classList.add('swiper-button-disabled')
+                    this.btnPrev.classList.add('swiper-button-disabled');
                 },
                 slideChange: (e) => {
                     if (e.activeIndex === 0) {
@@ -43,6 +58,5 @@ export class SwiperSlider {
         this.btnNext.addEventListener('click', () => swiper.slideNext())
         this.btnPrev.addEventListener('click', () => swiper.slidePrev())
     }
-
 
 }

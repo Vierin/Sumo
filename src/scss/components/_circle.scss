@@ -7,6 +7,10 @@
     align-items: center;
     position: relative;
 
+    &[data-position] {
+        position: absolute;
+    }
+
     &--l {
         width: 242px;
         height: 242px;
@@ -37,6 +41,10 @@
         border-radius: 50%;
         z-index: -1;
         pointer-events: none;
+
+        .module--form & {
+            filter: blur(50px);
+        }
 
         .circle--l & {
             filter: blur(100px);

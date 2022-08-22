@@ -1,0 +1,98 @@
+.analyses {
+
+    &__wrap {
+        position: relative;
+        padding-bottom: 330px;
+    }
+
+    &__wrapper {
+        position: fixed;
+        inset: 0 0 0 0;
+        background: rgba($color-black, .8);
+        z-index: 8;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity .3s $easing;
+
+        .is-right-open & {
+            opacity: 1;
+            pointer-events: all;
+        }
+    }
+
+    &__lines {
+        position: absolute;
+        top: -50%;
+        right: 0;
+        left: 0;
+        pointer-events: none;
+        z-index: 0;
+
+        @media (min-width: 2000px) {
+            top: -75%;
+        }
+
+        svg {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &__items {
+        margin-top: 100px;
+        z-index: 1;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        margin-right: 20px;
+
+        & > * {
+            pointer-events: none;
+        }
+
+        p {
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 130%;
+            color: $color-white;
+            margin-right: 11px;
+            max-width: 100px;
+        }
+
+        .cross {
+            height: 48px;
+            width: 48px;
+            background: $color-white;
+            border-radius: 50%;
+        }
+
+        @include hover {
+            .cross {
+                transform: rotate(90deg);
+            }
+        }
+    }
+
+    &__slider {
+        position: absolute;
+        transform: translateX(100%);
+        width: 50vw;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        background: $color-white;
+        padding: 33px 0 24px 100px;
+        transition: transform .6s $easing;
+
+        .is-right-open & {
+            transform: translate(0);
+        }
+    }
+}

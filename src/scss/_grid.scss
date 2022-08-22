@@ -8,6 +8,8 @@ $grid-s: 278px;
     max-width: $grid;
     position: relative;
 
+
+    // sizes
     &-xl {
         max-width: 1170px;
     }
@@ -26,6 +28,7 @@ $grid-s: 278px;
         width: 100%;
         max-width: $grid-s;
     }
+    // sizes
 
     &--col {
         flex-direction: column;

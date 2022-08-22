@@ -1,0 +1,56 @@
+.more {
+    position: relative;
+    display: flex;
+
+
+    &__btn {
+        width: 100%;
+        margin-top: 32px;
+        text-transform: uppercase;
+        font-size: 16px;
+        line-height: 150%;
+        letter-spacing: 0.02em;
+        font-weight: 600;
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 16px;
+        border-top: 1px solid rgba($color-dark, .3);
+        cursor: pointer;
+        z-index: 2;
+
+        .more:not(.is-open) & {
+            @include hover {
+                .cross {
+                    transform: rotate(90deg);
+                }
+            }
+        }
+
+
+    }
+
+    &__text {
+        position: absolute;
+        top: 16px;
+        width: 100%;
+        left: 0;
+
+        p {
+            opacity: 0;
+            pointer-events: none;
+        }
+    }
+
+    .cross {
+        .is-open & {
+            transition: none;
+        }
+
+        &::after {
+            .more.is-open & {
+                transform: scale(0);
+            }
+        }
+    }
+}

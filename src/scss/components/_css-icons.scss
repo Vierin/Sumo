@@ -1,0 +1,26 @@
+.cross {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    display: block;
+    transition: transform .4s $easing;
+    transition-delay: .2s;
+
+
+    &::after,
+    &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 1px;
+        width: 14px;
+        background: $color-black;
+        transition: transform .4s $easing;
+    }
+
+    &::after {
+        transform: translate(-50%, -50%) rotate(90deg);
+    }
+}

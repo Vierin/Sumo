@@ -1,0 +1,14 @@
+.what-item {
+
+    &__title {
+        font-weight: 700;
+        font-size: 64px;
+        line-height: 120%;
+        color: $color-violet;
+        margin-bottom: 16px;
+    }
+
+    &__img {
+        margin-top: 32px;
+    }
+}
