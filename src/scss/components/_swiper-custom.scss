@@ -1,6 +1,5 @@
 .swiper {
 
-
     &__border {
         z-index: 4;
         pointer-events: none;
@@ -20,7 +19,7 @@
     }
 
     &--cards {
-        width: $grid-s;
+        width: calc((#{$grid-s} + 20) * 2);
         margin: 64px 0 200px;
         position: relative;
     }
@@ -64,8 +63,8 @@
         }
 
         .swiper--cards & {
-            width: 810px;
-            transform: translate(-50%, -50%);
+            width: 790px;
+            transform: translate(-66%, -50%);
         }
     }
 

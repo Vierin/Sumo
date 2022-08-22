@@ -3,11 +3,12 @@
     background: $color-white;
     border-radius: 32px;
     padding: 24px;
-
+    width: $grid-s;
     height: 318px !important;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-right: 20px;
 
     &__num {
         position: absolute;

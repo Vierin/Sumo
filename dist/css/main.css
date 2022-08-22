@@ -13580,6 +13580,7 @@ ul.list {
   background: #fff;
   border-radius: 32px;
   padding: 24px;
+  width: 278px;
   height: 318px !important;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -13591,6 +13592,7 @@ ul.list {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  margin-right: 20px;
 }
 .card__num {
   position: absolute;
@@ -14047,7 +14049,7 @@ button.swiper-pagination-bullet {
   z-index: 5;
 }
 .swiper--cards {
-  width: 278px;
+  width: calc((278px + 20) * 2);
   margin: 64px 0 200px;
   position: relative;
 }
@@ -14101,10 +14103,10 @@ button.swiper-pagination-bullet {
   text-transform: uppercase;
 }
 .swiper--cards .swiper-btns {
-  width: 810px;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  width: 790px;
+  -webkit-transform: translate(-66%, -50%);
+  -ms-transform: translate(-66%, -50%);
+  transform: translate(-66%, -50%);
 }
 .swiper__close {
   border-radius: 50%;
@@ -14811,6 +14813,9 @@ button.swiper-pagination-bullet {
   width: 48px;
   background: #fff;
   border-radius: 50%;
+  -webkit-transition-delay: 0s;
+  -o-transition-delay: 0s;
+  transition-delay: 0s;
 }
 .mod_no-touchevents .analyses__item:hover .cross {
   -webkit-transform: rotate(90deg);

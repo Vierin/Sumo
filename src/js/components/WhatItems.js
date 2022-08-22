@@ -18,8 +18,8 @@ export class WhatItems {
         this.progressbar = this.view.querySelector('.js-progress');
         this.progress = this.progressbar.querySelector('.js-progress-line');
 
-        this.progressWidth = this.progressbar.clientWidth / this.view.querySelectorAll('.swiper-slide').length;
-        gsap.set(this.progress, {width: this.progressWidth});
+        // this.progressWidth = this.progressbar.clientWidth / this.view.querySelectorAll('.swiper-slide').length;
+        // gsap.set(this.progress, {width: this.progressWidth});
 
         this.initSlider();
 
@@ -47,6 +47,13 @@ export class WhatItems {
         this.btnPrev.classList.remove('swiper-button-disabled');
         this.btnNext.classList.remove('swiper-button-disabled');
 
+        const elWidth = [];
+        this.pagBtn.forEach(btn => {
+            elWidth.push(btn.clientWidth)
+        });
+
+        const offset = (this.progressbar.clientWidth - elWidth[0] - elWidth[1] - elWidth[2]) / 2;
+
         if (id === 0) {
             this.btnPrev.classList.add('swiper-button-disabled')
         } else if(id >= this.slides.length - 1) {
@@ -61,7 +68,22 @@ export class WhatItems {
         });
         this.pagBtn[id].classList.add('is-active');
 
-        gsap.to(this.progress, {x: this.progressWidth * id});
+        this.scroll;
+
+        switch (id) {
+            case 0:
+                this.scroll = 0;
+                break;
+            case 1:
+                this.scroll = elWidth[0] + offset;
+                break;
+            case 2:
+                this.scroll = elWidth[0] + elWidth[1] + offset + offset;
+                break;
+        }
+
+
+        gsap.to(this.progress, {x: this.scroll, width: elWidth[id]});
     }
 
     initSlider() {

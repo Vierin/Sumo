@@ -27,7 +27,6 @@ export class SwiperSlider {
         }
 
 
-
         this.btnPrev = view.parentElement.querySelector('.swiper-button-prev');
         this.btnNext = view.parentElement.querySelector('.swiper-button-next');
         this.slides = view.querySelectorAll('.swiper-slide');
@@ -35,6 +34,7 @@ export class SwiperSlider {
         swiper = new Swiper(view, {
             speed: 400,
             allowTouchMove: false,
+            slidesPerView: 2,
             spaceBetween: options.spaceBetween ? +options.spaceBetween : 0,
             initialSlide: options.initialSlide ? +options.initialSlide : 0,
             on: {
@@ -42,15 +42,33 @@ export class SwiperSlider {
                     this.btnPrev.classList.add('swiper-button-disabled');
                 },
                 slideChange: (e) => {
-                    if (e.activeIndex === 0) {
-                        this.btnPrev.classList.add('swiper-button-disabled')
-                    } else if(e.activeIndex >= this.slides.length - 1) {
-                        this.btnNext.classList.add('swiper-button-disabled')
-                    } else {
-                        this.btnPrev.classList.remove('swiper-button-disabled')
-                        this.btnNext.classList.remove('swiper-button-disabled')
-                    }
+                    if(!options.isCustom) {
+                        if (e.activeIndex === 0) {
+                            this.btnPrev.classList.add('swiper-button-disabled')
 
+
+                        } else if(e.activeIndex >= this.slides.length - 1) {
+                            this.btnNext.classList.add('swiper-button-disabled')
+                        } else {
+                            this.btnPrev.classList.remove('swiper-button-disabled')
+                            this.btnNext.classList.remove('swiper-button-disabled')
+                        }
+                    } else {
+                        if(e.activeIndex != 0) {
+                            gsap.to(view, { x: -205, duration: .2 });
+                            gsap.to([this.btnPrev, this.btnNext], { x: 125, duration: .2 });
+
+                            this.btnPrev.classList.remove('swiper-button-disabled')
+                            this.btnNext.classList.remove('swiper-button-disabled')
+
+                            if(e.activeIndex === 2) {
+                                this.btnNext.classList.add('swiper-button-disabled')
+                            }
+                        } else {
+                            gsap.to(view, { x: 0 });
+                            this.btnPrev.classList.add('swiper-button-disabled')
+                        }
+                    }
                 },
               },
         });

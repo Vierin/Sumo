@@ -1,5 +1,6 @@
 import { Animations } from "./components/Animations.js";
 import { SwiperSlider } from "./components/SwiperSlider.js";
+import { SliderCustom } from "./components/SliderCustom.js";
 import { Form } from './components/Form.js';
 import { Hero } from './components/Hero.js';
 import { Lines } from './components/Lines.js';
@@ -33,6 +34,7 @@ export class Page {
 
         //components
         new SwiperSlider();
+        new SliderCustom();
         new Form();
         new Hero();
         new Lines();
