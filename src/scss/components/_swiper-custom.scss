@@ -32,9 +32,29 @@
     }
 
     &--keys {
-        overflow: hidden;
-        padding-top: 32px;
+        position: relative;
+        width: $grid;
+        margin: 52px auto 150px;
+
+        padding-top: 100px;
         border-top: 1px solid rgba($color-dark, .1);
+
+        .swiper-wrapper {
+            order: 2;
+        }
+    }
+
+    &-imgs {
+        position: absolute;
+        top: 5%;
+        left: -10%;
+        width: 50%;
+    }
+
+    &__box {
+        width: $grid-m;
+        overflow: hidden;
+        margin-left: auto;
     }
 
     &--what {
@@ -46,6 +66,10 @@
         .swiper-wrapper {
             order: 2;
         }
+    }
+
+    &--padding-l {
+        padding-top: 170px;
     }
 
     &-btns {
@@ -109,9 +133,17 @@
         order: 1;
         display: flex;
         justify-content: space-between;
-        padding-bottom: 24px;
+        padding-bottom: 9px;
         margin-bottom: 35px;
         position: relative;
+
+
+        .swiper--keys & {
+            width: $grid-m;
+            position: absolute;
+            top: 17px;
+            right: 0;
+        }
 
         .js-progress {
             height: 1px;
@@ -130,17 +162,30 @@
         }
 
         div.js-pag {
-            font-weight: 600;
-            font-size: 14px;
-            line-height: 150%;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 130%;
+            color: $color-dark;
             color: $color-dark;
             padding: 15px 0;
-            opacity: .3;
+            width: 100%;
+            margin-right: 20px;
+            opacity: .6;
             cursor: pointer;
             transition: opacity .4s $easing;
 
+            span {
+                display: block;
+                margin-top: 25px;
+            }
+
+            &:nth-of-type(3) {
+                margin-right: 0;
+            }
+
             &.is-active {
                 opacity: 1;
+                font-weight: 600;
             }
         }
     }
@@ -208,6 +253,16 @@
             z-index: 2;
             left: -149px;
         }
+    }
+
+    &__caption {
+        position: absolute;
+        top: 32px;
+        left: 0;
+        font-size: 14px;
+        line-height: 150%;
+        color: rgba($color-dark, .6);
+        z-index: 2;
     }
 
 }

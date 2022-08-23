@@ -6,7 +6,7 @@
 
     <main>
         <section class="section">
-            <div class="module module--start module--full">
+            <div class="module module--start">
                 <div class="grid grid--end">
                     <div class="heading grid-m">
                         <p class="heading__span">What is SUMO?</p>
@@ -30,7 +30,7 @@
                 </div>
 
 
-                <div class="circle circle--violet circle--what circle--l js-circle" data-blur="60" data-position="23, 78">
+                <div class="circle circle--violet circle--what circle--l js-circle" data-blur="60" data-position="30, 80">
 					<span></span>
 					<div class="circle__svg">
 						<img src="circle-violet.svg">
@@ -46,7 +46,15 @@
                 </div>
             </div>
 
-            <div class="module module--analyses analyses">
+            <div class="module module--slider-keys">
+
+                <div class="circle circle--violet circle--what circle--l js-circle" data-blur="60" data-position="53, 5">
+					<span></span>
+					<div class="circle__svg">
+						<img src="circle-violet.svg">
+					</div>
+				</div>
+
                 <div class="grid grid--end">
                     <div class="grid-m">
                         <div class="heading">
@@ -55,102 +63,49 @@
                     </div>
                 </div>
 
-                <div class="analyses__wrap" data-component="WhatItems">
-                    <div class="grid grid--end">
-                        <div class="analyses__items grid-m">
-                            <div class="analyses__item">
-                                <p>What SUMO analyses</p>
-                                <i class="cross"></i>
+
+                <div class="swiper swiper--keys">
+                    <p class="swiper__caption">Key factors <br> of about SUMO</p>
+                    <div class="swiper__box" data-component="SwiperSlider" data-options="navigationNone: true">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide key-slide">
+                                <div class="key-slide__wrap">
+                                    <div class="key-slide__text">
+                                        <p>SUMO tracks data on the patient that monitors patient activity, their healing process, visits with medical professionals, and internal health statistics such as bone density.</p><p>Integrations for other sources such as wearable technology can be easily uploaded into SUMO any data integrated can be analysed.</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="analyses__item">
-                                <p>What SUMO can help</p>
-                                <i class="cross"></i>
+                            <div class="swiper-slide key-slide">
+                                <div class="key-slide__wrap">
+                                    <div class="key-slide__text">
+                                        <p>data on the patient that monitors patient activity, their healing process, visits with medical professionals, and internal health statistics such as bone density.</p><p>Integrations for other sources such as wearable technology can be easily uploaded into SUMO any data integrated can be analysed.</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="analyses__item">
-                                <p>What tasks solve</p>
-                                <i class="cross"></i>
+                            <div class="swiper-slide key-slide">
+                                <div class="key-slide__wrap">
+                                    <div class="key-slide__text">
+                                        <p>tracks data on the patient that monitors patient activity, their healing process, visits with medical professionals, and internal health statistics such as bone density.</p><p>Integrations for other sources such as wearable technology can be easily uploaded into SUMO any data integrated can be analysed.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="swiper__pagination">
+                            <div class="js-pag is-active">What SUMO analyses</div>
+                            <div class="js-pag">What SUMO can help</div>
+                            <div class="js-pag">What tasks solve</div>
+                            <div class="js-progress">
+                                <span class="js-progress-line"></span>
                             </div>
                         </div>
                     </div>
-
-
-                    <div class="analyses__lines">
-                        <img src="lines-analyses.svg" class="svg-lines-analyses">
-                    </div>
-
-                    <div class="analyses__wrapper">
-                        <div class="analyses__slider">
-                            <div class="swiper swiper--what js-slider">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide what-item">
-                                        <h3 class="what-item__title">What SUMO analyses</h3>
-                                        <p>SUMO tracks data on the patient that monitors patient activity, their healing process, visits with medical professionals, and internal health statistics such as bone density. Integrations for other sources such as wearable technology can be easily uploaded into SUMO any data integrated can be analysed.</p>
-                                        <div class="what-item__img">
-                                            <picture>
-                                                <source srcset="@media/what-1.webp" type="image/webp">
-                                                <source srcset="@media/what-1.jpg">
-                                                <img src="@media/what-1.jpg" alt="img">
-                                            </picture>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide what-item">
-                                        <h3 class="what-item__title">What SUMO can help users cope with</h3>
-                                        <p>There can be tremendous pressure to correctly diagnose patients with any musculoskeletal disorders, especially with most conditions needing more than one or two tests to assess any symptoms. Data being analysed more rapidly in one place can influence proper diagnosis and improve the time of reaching a proper diagnosis.</p>
-                                        <div class="what-item__img">
-                                            <picture>
-                                                <source srcset="@media/what-2.webp" type="image/webp">
-                                                <source srcset="@media/what-2.jpg">
-                                                <img src="@media/what-2.jpg" alt="img">
-                                            </picture>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide what-item">
-                                        <h3 class="what-item__title">What tasks SUMO can help solve</h3>
-                                        <p>Administrative tasks within multiple industries in healthcare can be rather tedious and time-consuming causing delays for patients seeking an effective treatment plan or suitable medical professional. Part of those issues pertains to the data needed but is sometimes difficult to access. The clinical graph structure SUMO has that serves as a web layout for patient data can be a solution to those issues.</p>
-                                        <div class="what-item__img">
-                                            <picture>
-                                                <source srcset="@media/what-3.webp" type="image/webp">
-                                                <source srcset="@media/what-3.jpg">
-                                                <img src="@media/what-3.jpg" alt="img">
-                                            </picture>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="swiper__pagination">
-                                    <div class="js-pag">What SUMO analyses</div>
-                                    <div class="js-pag">What SUMO can help</div>
-                                    <div class="js-pag">What tasks solve</div>
-                                    <div class="js-progress">
-                                        <span class="js-progress-line"></span>
-                                    </div>
-                                </div>
-
-                                <div class="swiper__close">
-                                    <i class="cross"></i>
-                                </div>
-
-                                <div class="swiper-btns">
-                                    <div class="swiper-button-prev">
-                                        <img class="svg-arr-slider" src="arr-slider.svg">
-                                        <span>Previous</span>
-                                    </div>
-                                    <div class="swiper-button-next">
-                                        <span>next</span>
-                                        <img class="svg-arr-slider" src="arr-slider.svg">
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
                 </div>
 
 
-                <div class="module module--bubles" data-component="Bubles">
-                    <img src="bubles-2.svg" class="svg-bubles">
-                </div>
+
             </div>
 
             <div class="module module--slider-cards">

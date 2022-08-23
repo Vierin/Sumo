@@ -16,7 +16,7 @@
                 </div>
 
 
-                <div class="circle circle--blue circle--indu circle--l js-circle" data-blur="60" data-position="23, 10">
+                <div class="circle circle--blue circle--indu circle--l js-circle" data-blur="50" data-position="50, 5">
 					<span></span>
 					<div class="circle__svg">
 						<img src="circle-blue.svg">
@@ -26,12 +26,13 @@
 
             </div>
 
-            <div class="module module--slider-keys">
-                <p class="module__caption">Key factors of <br> about work SUMO</p>
-                <div class="grid">
-                    <div class="swiper swiper--keys" data-component="SwiperSlider" data-options="navigationNone: true">
+            <div class="module module--slider-keys module--mt">
+
+                <div class="swiper swiper--keys swiper--padding-l">
+                    <p class="swiper__caption">Key factors of <br> about work SUMO</p>
+                    <div class="swiper__box" data-component="SwiperSlider" data-options="navigationNone: true, imageOutside: true">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide key-slide">
+                            <div class="swiper-slide key-slide swiper-slide--img-out">
                                 <div class="key-slide__wrap">
                                     <p class="key-slide__title">
                                         Hospitals, Clinics, and Other Medical Facilities
@@ -41,11 +42,8 @@
                                     </div>
                                     <button class="key-slide__btn button button--with-dot button--black">
                                         <span class="button__text">Read more</span>
-					                    <img class="svg-arr-btn" src="arr-btn.svg">
+                                        <img class="svg-arr-btn" src="arr-btn.svg">
                                     </button>
-                                </div>
-                                <div class="key-slide__img">
-                                    <img src="@media/key.png" alt="key">
                                 </div>
                             </div>
                             <div class="swiper-slide key-slide">
@@ -74,12 +72,18 @@
                         </div>
 
                         <div class="swiper__pagination">
-                            <div class="js-pag"><img src="key-sl-1.svg">Medical Facilities</div>
-                            <div class="js-pag"><img src="key-sl-2.svg">Insurance Companies</div>
-                            <div class="js-pag"><img src="key-sl-3.svg">Manufacturers</div>
+                            <div class="js-pag is-active"><img src="key-sl-1.svg"><span>Medical Facilities</span></div>
+                            <div class="js-pag"><img src="key-sl-2.svg"><span>Insurance Companies</span></div>
+                            <div class="js-pag"><img src="key-sl-3.svg"><span>Manufacturers</span></div>
                             <div class="js-progress">
                                 <span class="js-progress-line"></span>
                             </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-imgs">
+                        <div class="swiper__img key-slide__img js-swiper-img">
+                            <img src="@media/key.png" alt="key">
                         </div>
                     </div>
                 </div>

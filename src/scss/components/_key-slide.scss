@@ -9,16 +9,33 @@
         margin-bottom: 16px;
     }
 
+    &__text {
+        display: flex;
+        justify-content: space-between;
+
+        p {
+            width: $grid-s;
+            margin: 0;
+        }
+
+        .key-slide__title + & {
+            flex-direction: column;
+            p {
+
+                width: 100%;
+
+                margin-bottom: 20px;
+
+                &:last-of-type {
+                    margin: 0;
+                }
+            }
+        }
+    }
+
     &__wrap {
         width: $grid-m;
         margin-left: auto;
-    }
-
-    &__img {
-        position: absolute;
-        top: -32px;
-        left: -121px;
-        z-index: -1;
     }
 
     &__btn {

@@ -18,6 +18,17 @@
         letter-spacing: 0.02em;
     }
 
+    &__cols {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 16px;
+
+        p {
+            width: $grid-s;
+            margin: 0;
+        }
+    }
+
 
     &__span {
         display: block;
@@ -26,6 +37,12 @@
         font-weight: 500;
         line-height: 130%;
         letter-spacing: 0.02em;
+
+        svg {
+            height: 25px;
+            width: 25px;
+            margin-right: 16px;
+        }
 
         & + .heading__title {
             margin-top: 32px;

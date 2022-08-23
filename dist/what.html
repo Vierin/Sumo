@@ -124,7 +124,7 @@
 
     <main>
         <section class="section">
-            <div class="module module--start module--full">
+            <div class="module module--start">
                 <div class="grid grid--end">
                     <div class="heading grid-m">
                         <p class="heading__span">What is SUMO?</p>
@@ -148,7 +148,7 @@
                 </div>
 
 
-                <div class="circle circle--violet circle--what circle--l js-circle" data-blur="60" data-position="23, 78">
+                <div class="circle circle--violet circle--what circle--l js-circle" data-blur="60" data-position="30, 80">
 					<span></span>
 					<div class="circle__svg">
 						<svg width="720" height="720" viewBox="0 0 720 720" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -175,7 +175,26 @@
                 </div>
             </div>
 
-            <div class="module module--analyses analyses">
+            <div class="module module--slider-keys">
+
+                <div class="circle circle--violet circle--what circle--l js-circle" data-blur="60" data-position="53, 5">
+					<span></span>
+					<div class="circle__svg">
+						<svg width="720" height="720" viewBox="0 0 720 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g style="mix-blend-mode:multiply" filter="url(#filter0_f_1117_422)">
+<circle cx="360" cy="360" r="220" fill="#5D009F"/>
+</g>
+<defs>
+<filter id="filter0_f_1117_422" x="0" y="0" width="720" height="720" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="70" result="effect1_foregroundBlur_1117_422"/>
+</filter>
+</defs>
+</svg>
+					</div>
+				</div>
+
                 <div class="grid grid--end">
                     <div class="grid-m">
                         <div class="heading">
@@ -184,186 +203,49 @@
                     </div>
                 </div>
 
-                <div class="analyses__wrap" data-component="WhatItems">
-                    <div class="grid grid--end">
-                        <div class="analyses__items grid-m">
-                            <div class="analyses__item">
-                                <p>What SUMO analyses</p>
-                                <i class="cross"></i>
+
+                <div class="swiper swiper--keys">
+                    <p class="swiper__caption">Key factors <br> of about SUMO</p>
+                    <div class="swiper__box" data-component="SwiperSlider" data-options="navigationNone: true">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide key-slide">
+                                <div class="key-slide__wrap">
+                                    <div class="key-slide__text">
+                                        <p>SUMO tracks data on the patient that monitors patient activity, their healing process, visits with medical professionals, and internal health statistics such as bone density.</p><p>Integrations for other sources such as wearable technology can be easily uploaded into SUMO any data integrated can be analysed.</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="analyses__item">
-                                <p>What SUMO can help</p>
-                                <i class="cross"></i>
+                            <div class="swiper-slide key-slide">
+                                <div class="key-slide__wrap">
+                                    <div class="key-slide__text">
+                                        <p>data on the patient that monitors patient activity, their healing process, visits with medical professionals, and internal health statistics such as bone density.</p><p>Integrations for other sources such as wearable technology can be easily uploaded into SUMO any data integrated can be analysed.</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="analyses__item">
-                                <p>What tasks solve</p>
-                                <i class="cross"></i>
+                            <div class="swiper-slide key-slide">
+                                <div class="key-slide__wrap">
+                                    <div class="key-slide__text">
+                                        <p>tracks data on the patient that monitors patient activity, their healing process, visits with medical professionals, and internal health statistics such as bone density.</p><p>Integrations for other sources such as wearable technology can be easily uploaded into SUMO any data integrated can be analysed.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="swiper__pagination">
+                            <div class="js-pag is-active">What SUMO analyses</div>
+                            <div class="js-pag">What SUMO can help</div>
+                            <div class="js-pag">What tasks solve</div>
+                            <div class="js-progress">
+                                <span class="js-progress-line"></span>
                             </div>
                         </div>
                     </div>
-
-
-                    <div class="analyses__lines">
-                        <svg width="1920" height="728" viewBox="0 0 1920 728" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg-lines-analyses">
-<path d="M505 364H1633C1834.03 364 1997 526.968 1997 728V728" stroke="#3AADCC" stroke-width="80" stroke-linecap="round"/>
-<path d="M535 364H1612C1813.03 364 1976 201.032 1976 0V0" stroke="#5D009F" stroke-opacity="0.54" stroke-width="80"/>
-<path d="M2048 43C2048 220.283 1871.23 364 1653.18 364H1008" stroke="#5D009F" stroke-width="80" stroke-linecap="round"/>
-<path d="M493 364H1203" stroke="#7C1CC0" stroke-width="80" stroke-linecap="round"/>
-<path d="M1005 364H213C11.9683 364 -151 526.968 -151 728V728" stroke="#A14EDC" stroke-width="80" stroke-linecap="round"/>
-</svg>
-                    </div>
-
-                    <div class="analyses__wrapper">
-                        <div class="analyses__slider">
-                            <div class="swiper swiper--what js-slider">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide what-item">
-                                        <h3 class="what-item__title">What SUMO analyses</h3>
-                                        <p>SUMO tracks data on the patient that monitors patient activity, their healing process, visits with medical professionals, and internal health statistics such as bone density. Integrations for other sources such as wearable technology can be easily uploaded into SUMO any data integrated can be analysed.</p>
-                                        <div class="what-item__img">
-                                            <picture>
-                                                <source srcset="./media/what-1.webp" type="image/webp">
-                                                <source srcset="./media/what-1.jpg">
-                                                <img src="./media/what-1.jpg" alt="img">
-                                            </picture>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide what-item">
-                                        <h3 class="what-item__title">What SUMO can help users cope with</h3>
-                                        <p>There can be tremendous pressure to correctly diagnose patients with any musculoskeletal disorders, especially with most conditions needing more than one or two tests to assess any symptoms. Data being analysed more rapidly in one place can influence proper diagnosis and improve the time of reaching a proper diagnosis.</p>
-                                        <div class="what-item__img">
-                                            <picture>
-                                                <source srcset="./media/what-2.webp" type="image/webp">
-                                                <source srcset="./media/what-2.jpg">
-                                                <img src="./media/what-2.jpg" alt="img">
-                                            </picture>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide what-item">
-                                        <h3 class="what-item__title">What tasks SUMO can help solve</h3>
-                                        <p>Administrative tasks within multiple industries in healthcare can be rather tedious and time-consuming causing delays for patients seeking an effective treatment plan or suitable medical professional. Part of those issues pertains to the data needed but is sometimes difficult to access. The clinical graph structure SUMO has that serves as a web layout for patient data can be a solution to those issues.</p>
-                                        <div class="what-item__img">
-                                            <picture>
-                                                <source srcset="./media/what-3.webp" type="image/webp">
-                                                <source srcset="./media/what-3.jpg">
-                                                <img src="./media/what-3.jpg" alt="img">
-                                            </picture>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="swiper__pagination">
-                                    <div class="js-pag">What SUMO analyses</div>
-                                    <div class="js-pag">What SUMO can help</div>
-                                    <div class="js-pag">What tasks solve</div>
-                                    <div class="js-progress">
-                                        <span class="js-progress-line"></span>
-                                    </div>
-                                </div>
-
-                                <div class="swiper__close">
-                                    <i class="cross"></i>
-                                </div>
-
-                                <div class="swiper-btns">
-                                    <div class="swiper-button-prev">
-                                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg-arr-slider">
-<circle cx="24" cy="24" r="24" fill="white"/>
-<path d="M24 16.375L31.625 24L24 31.625L23.2 30.825L29.45 24.575L16.375 24.575L16.375 23.425L29.45 23.425L23.2 17.175L24 16.375Z" fill="#0E0E0E"/>
-</svg>
-                                        <span>Previous</span>
-                                    </div>
-                                    <div class="swiper-button-next">
-                                        <span>next</span>
-                                        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg-arr-slider">
-<circle cx="24" cy="24" r="24" fill="white"/>
-<path d="M24 16.375L31.625 24L24 31.625L23.2 30.825L29.45 24.575L16.375 24.575L16.375 23.425L29.45 23.425L23.2 17.175L24 16.375Z" fill="#0E0E0E"/>
-</svg>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
                 </div>
 
 
-                <div class="module module--bubles" data-component="Bubles">
-                    <svg viewBox="0 0 1165 458" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg-bubles">
 
-<g class="buble">
-    <g filter="url(#filter0_f_13_2)">
-        <path d="M279 282C276.239 282 274 279.761 274 277C274 274.239 276.239 272 279 272C281.761 272 284 274.239 284 277C284 279.761 281.761 282 279 282Z" fill="#5D009F"/>
-    </g>
-</g>
-<g class="buble">
-    <g filter="url(#filter1_f_13_2)">
-        <path d="M948 340C943.029 340 939 335.971 939 331C939 326.029 943.029 322 948 322C952.971 322 957 326.029 957 331C957 335.971 952.971 340 948 340Z" fill="#5D009F"/>
-    </g>
-</g>
-<g class="buble">
-    <g filter="url(#filter2_f_13_2)">
-        <path d="M87 326C82.0294 326 78 321.971 78 317C78 312.029 82.0294 308 87 308C91.9706 308 96 312.029 96 317C96 321.971 91.9706 326 87 326Z" fill="#5D009F"/>
-    </g>
-</g>
-<g class="buble">
-    <g filter="url(#filter3_f_13_2)">
-        <path d="M1146 335C1141.03 335 1137 330.971 1137 326C1137 321.029 1141.03 317 1146 317C1150.97 317 1155 321.029 1155 326C1155 330.971 1150.97 335 1146 335Z" fill="#3AADCC"/>
-    </g>
-</g>
-<g class="buble">
-    <path opacity="0.6" d="M527 422C525.895 422 525 421.105 525 420C525 418.895 525.895 418 527 418C528.105 418 529 418.895 529 420C529 421.105 528.105 422 527 422Z" fill="#5D009F"/>
-</g>
-<g class="buble">
-    <path opacity="0.6" d="M613 360C610.239 360 608 357.761 608 355C608 352.239 610.239 350 613 350C615.761 350 618 352.239 618 355C618 357.761 615.761 360 613 360Z" fill="#5D009F"/>
-</g>
-<g class="buble">
-    <path opacity="0.6" d="M613 360C610.239 360 608 357.761 608 355C608 352.239 610.239 350 613 350C615.761 350 618 352.239 618 355C618 357.761 615.761 360 613 360Z" fill="#5D009F"/>
-</g>
-<g class="buble">
-    <path opacity="0.6" d="M901 117C898.239 117 896 114.761 896 112C896 109.239 898.239 107 901 107C903.761 107 906 109.239 906 112C906 114.761 903.761 117 901 117Z" fill="#3AADCC"/>
-</g>
-<g class="buble">
-    <path opacity="0.6" d="M370 418C367.239 418 365 415.761 365 413C365 410.239 367.239 408 370 408C372.761 408 375 410.239 375 413C375 415.761 372.761 418 370 418Z" fill="#3AADCC"/>
-</g>
-<g class="buble">
-    <path opacity="0.6" d="M96.7007 21.9978C102.058 23.4332 107.564 20.2542 108.999 14.8974C110.435 9.5405 107.256 4.03432 101.899 2.59896C96.5418 1.16359 91.0356 4.34259 89.6003 9.69944C88.1649 15.0563 91.3439 20.5625 96.7007 21.9978Z" fill="#5D009F"/>
-</g>
-<g class="buble">
-    <path opacity="0.6" d="M1088.7 454.997C1094.06 456.433 1099.56 453.254 1101 447.897C1102.43 442.54 1099.26 437.034 1093.9 435.599C1088.54 434.163 1083.04 437.342 1081.6 442.699C1080.17 448.056 1083.34 453.562 1088.7 454.997Z" fill="#5D009F"/>
-</g>
-<g class="buble">
-    <path opacity="0.6" d="M11.6363 134.182C7.45209 135.303 3.15129 132.82 2.03014 128.636C0.909 124.452 3.39207 120.151 7.57624 119.03C11.7604 117.909 16.0612 120.392 17.1824 124.576C18.3035 128.76 15.8204 133.061 11.6363 134.182Z" fill="#5D009F"/>
-</g>
-<g class="buble">
-    <path opacity="0.6" d="M1044.64 79.1822C1040.46 80.3034 1036.16 77.8203 1035.03 73.6361C1033.91 69.452 1036.4 65.1512 1040.58 64.03C1044.76 62.9089 1049.06 65.3919 1050.19 69.5761C1051.31 73.7603 1048.82 78.0611 1044.64 79.1822Z" fill="#3AADCC"/>
-</g>
-
-    <defs>
-        <filter id="filter0_f_13_2" x="264" y="262" width="30" height="30" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-        <feGaussianBlur stdDeviation="5" result="effect1_foregroundBlur_13_2"/>
-        </filter>
-        <filter id="filter1_f_13_2" x="929" y="312" width="38" height="38" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-        <feGaussianBlur stdDeviation="5" result="effect1_foregroundBlur_13_2"/>
-        </filter>
-        <filter id="filter2_f_13_2" x="68" y="298" width="38" height="38" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-        <feGaussianBlur stdDeviation="5" result="effect1_foregroundBlur_13_2"/>
-        </filter>
-        <filter id="filter3_f_13_2" x="1127" y="307" width="38" height="38" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-        <feGaussianBlur stdDeviation="5" result="effect1_foregroundBlur_13_2"/>
-        </filter>
-    </defs>
-</svg>
-                </div>
             </div>
 
             <div class="module module--slider-cards">

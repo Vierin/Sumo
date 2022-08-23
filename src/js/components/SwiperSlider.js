@@ -26,11 +26,11 @@ export class SwiperSlider {
             });
         }
 
-        this.btnPrev = view.parentElement.querySelector('.swiper-button-prev');
-        this.btnNext = view.parentElement.querySelector('.swiper-button-next');
-        this.slides = view.querySelectorAll('.swiper-slide');
 
-        console.log(this.btnNext, this.btnPrev);
+
+        const btnPrev = view.parentElement.querySelector('.swiper-button-prev');
+        const btnNext = view.parentElement.querySelector('.swiper-button-next');
+        const slides = view.querySelectorAll('.swiper-slide');
 
         const swiper = new Swiper(view, {
             speed: 400,
@@ -40,47 +40,111 @@ export class SwiperSlider {
             initialSlide: options.initialSlide ? +options.initialSlide : 0,
             on: {
                 init: () => {
-
-                    this.btnPrev.classList.add('swiper-button-disabled');
+                    if(!options.navigationNone) {
+                        btnPrev.classList.add('swiper-button-disabled');
+                    }
                 },
                 slideChange: (e) => {
-                    if(!options.isCustom) {
+                    if(!options.isCustom && !options.navigationNone) {
                         if (e.activeIndex === 0) {
-                            this.btnPrev.classList.add('swiper-button-disabled')
-                        } else if(e.activeIndex >= this.slides.length - 1) {
-                            this.btnNext.classList.add('swiper-button-disabled')
+                            btnPrev.classList.add('swiper-button-disabled')
+                        } else if(e.activeIndex >= slides.length - 1) {
+                            btnNext.classList.add('swiper-button-disabled')
                         } else {
-                            this.btnPrev.classList.remove('swiper-button-disabled')
-                            this.btnNext.classList.remove('swiper-button-disabled')
+                            btnPrev.classList.remove('swiper-button-disabled')
+                            btnNext.classList.remove('swiper-button-disabled')
                         }
-                    } else {
+                    } else if(!options.navigationNone) {
                         if(e.activeIndex != 0) {
                             gsap.to(view, { x: -205, duration: .2 });
-                            gsap.to([this.btnPrev, this.btnNext], { x: 125, duration: .2 });
+                            gsap.to([btnPrev, btnNext], { x: 125, duration: .2 });
 
-                            this.btnPrev.classList.remove('swiper-button-disabled')
-                            this.btnNext.classList.remove('swiper-button-disabled')
+                            btnPrev.classList.remove('swiper-button-disabled')
+                            btnNext.classList.remove('swiper-button-disabled')
 
                             if(e.activeIndex === 2) {
-                                this.btnNext.classList.add('swiper-button-disabled')
+                                btnNext.classList.add('swiper-button-disabled')
                             }
                         } else {
                             gsap.to(view, { x: 0 });
-                            this.btnPrev.classList.add('swiper-button-disabled')
+                            btnPrev.classList.add('swiper-button-disabled')
                         }
                     }
+
+                    if(options.imageOutside) {
+                        if(slides[e.activeIndex].classList.contains('swiper-slide--img-out') ) {
+                            gsap.fromTo(this.imgs[0], {opacity: 0, x: -20}, {opacity: 1, x: 0,  duration: .4});
+                        } else {
+                            this.imgs.forEach(img => {
+                                gsap.to(img, {opacity: 0, x: 20, duration: .4});
+                            });
+                        }
+                    }
+
+
                 },
               },
         });
 
-        // if(!options.navigationNone) {
-            this.btnNext.addEventListener('click', () =>
-            {swiper.slideNext()
+        if(!options.navigationNone) {
+            btnNext.addEventListener('click', () => {
+                swiper.slideNext();
             })
-            this.btnPrev.addEventListener('click', () => swiper.slidePrev())
-        // }
+            btnPrev.addEventListener('click', () => swiper.slidePrev())
+        } else {
+            this.showPagination(swiper, view);
+        }
+
+        if(options.imageOutside) {
+            this.imgs = view.parentElement.querySelectorAll('.js-swiper-img');
+        }
 
 
+    }
+
+    showPagination(swiper, view) {
+        this.pagBtns = view.querySelectorAll('.js-pag');
+        this.progressbar = view.querySelector('.js-progress');
+        this.progress = this.progressbar.querySelector('.js-progress-line');
+
+        gsap.set(this.progress, {width: this.pagBtns[0].clientWidth})
+        this.pagBtns.forEach((btn, id) => {
+
+            btn.addEventListener('click', () => {
+                swiper.slideTo(id, 400);
+                this.setActiveEls(id)
+            })
+
+
+        });
+    }
+
+    setActiveEls(id) {
+
+        this.pagBtns.forEach(el => {
+            el.classList.remove('is-active');
+        });
+        this.pagBtns[id].classList.add('is-active');
+
+        const progressWidth = this.pagBtns[0].clientWidth;
+        const offset = (this.progressbar.clientWidth - progressWidth * this.pagBtns.length) / 2;
+
+        this.scroll;
+
+        switch (id) {
+            case 0:
+                this.scroll = 0;
+                break;
+            case 1:
+                this.scroll = progressWidth + offset;
+                break;
+            case 2:
+                this.scroll = (progressWidth + offset) * 2 ;
+                break;
+        }
+
+
+        gsap.to(this.progress, {x: this.scroll, width: this.pagBtns[0].clientWidth});
     }
 
 }

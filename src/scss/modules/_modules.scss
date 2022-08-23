@@ -76,23 +76,26 @@
         padding-bottom: 48px;
     }
 
-    &--how {
+    &--bg-box {
         height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
     }
 
-    &__caption {
-        position: absolute;
-        top: 32px;
-        left: 0;
-        font-size: 14px;
-        line-height: 150%;
-        color: rgba($color-dark, .6);
+    &--lines {
+        margin-top: 150px;
     }
 
     &--slider-keys {
         margin-top: 72px;
+
+        .module--start + & {
+            margin-top: 150px;
+        }
+    }
+
+    &--mt {
+        margin-top: 72px !important;
     }
 }

@@ -14,10 +14,30 @@
                 display: none;
             }
 
-            svg {
+            .circle__svg {
                 position: absolute;
                 inset: 0 0 0 0;
+                z-index: -1;
             }
+
+            .circle_wrap {
+                z-index: 2;
+
+                p {
+                    position: relative;
+
+                    svg {
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                    }
+                }
+            }
+
+            // svg {
+            //     position: absolute;
+            //     inset: 0 0 0 0;
+            // }
 
             g {
                 mix-blend-mode: none;

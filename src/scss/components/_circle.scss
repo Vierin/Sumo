@@ -17,6 +17,11 @@
     }
 
     &--xl {
+        width: 260px;
+        height: 260px;
+    }
+
+    &--xxl {
         width: 430px;
         height: 430px;
     }
@@ -53,6 +58,12 @@
                 filter: blur(100px) !important;
             }
         }
+
+
+    }
+
+    &.circle--what > span  {
+        filter: blur(60px);
     }
 
     &.js-circle > span {
