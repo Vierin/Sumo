@@ -1,0 +1,27 @@
+.key-slide {
+    position: relative;
+
+    &__title {
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 130%;
+        color: $color-violet;
+        margin-bottom: 16px;
+    }
+
+    &__wrap {
+        width: $grid-m;
+        margin-left: auto;
+    }
+
+    &__img {
+        position: absolute;
+        top: -32px;
+        left: -121px;
+        z-index: -1;
+    }
+
+    &__btn {
+        margin-top: 48px;
+    }
+}

@@ -2,7 +2,6 @@ import { gsap } from "gsap";
 import { Swiper } from "swiper";
 // import { breakpoint } from './Breakpoint.js';
 
-export let swiper;
 export class SwiperSlider {
     constructor() {
         this.views = document.querySelectorAll('[data-component="SwiperSlider"]');
@@ -16,6 +15,7 @@ export class SwiperSlider {
 
 
     init(view) {
+
         const options = {};
         if(view.dataset.options) {
             const arr = view.dataset.options.split(', ');
@@ -26,27 +26,27 @@ export class SwiperSlider {
             });
         }
 
-
         this.btnPrev = view.parentElement.querySelector('.swiper-button-prev');
         this.btnNext = view.parentElement.querySelector('.swiper-button-next');
         this.slides = view.querySelectorAll('.swiper-slide');
 
-        swiper = new Swiper(view, {
+        console.log(this.btnNext, this.btnPrev);
+
+        const swiper = new Swiper(view, {
             speed: 400,
-            allowTouchMove: false,
-            slidesPerView: 2,
+            allowTouchMove: true,
+            slidesPerView: options.slidesPerView ? +options.slidesPerView : 1,
             spaceBetween: options.spaceBetween ? +options.spaceBetween : 0,
             initialSlide: options.initialSlide ? +options.initialSlide : 0,
             on: {
                 init: () => {
+
                     this.btnPrev.classList.add('swiper-button-disabled');
                 },
                 slideChange: (e) => {
                     if(!options.isCustom) {
                         if (e.activeIndex === 0) {
                             this.btnPrev.classList.add('swiper-button-disabled')
-
-
                         } else if(e.activeIndex >= this.slides.length - 1) {
                             this.btnNext.classList.add('swiper-button-disabled')
                         } else {
@@ -73,8 +73,14 @@ export class SwiperSlider {
               },
         });
 
-        this.btnNext.addEventListener('click', () => swiper.slideNext())
-        this.btnPrev.addEventListener('click', () => swiper.slidePrev())
+        // if(!options.navigationNone) {
+            this.btnNext.addEventListener('click', () =>
+            {swiper.slideNext()
+            })
+            this.btnPrev.addEventListener('click', () => swiper.slidePrev())
+        // }
+
+
     }
 
 }

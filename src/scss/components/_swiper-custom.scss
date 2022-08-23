@@ -31,6 +31,12 @@
         position: relative;
     }
 
+    &--keys {
+        overflow: hidden;
+        padding-top: 32px;
+        border-top: 1px solid rgba($color-dark, .1);
+    }
+
     &--what {
         width: 477px;
         overflow: hidden;

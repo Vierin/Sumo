@@ -82,4 +82,17 @@
         flex-direction: column;
         justify-content: space-between;
     }
+
+    &__caption {
+        position: absolute;
+        top: 32px;
+        left: 0;
+        font-size: 14px;
+        line-height: 150%;
+        color: rgba($color-dark, .6);
+    }
+
+    &--slider-keys {
+        margin-top: 72px;
+    }
 }

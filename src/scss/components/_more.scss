@@ -46,11 +46,9 @@
         .is-open & {
             transition: none;
         }
+    }
 
-        &::after {
-            .more.is-open & {
-                transform: scale(0);
-            }
-        }
+    &.is-open .cross::after {
+        transform: scale(0);
     }
 }
