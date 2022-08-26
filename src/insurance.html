@@ -5,7 +5,7 @@
     @@include('html/header.html',{})
 
     <main>
-        <section class="section">
+        <section class="section section--white">
             <div class="module module--start">
                 <div class="grid grid--end">
                     <div class="heading grid-m">
@@ -49,9 +49,9 @@
                 </div>
 
 
-				<div class="chip">
-					<div class="chip__lines chip__lines--violet" data-component="Lines">
-						<img class="svg-chip-lines" src="chip-lines.svg">
+				<div class="chip chip--violet">
+					<div class="chip__lines" data-component="Lines">
+						<img class="svg-chip-lines" src="chip-lines-violet.svg">
 					</div>
 				</div>
 
@@ -77,15 +77,68 @@
 				</div>
 			</div>
 
-            <div class="module module--bg-box module--padding">
+			<div class="module module--data">
+				<div class="circle circle--violet circle--xl js-circle" data-blur="60" data-position="-5, 10">
+					<span></span>
+					<div class="circle__svg">
+						<img src="circle-violet.svg">
+					</div>
+				</div>
+				<div class="grid grid--end grid--col">
+					<div class="grid-m">
+						<div class="data__items">
+							<div class="data__item">
+								<strong>sumo</strong>
+								<div>
+									<img src="lock.svg">
+									<p>Patient data</p>
+								</div>
+							</div>
+							<div class="data__bolt">
+								<div class="data__svg">
+									<p>
+										<img src="bolt-gradient.svg">
+									</p>
+									<img src="bg-1.svg" alt="">
+									<img src="bg-2.svg" alt="">
+								</div>
+								<span>Fast data <br> processing</span>
+							</div>
+							<div class="data__item">
+								<p>Insurance Companies</p>
+							</div>
+
+							<div class="data__line">
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+						</div>
+						<p class="data__p">Insurance companies are likely to have systems in place that are automated to help policyholders make sound decisions about the amount of healthcare coverage. They need systems with real patient data to prevent providing unsafe or incorrect recommendations. </p>
+					</div>
+
+					<div class="text text--with-label text--two-cols">
+						<span class="text__label">Speed is problem <br> solving</span>
+						<div class="text__wrap">
+							<p>Speed is often an issue in health insurance data analytics. Insurance companies need to exchange information with hospitals, clinics, or other health institutions. But the speed at which insurance data analytics are gathered, is outside of the timeframes hospitals and clinics need.</p>
+							<p>SUMO has the capability to improve healthcare insurance operations and solve these common but not sole issues in data for these companies.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+        </section>
+
+		<section class="section section--dark js-dark">
+			<div class="module module--bg-box module--padding">
 				<div class="grid grid--end">
 					<div class="heading grid-m">
 						<h2 class="heading__title">What SUMO <br> can do for you</h2>
                         <button class="heading__btn button button--violet button--with-dot">
                             <span class="button__text">SEND inquiry</span>
-                            <span class="button__circle">
-                                <img class="svg-arr-btn" src="arr-btn.svg">
-                            </span>
+                            <img class="svg-arr-btn" src="arr-btn.svg">
                         </button>
 					</div>
 				</div>
@@ -98,23 +151,23 @@
 
 						<div class="bg-box__item">
 							<div class="bg-box__icon">
-								<img src="how-1.svg" class="svg-how-1">
+								<img src="grow.svg">
 							</div>
-							<p>Patients cannot be provided with the most accurate diagnosis due to a lack of information</p>
+							<p>Have web clinical graphs to make analysing individual policyholders much easier</p>
 						</div>
 
 						<div class="bg-box__item">
 							<div class="bg-box__icon">
-								<img src="how-2.svg" class="svg-how-2">
+								<img src="monitor.svg">
 							</div>
-							<p>Patients and insurance companies could underestimate or overestimate the amount of coverage that is needed</p>
+							<p>A team of medical experts on SUMO staff can help setup your company’s initial approach in improving data analytics</p>
 						</div>
 
 						<div class="bg-box__item">
 							<div class="bg-box__icon">
-								<img src="how-3.svg" class="svg-how-3">
+								<img src="bolt.svg">
 							</div>
-							<p>Healthcare professionals struggling to track patients’ post-op care and healing processes</p>
+							<p>Cut down processing time for claims with the easy exchange of data with healthcare providers</p>
 						</div>
 					</div>
 				</div>
@@ -130,8 +183,7 @@
 					</picture>
 				</div>
 			</div>
-
-        </section>
+		</section>
 
     </main>
 

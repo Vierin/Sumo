@@ -19,7 +19,14 @@ body {
         overflow: hidden;
     }
 
+
 }
+
+
+html.is-menu-open {
+    overflow: hidden;
+}
+
 
 a {
     text-decoration: none;

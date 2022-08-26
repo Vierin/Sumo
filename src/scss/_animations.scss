@@ -15,3 +15,9 @@
     50%   {transform: scale(.65);}
     100%  {transform: scale(1);}
 }
+
+@keyframes moveX {
+    0%   {left: 0%;}
+    100%  {left: 100%;}
+}
+

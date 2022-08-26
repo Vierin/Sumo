@@ -25,6 +25,31 @@
         }
     }
 
+    &--with-label {
+        width: 100%;
+        border-top: 1px solid rgba($color-dark, .1);
+        padding-top: 48px;
+        margin: 32px 0 120px;
+    }
+
+    &__wrap {
+        width: $grid-m;
+        display: flex;
+
+        p {
+            margin-top: 0;
+        }
+    }
+
+
+    &__label {
+        display: inline-block;
+        font-size: 14px;
+        line-height: 150%;
+        color: rgba($color-dark, .6);
+        margin-right: auto;
+    }
+
     p {
         color: $color-dark;
     }

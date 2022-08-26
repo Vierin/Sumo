@@ -1,0 +1,121 @@
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    min-height: calc(176px + 15vh + 315px);
+    background: $color-violet;
+    border-radius: 0px 0px 30px 30px;
+    padding: 50px 120px;
+    transform: translateY(-105%);
+    transition: transform .6s $easing;
+
+    .is-menu-open & {
+        transform: translateY(0%);
+    }
+
+    &__curtain {
+        position: fixed;
+        background: $color-violet;
+        width: 88px;
+        height: 38px;
+        right: 121px;
+        z-index: -1;
+        top: 17px;
+        border-radius: 30px;
+        display: none;
+    }
+
+    &__wrap {
+       position: relative;
+    }
+
+    &__search {
+        margin-left: 3px;
+        transition: background .3s $easing;
+
+        svg path {
+            transition: fill .3s $easing;
+        }
+
+        &.is-search-open {
+            background: $color-white;
+            svg path {
+                fill: $color-violet;
+            }
+        }
+    }
+
+    &__top {
+        display: flex;
+    }
+
+    &__list {
+        margin: 40px 0 64px;
+
+        & > li {
+            display: flex;
+            align-items: flex-end;
+        }
+
+        &--submenu {
+            counter-reset: section;
+            display: flex;
+            margin-left: 27px;
+            padding-bottom: 10px;
+
+            li {
+                margin-right: 22px;
+            }
+        }
+    }
+
+    &__close {
+        margin-left: auto;
+
+        @include hover {
+            .cross {
+                transform: rotate(135deg);
+            }
+        }
+    }
+
+
+
+    &__link {
+        display: block;
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 110%;
+        color: $color-white;
+        margin-bottom: 4px;
+        counter-increment: section;
+
+        .menu__list--submenu & {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 100%;
+            position: relative;
+
+
+            &::before {
+                content: counter(section);
+                position: absolute;
+                top: 0;
+                left: 0;
+                font-size: 11px;
+                transform: translate(-110%, -25%);
+            }
+        }
+    }
+
+    .cross {
+        transform: rotate(45deg);
+
+        &::after,
+        &::before {
+            background: $color-white;
+        }
+    }
+
+}

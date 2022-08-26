@@ -24,10 +24,15 @@
 @import "./components/text";
 @import "./components/select";
 
+@import "./components/menu";
+@import "./components/search-panel";
+
 @import "./components/more";
 @import "./components/cards";
 @import "./components/what-item";
 @import "./components/key-slide";
+@import "./components/data";
+
 
 
 //swiper styles
@@ -44,6 +49,7 @@
 @import "./modules/keys";
 @import "./modules/news";
 @import "./modules/intro";
+@import "./modules/article";
 
 
 

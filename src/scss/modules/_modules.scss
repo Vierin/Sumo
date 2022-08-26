@@ -3,6 +3,10 @@
 
     &--start {
         padding-top: 50px;
+
+        @media(max-height: 750px) {
+            padding-bottom: 50px;
+        }
     }
 
     &--full {
@@ -19,11 +23,22 @@
             bottom: auto;
             right: auto;
             z-index: 0;
+            max-width: 45vw;
+
+            @media(max-width: 1500px) {
+
+            }
         }
     }
 
     &--form {
         margin-bottom: 120px;
+
+        .circle--blue {
+            @media (max-width: 1450px) {
+                left: -6% !important;
+            }
+        }
 
         .section--padding-l & {
             margin-bottom: 0;
@@ -66,6 +81,10 @@
 
     &--news {
         padding-top: 102px;
+
+        .module--start + & {
+            padding-top: 0;
+        }
     }
 
     &--works {
@@ -85,13 +104,22 @@
 
     &--lines {
         margin-top: 150px;
+
+        .mac {
+            z-index: 2;
+        }
     }
+
 
     &--slider-keys {
         margin-top: 72px;
 
         .module--start + & {
             margin-top: 150px;
+
+            .circle {
+                top: 25% !important;
+            }
         }
     }
 

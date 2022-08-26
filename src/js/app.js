@@ -1,6 +1,5 @@
 import { Animations } from "./components/Animations.js";
 import { SwiperSlider } from "./components/SwiperSlider.js";
-import { SliderCustom } from "./components/SliderCustom.js";
 import { Form } from './components/Form.js';
 import { Hero } from './components/Hero.js';
 import { Lines } from './components/Lines.js';
@@ -8,6 +7,7 @@ import { Bubles } from './components/Bubles.js';
 import { getBrowser } from './components/Browsers.js';
 import { Sticky } from './components/Sticky.js';
 import { WhatItems } from './components/WhatItems.js';
+import { Menu } from './components/Menu.js';
 
 import { gsap } from "gsap";
 // import ScrollTrigger from "gsap/src/ScrollTrigger.js";
@@ -34,13 +34,14 @@ export class Page {
 
         //components
         new SwiperSlider();
-        new SliderCustom();
+        // new SliderCustom();
         new Form();
         new Hero();
         new Lines();
         new Bubles();
         new Sticky();
         new WhatItems();
+        new Menu();
 
         //group in one folder
         this.toggleMore();

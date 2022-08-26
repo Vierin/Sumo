@@ -4,8 +4,83 @@
             <img class="svg-logo svg-white" src="logo-white.svg">
             <img class="svg-logo svg-black" src="logo-black.svg">
         </div>
-        <button class="button button--header">
+        <button class="button button--header js-menu-btn">
             <span class="button__text">menu</span>
         </button>
+    </div>
+
+    <div class="menu__curtain"></div>
+
+    <div class="menu js-menu">
+        <div class="menu__wrap">
+            <div class="menu__top">
+                <a href="/" class="button button--link">
+                    <span class="button__text">home</span>
+                </a>
+                <button class="button menu__search button--icon js-menu-search">
+                    <img src="search.svg">
+                </button>
+                <button class="button button--icon menu__close js-menu-close">
+                    <i class="cross"></i>
+                </button>
+            </div>
+
+            <div class="search-panel js-search">
+                <div class="search-panel__wrap">
+                    <p>Search SUMO</p>
+                    <form action="">
+                        <input class="js-search-inp" type="text" placeholder="Write what you are looking for...">
+                        <button type="submit" class="button button--search button--with-dot js-search-btn">
+                            <span class="button__text">find</span>
+                            <img class="svg-arr-btn" src="arr-btn.svg">
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <ul class="menu__list">
+                <li>
+                    <a href="/what.html" class="menu__link">What is SUMO</a>
+                </li>
+                <li>
+                    <a href="" class="menu__link">How it works</a>
+                    <ul class="menu__list--submenu">
+                        <li><a href="" class="menu__link">For bussines</a></li>
+                        <li><a href="" class="menu__link">For patient</a></li>
+                        <li><a href="" class="menu__link">For doctor</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/industries.html" class="menu__link">Industries</a>
+                    <ul class="menu__list--submenu">
+                        <li><a href="/insurance.html" class="menu__link">Insurance</a></li>
+                        <li><a href="" class="menu__link">Hospitals</a></li>
+                        <li><a href="" class="menu__link">Manufactures</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="" class="menu__link">About Us</a>
+                </li>
+                <li>
+                    <a href="/news.html" class="menu__link">Blog</a>
+                </li>
+                <li>
+                    <a href="" class="menu__link">Contact</a>
+                </li>
+            </ul>
+
+            <ul class="socials socials--menu">
+                <li class="socials__item">
+                    <a href="#"><img src="facebook.svg" class="svg-facebook"></a>
+                </li>
+                <li class="socials__item">
+                    <a href="#"><img src="insta.svg" class="svg-insta"></a>
+                </li>
+                <li class="socials__item">
+                    <a href="#"><img src="linkedin.svg" class="svg-linkedin"></a>
+                </li>
+            </ul>
+        </div>
+
     </div>
 </header>

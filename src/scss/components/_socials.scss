@@ -2,11 +2,42 @@
     display: flex;
     margin-top: 41px;
 
+    &--menu {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+
     &__item {
         margin-right: 16px;
 
+        .socials--menu & {
+            margin: 0;
+        }
+
         a {
             transition: transform .3s $easing;
+
+            .socials--menu & {
+                border: 1px solid rgba($color-white, .3);
+                border-radius: 50%;
+                height: 48px;
+                width: 48px;
+                margin-left: 8px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: background-color .3s $easing;
+                transform: none !important;
+
+                @include hover {
+                    background-color: $color-white;
+
+                    svg path {
+                        fill: $color-violet;
+                    }
+                }
+            }
 
             @include hover {
                 transform: scale(1.3);

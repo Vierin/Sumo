@@ -37,5 +37,9 @@
     &__text {
         color: rgba($color-white, .6);
         max-width: 179px;
+
+        .section--white & {
+            color: $color-dark;
+        }
     }
 }

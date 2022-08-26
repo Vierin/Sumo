@@ -1,0 +1,132 @@
+@@include('html/head.html',{
+    "title":"News"
+    })
+
+    @@include('html/header.html',{})
+
+    <main>
+        <section class="section">
+            <div class="module module--start">
+                <div class="grid grid--end">
+                    <div class="grid-m">
+                        <div class="heading">
+                            <h2 class="heading__title">News & Cases</h2>
+                            <p class="heading__subtitle">Our recent client Cases <br> and News</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="module module--news">
+
+                <div class="circle circle--blue circle--xl js-circle" data-blur="60" data-position="16, 3">
+					<span></span>
+					<div class="circle__svg">
+						<img src="circle-blue.svg">
+					</div>
+				</div>
+                <div class="circle circle--violet circle--xl js-circle" data-blur="60" data-position="80, 75">
+					<span></span>
+					<div class="circle__svg">
+						<img src="circle-violet.svg">
+					</div>
+				</div>
+
+                <div class="grid grid--end">
+                    <div class="news">
+                        <div class="news__cats">
+                            <p class="is-active">All</p>
+                            <p>cases</p>
+                            <p>news</p>
+                        </div>
+                        <div class="grid-m">
+
+                            <div class="news__item">
+                                <span class="news__type news__type--cases">Cases</span>
+                                <div class="news__img">
+                                    <picture>
+                                        <source srcset="@media/slide-21.webp" type="image/webp">
+                                        <source srcset="@media/slide-21.jpg">
+                                        <img src="@media/slide-21.jpg" alt="img">
+                                    </picture>
+                                </div>
+                                <p class="news__title">How we built Relay</p>
+                                <p class="news__date">08 March, 2022 </p>
+                                <button class="button button--with-dot news__btn">
+                                    <span class="button__text">read more</span>
+                                    <img class="svg-arr-btn" src="arr-btn.svg">
+                                </button>
+                            </div>
+                            <div class="news__item">
+                                <span class="news__type news__type--news">News</span>
+								<div class="news__img">
+									<picture>
+										<source srcset="@media/slide-23.webp" type="image/webp">
+										<source srcset="@media/slide-23.jpg">
+										<img src="@media/slide-23.jpg" alt="img">
+									</picture>
+								</div>
+								<p class="news__title">Announcing PCI DSS compliance</p>
+								<p class="news__date">08 March, 2022</p>
+								<button class="button button--with-dot news__btn">
+									<span class="button__text">read more</span>
+									<img class="svg-arr-btn" src="arr-btn.svg">
+								</button>
+                            </div>
+                            <div class="news__item">
+                                <span class="news__type news__type--news">News</span>
+								<div class="news__img">
+									<picture>
+										<source srcset="@media/slide-22.webp" type="image/webp">
+										<source srcset="@media/slide-22.jpg">
+										<img src="@media/slide-22.jpg" alt="img">
+									</picture>
+								</div>
+								<p class="news__title">Treecard: The wooden debit card that plants trees</p>
+								<p class="news__date">08 March, 2022</p>
+								<button class="button button--with-dot news__btn">
+									<span class="button__text">read more</span>
+									<img class="svg-arr-btn" src="arr-btn.svg">
+								</button>
+                            </div>
+                            <div class="news__item">
+                                <span class="news__type news__type--cases">Cases</span>
+                                <div class="news__img">
+                                    <picture>
+                                        <source srcset="@media/slide-21.webp" type="image/webp">
+                                        <source srcset="@media/slide-21.jpg">
+                                        <img src="@media/slide-21.jpg" alt="img">
+                                    </picture>
+                                </div>
+                                <p class="news__title">How we built Relay</p>
+                                <p class="news__date">08 March, 2022 </p>
+                                <button class="button button--with-dot news__btn">
+                                    <span class="button__text">read more</span>
+                                    <img class="svg-arr-btn" src="arr-btn.svg">
+                                </button>
+                            </div>
+
+                            <div class="news__more">
+                                <button class="button button--more">
+                                    <span class="button__text">show more</span>
+                                </button>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+
+        </section>
+
+
+
+    </main>
+
+    @@include('html/footer.html',{})

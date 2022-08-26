@@ -173,6 +173,94 @@
         }
     }
 
+    &--icon {
+        height: 48px;
+        width: 48px;
+        border-radius: 50%;
+        border: 1px solid rgba($color-white, .3);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & > * {
+            pointer-events: none;
+        }
+    }
+
+    &--link {
+        border-radius: 100px;
+        overflow: hidden;
+
+        .button__text {
+            transition: background .3s $easing;
+        }
+
+        @include hover {
+            .button__text {
+                background: $color-white;
+                color: $color-violet;
+            }
+        }
+    }
+
+    &--search {
+        position: relative;
+        background: transparent;
+        border-color: rgba($color-white, .3);
+        pointer-events: none;
+        transition: color .3s $easing, background .3s $easing;
+
+        svg {
+            background: $color-white;
+
+            rect {
+                stroke: none;
+            }
+        }
+
+        &.not-empty {
+            pointer-events: all;
+            background: $color-white;
+
+            .button__text {
+                color: $color-violet;
+            }
+
+            svg {
+                background: $color-violet;
+            }
+        }
+
+        &.is-search-open  {
+            background: $color-white;
+
+            svg {
+                fill: $color-violet;
+            }
+        }
+    }
+
+    &--violet {
+        background: $color-violet;
+        color: $color-white;
+
+        &.button--with-dot {
+            svg {
+                background: $color-white;
+
+                path {
+                    fill: $color-violet;
+                }
+            }
+        }
+    }
+
+    &--more {
+        background: $color-black;
+        padding: 12px 24px;
+        border-radius: 100px;
+    }
+
     &__text {
         text-transform: uppercase;
         font-weight: 500;
@@ -183,11 +271,25 @@
         pointer-events: none;
         transition: color .3s $easing, background .3s $easing;
 
-        .button--with-arr & {
+        .button--with-arr &,
+        .menu__top & {
             border: 1px solid $color-white;
             border-radius: 100px;
             padding: 10px 24px;
-            margin-right: 4px;
+            margin-right: 2px;
+        }
+
+        .news__item & {
+            color: $color-dark;
+        }
+
+        .menu__top & {
+            font-size: 14px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            padding: 16px 40px;
+            border-color: rgba($color-white, .3);
         }
 
         .section--white & {
@@ -195,7 +297,8 @@
             color: $color-dark;
         }
 
-        .button--black & {
+        .button--black &,
+        .menu & {
             color: $color-white;
         }
     }

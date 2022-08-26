@@ -22,17 +22,38 @@ animation ???
 === 7
 
 4) news == 3
+
+
+--------------------------------------------
+
 5) articles 
-main - 4
-slider + bubles - 1
-=== 5
+main - 3
+slider + bubles - .5
+=== 3.5
 
-6) 404 === 2
+6) 404 === 1.5
+
 7) contacts 
-form 2
-main + bubles 2
-=== 4
+form 
+main + bubles
+=== 3
 
-8) text page === 1.5
+8) text page === 1
 
 9) about
+video 1
+teams + text 2.5
+form 0
+circle 3
+
+6.5
+
+Result 2
+
+For busines 2
+
+How it work
+main 2
+form 0
+circle 4
+
