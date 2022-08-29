@@ -8,27 +8,53 @@
         bottom: 0;
     }
 
+    &--article {
+        margin-top: 0;
+
+        path {
+            fill: $color-violet;
+        }
+    }
+
     &__item {
         margin-right: 16px;
 
-        .socials--menu & {
+        .socials--menu &,
+        .socials--article & {
             margin: 0;
         }
 
         a {
             transition: transform .3s $easing;
 
-            .socials--menu & {
-                border: 1px solid rgba($color-white, .3);
+            .socials--menu &,
+            .socials--article & {
                 border-radius: 50%;
                 height: 48px;
                 width: 48px;
-                margin-left: 8px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 transition: background-color .3s $easing;
                 transform: none !important;
+            }
+
+            .socials--menu & {
+                border: 1px solid rgba($color-white, .3);
+                margin-left: 8px;
+
+                @include hover {
+                    background-color: $color-white;
+
+                    svg path {
+                        fill: $color-violet;
+                    }
+                }
+            }
+
+            .socials--article & {
+                border: 1px solid rgba($color-violet, .3);
+                margin-right: 8px;
 
                 @include hover {
                     background-color: $color-white;

@@ -4,30 +4,44 @@
     left: 0;
     right: 0;
     min-height: calc(176px + 15vh + 315px);
-    background: $color-violet;
     border-radius: 0px 0px 30px 30px;
     padding: 50px 120px;
-    transform: translateY(-105%);
-    transition: transform .6s $easing;
+    overflow: hidden;
+    pointer-events: none;
 
     .is-menu-open & {
-        transform: translateY(0%);
+        pointer-events: all;
     }
 
-    &__curtain {
-        position: fixed;
+
+    .curtain {
+        position: absolute;
+        top: 36px;
+        right: 165px;
         background: $color-violet;
-        width: 88px;
-        height: 38px;
-        right: 121px;
-        z-index: -1;
-        top: 17px;
-        border-radius: 30px;
-        display: none;
+        transform-origin: 50% 50%;
+        transform: translate(50%, -50%);
+        height: 1px;
+        width: 1px;
+        border-radius: 50%;
+        opacity: 0;
+
+        @media(max-width: 1450px) {
+            right: 145px;
+        }
     }
 
     &__wrap {
        position: relative;
+       opacity: 0;
+       transform: translateY(-20px);
+
+       .is-menu-open & {
+        opacity: 1;
+        transform: translateY(0);
+        transition: transform .4s $easing, opacity .4s $easing;
+        transition-delay: .4s;
+       }
     }
 
     &__search {

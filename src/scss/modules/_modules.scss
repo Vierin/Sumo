@@ -31,6 +31,73 @@
         }
     }
 
+    &--404 {
+        height: calc(100vh - 120px);
+
+        .logo {
+            position: fixed;
+            top: 16px;
+            left: 120px;
+
+            @media(max-width: 1450px) {
+                left: 100px;
+            }
+        }
+
+        .nav {
+            // margin-top: 150px;
+            margin-top: 16vh;
+
+            @media(min-height: 750px) {
+                margin-bottom: 10vh;
+            }
+
+            p {
+                color: rgba($color-dark, .6);
+                margin-bottom: 4px;
+            }
+
+            a {
+                position: relative;
+                display: inline-flex;
+                margin-right: 24px;
+                font-size: 14px;
+                line-height: 150%;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: 3px;
+                    left: 0;
+                    height: 1px;
+                    background: $color-dark;
+                    width: 100%;
+                }
+            }
+        }
+
+        .image {
+            max-width: 520px;
+            margin: 120px auto 40px;
+        }
+    }
+
+    &--image {
+        &-small {
+            max-height: 500px;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            overflow: hidden;
+            margin-bottom: 150px;
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
     &--form {
         margin-bottom: 120px;
 
@@ -38,6 +105,10 @@
             @media (max-width: 1450px) {
                 left: -6% !important;
             }
+        }
+
+        &-cols {
+            margin-top: 120px;
         }
 
         .section--padding-l & {
@@ -55,6 +126,10 @@
         @media(max-height: 720px) {
             padding-top: 50px;
         }
+    }
+
+    &--text {
+        margin-bottom: 120px;
     }
 
     &--steps {
@@ -80,7 +155,7 @@
     }
 
     &--news {
-        padding-top: 102px;
+        padding: 102px 0 120px;
 
         .module--start + & {
             padding-top: 0;

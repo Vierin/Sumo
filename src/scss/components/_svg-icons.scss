@@ -3,7 +3,9 @@
         transform: rotate(180deg);
     }
 
-
+    &-left {
+        transform: rotate(90deg);
+    }
 }
 
 .svg-arr-btn {

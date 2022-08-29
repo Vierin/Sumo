@@ -42,10 +42,18 @@ summary {
 		border-top: 5px solid rgba($color-dark, .3);
 		transform-origin: center center;
 		transition: transform ease-in-out .2s, border .3s $easing;
+
+		.section--violet & {
+			border-top: 5px solid rgba($color-white, .3);
+		}
 	}
 
 	&.error::after  {
 		border-top: 5px solid $color-dark;
+
+		.section--violet & {
+			border-top: 5px solid $color-white;
+		}
 	}
 }
 
@@ -78,20 +86,52 @@ summary.radios {
 			border-top: 5px solid $color-dark;
 		}
 	}
+
+	.section--violet & {
+		@include hover {
+			input {
+				border-color: $color-white;
+
+				&[type=radio]:after {
+					color: $color-white;
+				}
+			}
+
+			&:after {
+				border-top: 5px solid $color-white;
+			}
+		}
+	}
 }
 
 .custom-select[open] {
 	input {
 		border-color: $color-dark;
 
+		.section--violet & {
+			border-color: $color-white;
+		}
+
 		&[type=radio]:after {
 			color: $color-dark;
+
+			.section--violet & {
+				color: $color-white;
+			}
 		}
 	}
 
+
+
 	&:after {
 		border-top: 5px solid $color-dark;
+
+		.section--violet & {
+			border-top: 5px solid $color-white;
+		}
 	}
+
+
 }
 
 summary.radios:before {
@@ -112,13 +152,25 @@ input[type=radio] {
 	-o-appearance: none;
 	appearance: none;
 
+	.section--violet & {
+		color: rgba($color-white, .3);
+	}
+
 	.error & {
 		color: $color-red;
 		border-color: rgba($color-red, .3);
 	}
 
+	.section--violet .error & {
+        border-color: #FFAAAA !important;
+	}
+
 	.is-active & {
 		color: $color-dark;
+
+		.section--violet & {
+			color: $color-white;
+		}
 	}
 }
 
@@ -151,6 +203,11 @@ ul.list {
 	box-sizing: border-box;
 	max-height: 200px;
 	overflow-y: auto;
+
+	.section--violet & {
+		border: 0.5px solid $color-white;
+		color: $color-dark;
+	}
 
 	.error & {
 		border-color: $color-red;

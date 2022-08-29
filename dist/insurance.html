@@ -17,9 +17,9 @@
 	<body>
 
     <header class="header js-header">
-    <div class="header__wrap">
-        <div class="header__logo">
-            <svg width="78" height="86" viewBox="0 0 78 86" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg-logo svg-white">
+    <!-- <div class="header__wrap"> -->
+    <div class="header__logo">
+        <svg width="78" height="86" viewBox="0 0 78 86" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg-logo svg-white">
 <g clip-path="url(#clip0_369_215)">
 <path d="M53.2907 3.88152C54.366 3.88152 55.2377 3.01262 55.2377 1.94076C55.2377 0.868909 54.366 0 53.2907 0C52.2154 0 51.3438 0.868909 51.3438 1.94076C51.3438 3.01262 52.2154 3.88152 53.2907 3.88152Z" fill="#3AADCC"/>
 <path d="M48.0251 13.1003C49.1004 13.1003 49.972 12.2314 49.972 11.1595C49.972 10.0877 49.1004 9.21875 48.0251 9.21875C46.9498 9.21875 46.0781 10.0877 46.0781 11.1595C46.0781 12.2314 46.9498 13.1003 48.0251 13.1003Z" fill="white"/>
@@ -67,7 +67,7 @@
 </clipPath>
 </defs>
 </svg>
-            <svg width="78" height="86" viewBox="0 0 78 86" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg-logo svg-black">
+        <svg width="78" height="86" viewBox="0 0 78 86" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg-logo svg-black">
 <g clip-path="url(#clip0_343_2177)">
 <path d="M53.2984 3.88152C54.3737 3.88152 55.2454 3.01262 55.2454 1.94076C55.2454 0.868909 54.3737 0 53.2984 0C52.2231 0 51.3514 0.868909 51.3514 1.94076C51.3514 3.01262 52.2231 3.88152 53.2984 3.88152Z" fill="#3AADCC"/>
 <path d="M48.025 13.1003C49.1002 13.1003 49.9719 12.2314 49.9719 11.1595C49.9719 10.0877 49.1002 9.21875 48.025 9.21875C46.9497 9.21875 46.078 10.0877 46.078 11.1595C46.078 12.2314 46.9497 13.1003 48.025 13.1003Z" fill="#5D009F"/>
@@ -115,15 +115,15 @@
 </clipPath>
 </defs>
 </svg>
-        </div>
-        <button class="button button--header js-menu-btn">
-            <span class="button__text">menu</span>
-        </button>
     </div>
-
-    <div class="menu__curtain"></div>
+    <button class="button button--header js-menu-btn">
+        <span class="button__text">menu</span>
+    </button>
+    <!-- </div> -->
 
     <div class="menu js-menu">
+        <span class="curtain"></span>
+
         <div class="menu__wrap">
             <div class="menu__top">
                 <a href="/" class="button button--link">
@@ -162,7 +162,7 @@
                 <li>
                     <a href class="menu__link">How it works</a>
                     <ul class="menu__list--submenu">
-                        <li><a href class="menu__link">For bussines</a></li>
+                        <li><a href="/business.html" class="menu__link">For bussines</a></li>
                         <li><a href class="menu__link">For patient</a></li>
                         <li><a href class="menu__link">For doctor</a></li>
                     </ul>
@@ -182,7 +182,7 @@
                     <a href="/news.html" class="menu__link">Blog</a>
                 </li>
                 <li>
-                    <a href class="menu__link">Contact</a>
+                    <a href="/contacts.html" class="menu__link">Contact</a>
                 </li>
             </ul>
 
@@ -301,9 +301,8 @@
     <stop offset="1" stop-color="#CC84FF" stop-opacity="0"/>
     </linearGradient>
     <linearGradient id="paint1" x1="1321.67" y1="226.939" x2="1234.17" y2="224.939" gradientUnits="userSpaceOnUse">
-    <stop stop-color="#5D009F"/>
-    <stop offset="1" stop-color="white" stop-opacity="0"/>
-    <stop offset="1" stop-color="#5D009F" stop-opacity="0"/>
+    <stop stop-color="#5D009F" stop-opacity="0"/>
+    <stop offset="1" stop-color="#5D009F"/>
     </linearGradient>
     <linearGradient id="paint2" x1="76.7561" y1="79.0469" x2="1838" y2="97.3349" gradientUnits="userSpaceOnUse">
     <stop stop-color="white" stop-opacity="0"/>
@@ -312,9 +311,8 @@
     <stop offset="1" stop-color="#CC84FF" stop-opacity="0"/>
     </linearGradient>
     <linearGradient id="paint3" x1="870.165" y1="184.91" x2="782.665" y2="182.91" gradientUnits="userSpaceOnUse">
-    <stop stop-color="#5D009F"/>
-    <stop offset="1" stop-color="white" stop-opacity="0"/>
-    <stop offset="1" stop-color="#5D009F" stop-opacity="0"/>
+    <stop stop-color="#5D009F" stop-opacity="0"/>
+    <stop offset="1" stop-color="#5D009F"/>
     </linearGradient>
     <linearGradient id="paint4" x1="76.84" y1="374.758" x2="1838.09" y2="356.47" gradientUnits="userSpaceOnUse">
     <stop stop-color="white" stop-opacity="0"/>
@@ -323,9 +321,8 @@
     <stop offset="1" stop-color="#CC84FF" stop-opacity="0"/>
     </linearGradient>
     <linearGradient id="paint5" x1="870.249" y1="268.895" x2="782.749" y2="270.895" gradientUnits="userSpaceOnUse">
-    <stop stop-color="#5D009F"/>
-    <stop offset="1" stop-color="white" stop-opacity="0"/>
-    <stop offset="1" stop-color="#5D009F" stop-opacity="0"/>
+    <stop stop-color="#5D009F" stop-opacity="0"/>
+    <stop offset="1" stop-color="#5D009F"/>
     </linearGradient>
     <linearGradient id="paint6" x1="75.9647" y1="155.26" x2="1837.21" y2="173.548" gradientUnits="userSpaceOnUse">
     <stop stop-color="white" stop-opacity="0"/>
@@ -334,9 +331,8 @@
     <stop offset="1" stop-color="#CC84FF" stop-opacity="0"/>
     </linearGradient>
     <linearGradient id="paint7" x1="1321.67" y1="226.939" x2="1234.17" y2="224.939" gradientUnits="userSpaceOnUse">
-    <stop stop-color="#5D009F"/>
-    <stop offset="1" stop-color="white" stop-opacity="0"/>
-    <stop offset="1" stop-color="#5D009F" stop-opacity="0"/>
+    <stop stop-color="#5D009F" stop-opacity="0"/>
+    <stop offset="1" stop-color="#5D009F"/>
     </linearGradient>
     <linearGradient id="paint8" x1="76.7625" y1="298.576" x2="1838.01" y2="280.288" gradientUnits="userSpaceOnUse">
     <stop stop-color="white" stop-opacity="0"/>
@@ -345,9 +341,8 @@
     <stop offset="1" stop-color="#CC84FF" stop-opacity="0"/>
     </linearGradient>
     <linearGradient id="paint9" x1="1322.47" y1="226.896" x2="1234.97" y2="228.896" gradientUnits="userSpaceOnUse">
-    <stop stop-color="#5D009F"/>
-    <stop offset="1" stop-color="white" stop-opacity="0"/>
-    <stop offset="1" stop-color="#5D009F" stop-opacity="0"/>
+    <stop stop-color="#5D009F" stop-opacity="0"/>
+    <stop offset="1" stop-color="#5D009F"/>
     </linearGradient>
 </defs>
 </svg>
@@ -684,8 +679,7 @@
    });
 </script>
 <!-- form scripts -- move to js file -->
-<script src="js/app.min.js"></script>
 
-
-</body>
+        <script src="js/app.min.js"></script>
+    </body>
 </html>

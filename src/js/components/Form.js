@@ -44,6 +44,19 @@ export class Form {
         const date = document.querySelector('#datepicker input');
         const time = document.querySelector('.input--time input');
 
+        if(time) {
+            time.addEventListener('click', (e) => {
+                document.querySelector('#datepicker input').focus();
+                this.insertTime();
+                setTimeout(() => {
+                    this.timeInput.focus();
+                }, 10)
+                this.picker.classList.add('is-started');
+            })
+        }
+
+
+
         function showError(input) {
             const formControl = input.parentElement;
             formControl.classList.add('error');
@@ -156,15 +169,15 @@ export class Form {
 
     setTime() {
         const timeInputInside = this.view.querySelector('input[type=time]');
-        const timeInput = document.querySelector('.datepicker__time .time')
-        timeInput.addEventListener('click', () => {
+        this.timeInput = document.querySelector('.datepicker__time .time')
+        this.timeInput.addEventListener('click', () => {
             setTimeout(() => {
-                timeInput.focus();
+                this.timeInput.focus();
             }, 10)
         })
 
-        timeInput.addEventListener('input', () => {
-            timeInputInside.value = timeInput.value;
+        this.timeInput.addEventListener('input', () => {
+            timeInputInside.value = this.timeInput.value;
 
             timeInputInside.parentElement.classList.remove('error');
             timeInputInside.parentElement.classList.add('is-active');

@@ -105,7 +105,6 @@ export class Page {
     moveCircle(circle) {
         // set position
         if(circle.hasAttribute("data-position")) {
-            console.log(1);
             const positions = circle.dataset.position.split(", ");
             circle.style.top = positions[0] + "%";
             circle.style.left = positions[1] + "%";
@@ -163,7 +162,7 @@ export class Page {
     }
 
     backToTop() {
-        document.querySelector('.js-arr-back').addEventListener('click', () => {
+        document.querySelector('.js-arr-back') && document.querySelector('.js-arr-back').addEventListener('click', () => {
             window.scroll({
                 top: 0,
                 left: 0,

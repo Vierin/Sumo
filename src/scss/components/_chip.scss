@@ -32,4 +32,8 @@
         background: $color-white;
         border-radius: 25px;
     }
+
+    .svg-chip-lines g g:nth-child(3) path:last-child {
+        clip-path: polygon(0 0, 80% 0%, 100% 100%, 0% 100%);
+    }
 }

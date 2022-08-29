@@ -1,6 +1,11 @@
 .form {
     margin: 48px 0 48px;
 
+    .grid--row & {
+        width: $grid-m;
+        margin-top: 0;
+    }
+
     &__item {
         display: flex;
         margin-bottom: 8px;
@@ -26,6 +31,14 @@
             font-weight: 500;
             font-size: 16px;
             line-height: 150%;
+
+            .section--violet & {
+                color: $color-white;
+            }
+        }
+
+        .section--violet & #datepicker.error input{
+            border-color: #FFAAAA !important;
         }
     }
 
@@ -78,37 +91,38 @@
                     font-size: 12px;
                     height: 35px;
                     transition: color .3s $easing, font-size .2s $easing;
+                    cursor: pointer;
+
+                    .section--violet & {
+                        color: rgba($color-white, .3);
+                    }
                 }
 
                 &.is-active input {
                     font-size: 16px;
                     color: $color-dark;
+
+                    .section--violet & {
+                        color: $color-white;
+                    }
                 }
 
                 &.error input[type=time] {
                     color: $color-red;
                 }
             }
-        }
 
-        &.error {
-            input {
-                border-color: rgba($color-red, .3);
-
-                &::placeholder {
-                    color: $color-red;
-                }
-            }
-
-            input[type=number] {
-                color: $color-red;
+            .section--violet & .input--time.error input {
+                border-color: #FFAAAA !important;
             }
         }
+
+
 
 
 
         input {
-            padding: 5px 10px;
+            padding: 5px 24px 5px 10px;
             border-bottom: 1px solid rgba($color-dark, .3);
             font-family: $font-main;
             width: 100%;
@@ -120,6 +134,16 @@
             text-align: center;
             position: relative;
 
+            .section--violet & {
+                border-color: rgba($color-white, .3);
+                color: $color-white;
+            }
+
+
+            &[type=time] {
+                padding: 5px 10px;
+            }
+
             &::placeholder {
                 text-align: center;
                 color: rgba($color-dark, .3);
@@ -127,6 +151,10 @@
                 line-height: 130%;
                 letter-spacing: 0.02em;
                 transition: color .3s $easing;
+
+                .section--violet & {
+                    color: rgba($color-white, .3);
+                }
             }
 
             &:focus::placeholder {
@@ -142,6 +170,38 @@
                     color: $color-dark;
                 }
             }
+
+            .section--violet & {
+                @include hover {
+                    border-color: $color-white;
+
+                    &::placeholder {
+                        color: $color-white;
+                    }
+                }
+            }
+        }
+
+        &.error {
+            input {
+                border-color: rgba($color-red, .3) !important;
+
+                &::placeholder {
+                    color: $color-red !important;
+                }
+            }
+
+            input[type=number] {
+                color: $color-red !important;
+            }
+        }
+
+        .section--violet &.error input {
+            border-color: #FFAAAA !important;
+        }
+
+        &.form__input--datepicker input {
+            padding: 5px 10px;
         }
 
         input:focus + label {
@@ -166,6 +226,10 @@
             pointer-events: none;
             transition: opacity .2s $easing;
 
+            .section--violet & {
+                color: $color-white;
+            }
+
             .is-error {
                 color: $color-red;
             }
@@ -173,6 +237,7 @@
     }
 
     &__checkbox {
+        height: 64px;
 
         label {
             position: relative;
@@ -200,6 +265,10 @@
             &::before {
                 border: 1px solid rgba($color-dark, .3);
                 z-index: 2;
+
+                .section--violet & {
+                    border: 1px solid rgba($color-white, .3);
+                }
             }
 
             &::after {
@@ -208,6 +277,11 @@
                 z-index: 0;
                 opacity: 0;
                 transition: opacity .3s $easing;
+
+                .section--violet & {
+                    background: url("../media/check-white.png") no-repeat;
+                    background-size: cover;
+                }
             }
         }
 

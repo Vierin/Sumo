@@ -12,6 +12,70 @@
         }
     }
 
+    .module--text & p {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 150%;
+    }
+
+    &__sources {
+        margin-top: 32px;
+
+        a {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 150%;
+            color: $color-violet;
+        }
+    }
+
+    & + & {
+        margin-top: 72px;
+    }
+
+    h4 {
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 110%;
+        margin-bottom: 32px;
+    }
+
+    .module--contacts & {
+        margin-top: 64px;
+
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 150%;
+
+
+        a {
+            margin-bottom: 6px;
+            display: block;
+
+            span {
+                display: inline;
+                color: #575757;
+                margin-right: 6px;
+            }
+        }
+    }
+
+    .article & {
+        p {
+            font-size: 16px;
+            line-height: 150%;
+            color: rgba($color-black, .7);
+
+            & + p {
+                margin-top: 30px;
+            }
+        }
+    }
+
+    a {
+        color: $color-violet;
+    }
+
     &--two-cols {
         display: flex;
         flex-wrap: wrap;

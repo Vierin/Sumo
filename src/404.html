@@ -1,0 +1,67 @@
+@@include('html/head.html',{
+    "title":"Treecard: The wooden debit card that plants trees - SUMO"
+})
+
+<main>
+    <section class="section">
+        <div class="module module--404">
+
+            <div class="circle circle--blue circle--l js-circle" data-blur="40" data-position="12, -1">
+                <span></span>
+                <div class="circle__svg">
+                    <img src="circle-blue.svg">
+                </div>
+            </div>
+            <div class="circle circle--violet circle--l js-circle" data-blur="40" data-position="2, 75">
+                <span></span>
+                <div class="circle__svg">
+                    <img src="circle-violet.svg">
+                </div>
+            </div>
+            <div class="circle circle--blue circle--l js-circle" data-blur="40" data-position="-5, 72">
+                <span></span>
+                <div class="circle__svg">
+                    <img src="circle-blue.svg">
+                </div>
+            </div>
+            <div class="circle circle--violet circle--m js-circle" data-blur="40" data-position="55, 17">
+                <span></span>
+                <div class="circle__svg">
+                    <img src="circle-violet.svg">
+                </div>
+            </div>
+
+            <div class="logo">
+                <img class="svg-logo svg-black" src="logo-black.svg">
+            </div>
+
+            <div class="image">
+                <picture>
+                    <source srcset="@media/404.webp" type="image/webp">
+                    <source srcset="@media/404.png">
+                    <img src="@media/404.png" alt="img">
+                </picture>
+            </div>
+
+            <div class="grid grid--end grid--col">
+                <div class="grid-m heading">
+                    <h2 class="heading__title">Oops!</h2>
+                    <p class="heading__subtitle">We can’t seem to find the page <br> you are looking for.</p>
+                </div>
+
+                <div class="nav grid-m">
+                    <p>Here are some help links instead:</p>
+                    <nav>
+                        <a href="/">Homepage</a>
+                        <a href="/what.html">What is SUMO?</a>
+                        <a href="/industries.html">Industries</a>
+                        <a href="/contact.html">Contact</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+@@include('html/foot.html',{})

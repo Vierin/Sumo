@@ -43,6 +43,7 @@
     display: flex;
     align-items: center;
     height: 36px;
+    padding-top: 12px;
 
     p {
         font-weight: 500;
@@ -185,10 +186,16 @@
                     transform-origin: right;
                 }
 
+                &::after {
+                    transform: rotate(45deg) translateY(calc(-50% + 1px));
+                }
+
                 &:before {
-                    transform: rotate(-45deg) translateY(-51%);
+                    top: 50%;
+                    transform: rotate(-45deg) translate(0, -50%);
                 }
             }
+
         }
     }
 
@@ -203,7 +210,7 @@
     }
 
     .datepicker-days thead {
-        margin-bottom: 0;
+        // margin-bottom: 0;
     }
 
     .datepicker-days thead tr {
@@ -216,7 +223,8 @@
             text-align: left;
             font-weight: 500;
             position: relative;
-            width: 55%;
+            width: fit-content;
+            padding-right: 15px;
             margin-right: auto;
 
             &::after,
@@ -234,7 +242,7 @@
             }
 
             &::before {
-                width: 10px;
+                top: calc(50% - 1px);
                 transform: rotate(-45deg);
             }
         }

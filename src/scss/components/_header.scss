@@ -1,7 +1,18 @@
 .header {
     position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
     inset: 0 0 auto 0;
     z-index: 8;
+    padding-top: 16px;
+    padding: 16px 120px 0;
+    height: 0;
+
+
+    @media(max-width: 1450px) {
+        padding: 16px 100px 0;
+    }
 
     &__logo {
         position: relative;
@@ -36,17 +47,4 @@
 
     }
 
-    &__wrap {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        width: 100%;
-        max-width: 1170px;
-        margin: 16px auto 0;
-
-        @media(min-width: 1450px) {
-            max-width: 100%;
-            padding: 0 120px;
-        }
-    }
 }

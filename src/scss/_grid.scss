@@ -38,6 +38,11 @@ $grid-s: 278px;
         }
     }
 
+    &--row {
+        display: flex;
+        justify-content: space-between;
+    }
+
     &--end {
         display: flex;
         justify-content: flex-end;

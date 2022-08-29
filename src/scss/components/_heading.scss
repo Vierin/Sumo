@@ -1,10 +1,48 @@
 .heading {
     z-index: 2;
 
+    &--text {
+        padding-bottom: 64px;
+        position: relative;
+        width: 100%;
+        border-bottom: 1px solid rgba($color-dark, .1);
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 64px;
+    }
+
+    &__info {
+        position: absolute;
+        bottom: 64px;
+        left: 0;
+
+        strong {
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 150%;
+            color: $color-violet;
+            text-transform: uppercase;
+        }
+
+        p {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 150%;
+            opacity: .6;
+            color: $color-dark;
+        }
+    }
+
     &__title {
         font-weight: 700;
         font-size: 64px;
         line-height: 110%;
+
+        .module--form-cols & {
+            font-weight: 600;
+            font-size: 48px;
+            line-height: 110%;
+        }
 
         & + p {
             margin-top: 16px;

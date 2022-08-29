@@ -3,28 +3,49 @@ import { gsap } from "gsap";
 export class Menu {
     constructor() {
         this.view = document.querySelector('.js-menu');
+
+
+        if(this.view) {
+            this.init();
+        }
+
+    }
+
+    init() {
         this.menuBtn = document.querySelector('.js-menu-btn');
         this.menuClose = document.querySelector('.js-menu-close');
         this.btnSearch = this.view.querySelector('.js-menu-search')
         this.search = this.view.querySelector('.js-search');
 
-        // this.curtain = document.querySelector('.js-header .menu__curtain');
+        this.curtain = this.view.querySelector('.curtain');
 
         this.menuBtn.addEventListener('click', () => {
-            document.documentElement.classList.add('is-menu-open');
-            // gsap.to(this.curtain, {width: 100 + "vw", right: 0, top: -30, height: 67 + "vh", zIndex: 1, duration: .7 })
+            this.toggleMenu(true)
         })
 
         this.menuClose.addEventListener('click', () => {
-            document.documentElement.classList.remove('is-menu-open');
-            this.searchClose()
+            this.toggleMenu(false)
         })
 
-        this.init();
+        this.setSearch();
     }
 
+    toggleMenu(show) {
+        document.documentElement.classList.toggle('is-menu-open', show);
 
-    init() {
+        if(show) {
+            gsap.set(this.curtain, {opacity: 1});
+            gsap.to(this.curtain, {width: 200 + "vw", height: 200 + "vw", duration: .5 })
+        } else {
+            this.searchClose()
+            gsap.to(this.curtain, {width: 1, height: 1, duration: .5, onComplete: () => {
+                gsap.set(this.curtain, {opacity: 1});
+            }})
+        }
+
+    }
+
+    setSearch() {
         //search
         this.searchInp = this.view.querySelector('.js-search-inp');
         this.searchBtn = this.view.querySelector('.js-search-btn');

@@ -1,0 +1,17 @@
+.contact {
+    margin: 17px 0 166px;
+    padding-top: 24px;
+    border-top: 1px solid rgba($color-dark, .1);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    p {
+        color: #383838;
+        font-weight: 500;
+
+        & + p {
+            margin-top: 24px;
+        }
+    }
+}

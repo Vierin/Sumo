@@ -32,6 +32,12 @@ export class SwiperSlider {
         const btnNext = view.parentElement.querySelector('.swiper-button-next');
         const slides = view.querySelectorAll('.swiper-slide');
 
+        if(options.imageOutside) {
+            this.imgs = view.parentElement.querySelectorAll('.js-swiper-img');
+        }
+
+
+
         const swiper = new Swiper(view, {
             speed: 400,
             allowTouchMove: true,
@@ -87,18 +93,15 @@ export class SwiperSlider {
         });
 
         if(!options.navigationNone) {
-            btnNext.addEventListener('click', () => {
-                swiper.slideNext();
-            })
+            btnNext.addEventListener('click', () => swiper.slideNext())
             btnPrev.addEventListener('click', () => swiper.slidePrev())
         } else {
             this.showPagination(swiper, view);
-        }
 
-        if(options.imageOutside) {
-            this.imgs = view.parentElement.querySelectorAll('.js-swiper-img');
+            if(options.initialSlide > 0) {
+                this.setActiveEls(options.initialSlide)
+            }
         }
-
 
     }
 
@@ -131,7 +134,7 @@ export class SwiperSlider {
 
         this.scroll;
 
-        switch (id) {
+        switch (+id) {
             case 0:
                 this.scroll = 0;
                 break;
@@ -142,8 +145,6 @@ export class SwiperSlider {
                 this.scroll = (progressWidth + offset) * 2 ;
                 break;
         }
-
-
         gsap.to(this.progress, {x: this.scroll, width: this.pagBtns[0].clientWidth});
     }
 
