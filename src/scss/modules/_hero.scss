@@ -10,7 +10,7 @@
 
     .js-area {
         width: calc(100vw - 500px);
-        height: 500px;
+        height: 460px;
         position: absolute;
         right: 0;
         top: 0;
@@ -105,20 +105,18 @@
         margin-top: 120px;
     }
 
-    &__bg {
-        position: fixed;
-        inset: 0 0 0 0;
-        z-index: 0;
-        background: url("../media/bg-video.jpg") no-repeat;
-        background-size: cover;
-    }
-
     &__scroll {
         position: fixed;
         bottom: 40px;
         left: calc(50% - 20px);
         cursor: pointer;
         z-index: 2;
+        transition: opacity .4s $easing;
+
+        .is-video-open & {
+            opacity: 0;
+            pointer-events: none;
+        }
 
         @media(max-height: 790px) {
             bottom: 25px;

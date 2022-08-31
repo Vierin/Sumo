@@ -114,6 +114,12 @@ export const images = () => {
 		.pipe(app.plugins.browsersync.stream());
 }
 
+//move video
+export const video = () => {
+	return app.gulp.src(app.path.src.video)
+		.pipe(app.gulp.dest(app.path.build.video));
+}
+
 //js
 import webpack from "webpack-stream";
 
@@ -149,7 +155,6 @@ import rename from 'gulp-rename';
 import cleanCss from 'gulp-clean-css'; // Сжатие CSS файла
 import webpcss from 'gulp-webpcss';
 import autoprefixer from 'gulp-autoprefixer';
-import groupCssMediaQueries from 'gulp-group-css-media-queries';
 
 const sass = gulpSass(dartSass);
 
@@ -164,12 +169,7 @@ export const scss = () => {
 			outputStyle: 'expanded'
 		}))
 		.pipe(app.plugins.replace(/@media\//g, '../media/'))
-		.pipe(
-			app.plugins.if(
-				app.isBuild,
-				groupCssMediaQueries()
-			)
-		)
+
 		.pipe(
 			autoprefixer({
 				grid: true,

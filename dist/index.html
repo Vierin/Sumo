@@ -157,32 +157,32 @@
 
             <ul class="menu__list">
                 <li>
-                    <a href="/what.html" class="menu__link">What is SUMO</a>
+                    <a href="./what.html" class="menu__link">What is SUMO</a>
                 </li>
                 <li>
-                    <a href class="menu__link">How it works</a>
+                    <a href="./how.html" class="menu__link">How it works</a>
                     <ul class="menu__list--submenu">
-                        <li><a href="/business.html" class="menu__link">For bussines</a></li>
+                        <li><a href="./business.html" class="menu__link">For bussines</a></li>
                         <li><a href class="menu__link">For patient</a></li>
                         <li><a href class="menu__link">For doctor</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="/industries.html" class="menu__link">Industries</a>
+                    <a href="./industries.html" class="menu__link">Industries</a>
                     <ul class="menu__list--submenu">
-                        <li><a href="/insurance.html" class="menu__link">Insurance</a></li>
+                        <li><a href="./insurance.html" class="menu__link">Insurance</a></li>
                         <li><a href class="menu__link">Hospitals</a></li>
                         <li><a href class="menu__link">Manufactures</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href class="menu__link">About Us</a>
+                    <a href="./about.html" class="menu__link">About Us</a>
                 </li>
                 <li>
-                    <a href="/news.html" class="menu__link">Blog</a>
+                    <a href="./news.html" class="menu__link">Blog</a>
                 </li>
                 <li>
-                    <a href="/contacts.html" class="menu__link">Contact</a>
+                    <a href="./contacts.html" class="menu__link">Contact</a>
                 </li>
             </ul>
 
@@ -289,8 +289,8 @@
 
 
 
-			<div class="hero__bg video">
-				<div class="circle circle--violet video__circle js-circle-area">
+			<div class="video" data-component="Video">
+				<div class="circle circle--violet video__circle js-circle-area js-show">
 					<span></span>
 					<div class="circle__svg">
 						<svg width="720" height="720" viewBox="0 0 720 720" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -315,6 +315,42 @@
 							<span>1:32</span>
 						</p>
 					</div>
+				</div>
+				<div class="video__wrap">
+					<div class="player">
+						<div class="player__info">
+							<span class="js-player-info">1:32</span>
+							<h3>ABOUT SUMO <br> Labs</h3>
+						</div>
+						<div class="player__video js-player">
+							<video src="./media/video.mp4"></video>
+						</div>
+						<div class="player__play">
+							<svg width="28" height="32" viewBox="0 0 28 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg-play">
+<path d="M25.9281 14.7182C26.8894 15.3024 26.8894 16.6976 25.928 17.2818L3.27902 31.0465C2.2794 31.654 0.999998 30.9344 0.999999 29.7647L1 2.23535C1 1.0656 2.27941 0.345996 3.27902 0.953501L25.9281 14.7182Z" stroke="white"/>
+</svg>
+							<i class="pause"></i>
+						</div>
+						<div class="player__bottom">
+							<div class="player__progress js-player-progress">
+								<span></span>
+							</div>
+							<div class="player-time__curr js-player-curr">0:00</div>
+							<div class="player-time__all js-player-all">1:32</div>
+						</div>
+						<div class="video__close js-video-close">
+							<i class="cross"></i>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="video__bg js-video-bg">
+					<picture>
+						<source srcset="./media/bg-video.webp" type="image/webp">
+						<source srcset="./media/bg-video.jpg">
+						<img src="./media/bg-video.jpg" alt="img">
+					</picture>
 				</div>
 			</div>
 
@@ -753,7 +789,8 @@
 							<span>The SUMO Team</span>
 							<blockquote class="team__quote">
 								<p>“Sumo offers technology that handles tremendous data throughput reliably & securely”</p>
-								<span>Jim McAvoy <br> CEO and founder SUMO</span>
+								<span class="team__name">Jim McAvoy</span>
+								<span class="team__position">CEO and founder SUMO</span>
 							</blockquote>
 							<button class="team__btn button button--with-arr">
 								<span class="button__text">read more</span>
@@ -763,7 +800,7 @@
 </svg>
 							</button>
 						</div>
-						<div class="team__video video">
+						<div class="team__video video video--small">
 							<img class="video__poster" src="./media/team.png" alt="team">
 
 							<button class="video__btn">

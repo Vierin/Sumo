@@ -1,11 +1,81 @@
 .video {
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    &--small {
+        position: relative;
+    }
+
+    &__wrap {
+        z-index: 2;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    &__close {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        height: 48px;
+        width: 48px;
+        border-radius: 50%;
+        border: 1px solid rgba($color-white, .3);
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+
+        .cross {
+            pointer-events: none;
+            transform: rotate(45deg);
+
+            &::after,
+            &::before {
+                background-color: $color-white;
+            }
+        }
+
+        @include hover {
+            .cross {
+                transform: rotate(135deg);
+            }
+        }
+    }
+
+    .is-video-open & .circle__wrap {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    &__bg {
+        position: fixed;
+        inset: 0 0 0 0;
+        z-index: 0;
+    }
 
 
     &__circle {
         position: absolute;
         left: 64vw;
         top: 17vh;
+
+        .video--about & {
+            top: 32vh;
+            left: 27vw;
+            cursor: pointer;
+        }
+
+        .is-video-open & {
+            pointer-events: none;
+        }
 
         .safari & {
             transform: scale(1.3);
@@ -20,7 +90,7 @@
                 z-index: -1;
             }
 
-            .circle_wrap {
+            .circle__wrap {
                 z-index: 2;
 
                 p {
@@ -64,7 +134,13 @@
         & > span {
             filter: blur(10px);
             transition: filter .4s $easing, transform .4s $easing;
+
+            .is-video-open &  {
+                filter: none !important;
+                transition: none !important;
+            }
         }
+
 
         @include hover {
             & > span {
@@ -123,6 +199,10 @@
             font-weight: 500;
             font-size: 16px;
             line-height: 150%;
+
+            .section--white & {
+                color: $color-white;
+            }
         }
     }
 

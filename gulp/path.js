@@ -10,11 +10,13 @@ export const path = {
 		js: `${buildFolder}/js/`,
 		css: `${buildFolder}/css/`,
 		html: `${buildFolder}/`,
-		images: `${buildFolder}/media/`
+		images: `${buildFolder}/media/`,
+		video: `${buildFolder}/media/`
 	},
 	src: {
 		js: `${srcFolder}/js/app.js`,
 		images: `${srcFolder}/media/**/*.{jpg,jpeg,png,gif,webp}`,
+		video: `${srcFolder}/media/*.mp4`,
 		svg: `${srcFolder}/media/**/*.svg`,
 		svgSet: `${srcFolder}/media/svg/`,
 		scss: `${srcFolder}/scss/main.scss`,

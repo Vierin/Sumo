@@ -23,7 +23,8 @@ body {
 }
 
 
-html.is-menu-open {
+html.is-menu-open,
+html.is-video-open {
     overflow: hidden;
 }
 

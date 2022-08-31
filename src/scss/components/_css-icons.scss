@@ -24,3 +24,25 @@
         transform: translate(-50%, -50%) rotate(90deg);
     }
 }
+
+.pause {
+    height: 24px;
+    width: 24px;
+    position: relative;
+
+    &::after,
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 25%;
+        height: 100%;
+        width: 1px;
+        background: $color-white;
+    }
+
+    &::after {
+        left: auto;
+        right: 25%;
+    }
+}

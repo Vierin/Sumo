@@ -9,6 +9,10 @@
     padding: 16px 120px 0;
     height: 0;
 
+    .is-video-open & {
+        opacity: 0;
+        pointer-events: none;
+    }
 
     @media(max-width: 1450px) {
         padding: 16px 100px 0;

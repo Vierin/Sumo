@@ -8,6 +8,9 @@ import { getBrowser } from './components/Browsers.js';
 import { Sticky } from './components/Sticky.js';
 import { WhatItems } from './components/WhatItems.js';
 import { Menu } from './components/Menu.js';
+import { Video } from './components/Video.js';
+import { Percents } from './components/Percents.js';
+import { Quest } from './components/Quest.js';
 
 import { gsap } from "gsap";
 // import ScrollTrigger from "gsap/src/ScrollTrigger.js";
@@ -42,6 +45,9 @@ export class Page {
         new Sticky();
         new WhatItems();
         new Menu();
+        new Video();
+        new Percents();
+        new Quest();
 
         //group in one folder
         this.toggleMore();

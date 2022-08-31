@@ -1,0 +1,25 @@
+.list {
+    margin: 50px 0 40px;
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        padding: 32px 0;
+        border-top: 1px solid rgba($color-dark, .3);
+
+        span {
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 130%;
+            color: rgba($color-dark, .6);
+            text-transform: uppercase;
+        }
+
+        p {
+            width: $grid-m;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 150%;
+        }
+    }
+}

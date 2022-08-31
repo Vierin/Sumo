@@ -1,0 +1,172 @@
+.quest {
+    height: 700px;
+    width: 700px;
+    position: relative;
+    margin: 166px auto 138px;
+
+    &__wrap {
+        border-bottom: 1px solid rgba($color-white, .3);
+    }
+
+    &__circle {
+        pointer-events: none;
+
+        svg {
+            overflow: visible;
+        }
+
+        &--dashed {
+            z-index: 0;
+        }
+
+        &--progress {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            transform: rotate(-90deg);
+
+            circle {
+                stroke-width: 2;
+                stroke-dasharray: none;
+                opacity: 1;
+            }
+        }
+    }
+
+    &__arr {
+        position: absolute;
+        z-index: 3;
+        cursor: pointer;
+
+        &--1 {
+            top: 28%;
+            right: 1%;
+            transform: rotate(-25deg);
+        }
+
+        &--2 {
+            top: 97%;
+            right: 47%;
+            transform: rotate(90deg);
+        }
+
+        &--3 {
+            top: 28%;
+            left: 1%;
+            transform: rotate(202deg);
+        }
+
+        circle {
+            fill: $color-white;
+            stroke: none;
+            opacity: 1 !important;
+        }
+
+        path {
+            fill: $color-violet;
+        }
+    }
+
+    &__info {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 64px;
+        line-height: 120%;
+        color: #F1F1F1;
+        text-align: center;
+    }
+
+    &__restart {
+        cursor: pointer;
+        text-transform: uppercase;
+        padding: 4px 12px 4px 4px;
+        background: rgba($color-white, 0.1);
+        border-radius: 30px;
+        width: fit-content;
+        margin: 16px auto 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background .3s $easing;
+
+        & > * {
+            pointer-events: none;
+        }
+
+        p {
+            padding-top: 2px;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 130%;
+            transition: color .3s $easing;
+        }
+
+        svg {
+            margin-right: 5px;
+
+            path {
+                transition: fill .3s $easing;
+            }
+        }
+
+        @include hover {
+            background: $color-white;
+
+            p {
+                color: $color-violet;
+            }
+
+            svg path {
+                fill: $color-violet;
+            }
+        }
+    }
+
+    &__item {
+        width: fit-content;
+        position: absolute;
+        z-index: 3;
+
+        &--1 {
+            top: -3%;
+            left: 34%;
+        }
+
+        &--2 {
+            top: 68%;
+            right: -9%;
+        }
+
+        &--3 {
+            top: 68%;
+            left: -12%;
+        }
+
+        a {
+            background: $color-white;
+        }
+
+        .button__text {
+            text-transform: uppercase;
+            color: $color-violet;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 150%;
+        }
+
+        svg {
+            background: $color-violet;
+
+            rect {
+                stroke: none;
+            }
+        }
+    }
+}

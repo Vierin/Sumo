@@ -1,15 +1,11 @@
 .data {
-    &__p {
-        font-size: 20px;
-        line-height: 150%;
-        margin-top: 40px;
-    }
+
 
     &__items {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-top: 50px;
+        margin: 50px 0 40px;
         position: relative;
     }
 

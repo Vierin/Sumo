@@ -1,0 +1,238 @@
+@@include('html/head.html',{
+    "title":"How"
+    })
+
+    @@include('html/header.html',{})
+
+    <main>
+        <section class="section section--white">
+            <div class="module module--start">
+
+                <div class="grid grid--end">
+                    <div class="heading grid-m">
+                        <span class="heading__span">How it Works</span>
+                        <h2 class="heading__title">A few confident steps towards automation</div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="circle circle--blue circle--l js-circle" data-blur="40" data-position="-2, 90">
+                <span></span>
+                <div class="circle__svg">
+                    <img src="circle-blue.svg">
+                </div>
+            </div>
+
+            <div class="circle circle--violet circle--l js-circle" data-blur="40" data-position="5, 85">
+                <span></span>
+                <div class="circle__svg">
+                    <img src="circle-violet.svg">
+                </div>
+            </div>
+
+            <div class="module module--list">
+                <div class="grid">
+                    <ul class="list">
+                        <li class="list__item">
+                            <span>Step 1</span>
+                            <p>Encrypted data is automatically uploaded onto our secure system.</p>
+                        </li>
+                        <li class="list__item">
+                            <span>Step 2</span>
+                            <p>Nodes of specific data are automatically created (for example patient information, wait times, procedure details, recovery processes, treatment costs and so on).</p>
+                        </li>
+                        <li class="list__item">
+                            <span>Step 3</span>
+                            <p>The data is automatically analysed by our leading software, and relevant links are made between the information. Each result is specific to your pre-determined requirements and key to solve your particular task.</p>
+                        </li>
+                        <li class="list__item">
+                            <span>Step 4</span>
+                            <p>SUMO provide you and your company with the tools required to operate the software independently. We equip you with information to keep track of patient history and their treatment process, to control their recovery programme and improve your general service by reducing wait times or limiting paperwork for example.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="section section--violet js-dark">
+            <div class="circle circle--blue circle--l js-circle" data-blur="40" data-position="10, -3">
+                <span></span>
+                <div class="circle__svg">
+                    <img src="circle-blue.svg">
+                </div>
+            </div>
+
+            <div class="circle circle--violet-2 circle--xxl circle--quest circle--animate">
+                <span></span>
+            </div>
+
+            <div class="module module--quest">
+                <div class="grid">
+                    <div class="quest__wrap">
+                        <div class="quest" data-component="Quest">
+                            <div class="quest__info">
+                                <h3 class="quest__title">How it <br> works for</h3>
+                                <div class="quest__restart js-quest-restart">
+                                    <img src="restart.svg">
+                                    <p>restart</p>
+                                </div>
+                            </div>
+
+                            <div class="quest__item quest__item--1 js-quest-item">
+                                <a href="" class="button button--with-dot">
+                                    <span class="button__text">For bussines</span>
+                                    <img class="svg-arr-btn" src="arr-btn.svg">
+                                </a>
+                            </div>
+
+                            <div class="quest__arr quest__arr--1 js-quest-item">
+                                <img src="arrow.svg">
+                            </div>
+
+                            <div class="quest__item quest__item--2 js-quest-item">
+                                <a href="" class="button button--with-dot">
+                                    <span class="button__text">For patient</span>
+                                    <img class="svg-arr-btn" src="arr-btn.svg">
+                                </a>
+                            </div>
+
+                            <div class="quest__arr quest__arr--2 js-quest-item">
+                                <img src="arrow.svg">
+                            </div>
+
+                            <div class="quest__item quest__item--3 js-quest-item">
+                                <a href="" class="button button--with-dot">
+                                    <span class="button__text">For doctors</span>
+                                    <img class="svg-arr-btn" src="arr-btn.svg">
+                                </a>
+                            </div>
+
+                            <div class="quest__arr quest__arr--3 js-quest-item">
+                                <img src="arrow.svg">
+                            </div>
+
+
+                            <div class="quest__circle">
+                                <img src="circle-dashed.svg" class="quest__circle quest__circle--dashed">
+                                <img src="circle-dashed.svg" class="quest__circle quest__circle--progress js-quest-circ">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="module module--form module--form-cols">
+                <div class="grid grid--end grid--col">
+
+                    <div class="grid grid--row">
+                        <div class="heading">
+                            <h2 class="heading__title">Any Questions? <br> Let Us Know.</h2>
+                            <p class="heading__subtitle">Get in touch with us today and <br> make the change.</p>
+                        </div>
+
+                        <form class="form" id="form" action="" data-component="Form">
+                            <div class="form__item">
+                                <p>Hi! My name is</p>
+                                <div class="form__input">
+                                    <input id="name" type="text" placeholder="Enter your name & last name*">
+                                </div>
+                            </div>
+                            <div class="form__item">
+                                <p>and I work company</p>
+                                <div class="form__input">
+                                    <input id="company" type="text" placeholder="Company name type here*">
+                                </div>
+                            </div>
+                            <div class="form__item">
+                                <p>You can reach me at</p>
+                                <div class="form__input">
+                                    <input id="email" type="email" placeholder="Enter your email*">
+                                </div>
+                            </div>
+                            <div class="form__item">
+                                <p>or my telephone number</p>
+                                <div class="form__input form__input--small">
+                                    <input id="number" type="number" placeholder="Enter your phone*">
+                                </div>
+                            </div>
+                            <div class="form__item">
+                                <p>I'm interested in</p>
+                                <div class="form__input form__input--select">
+                                    <details class="custom-select">
+                                        <summary class="radios">
+                                            <input type="radio" name="inter" id="default" title="Select*" checked>
+                                            <input type="radio" name="inter" id="inter1" title="Medical Facilities">
+                                            <input type="radio" name="inter" id="inter2" title="Insurance Companies">
+                                            <input type="radio" name="inter" id="inter3" title="Manufacturers">
+                                        </summary>
+                                        <ul class="list">
+                                            <li>
+                                                <label class="option" for="inter1">
+                                                    Medical Facilities
+                                                    <span></span>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="option" for="inter2">Insurance Companies</label>
+                                            </li>
+                                            <li>
+                                                <label class="option" for="inter3">Manufacturers</label>
+                                            </li>
+                                        </ul>
+                                    </details>
+                                </div>
+
+
+                            </div>
+                            <div class="form__item">
+                                <p>Best time to contact</p>
+                                <div class="form__input form__input--datepicker">
+                                    <div class="input-group date" id="datepicker">
+                                        <input type="text" placeholder="16 Aug, Tue">
+                                        <span class="input-group-append">
+                                            <span class="input-group-text bg-white d-block">
+                                            </span>
+                                        </span>
+                                    </div>
+                                    <div class="input--time">
+                                        <input type="time" value="00:00">
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="form__item form__item--row">
+                                <div class="form__checkbox">
+                                    <input type="checkbox" name="privacy" id="privacy">
+                                    <label for="privacy">I agree with the Privacy Policy</label>
+                                </div>
+                                <div class="form__btn">
+                                    <button type="submit" class="button button--form button--with-dot">
+                                        <span class="button__text">SEND inquiry</span>
+                                        <span class="button__circle">
+                                            <img class="svg-arr-btn" src="arr-btn.svg">
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+
+
+
+
+
+    </main>
+
+    @@include('html/footer.html',{})

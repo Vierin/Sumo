@@ -9,6 +9,18 @@
         }
     }
 
+    &--hero-intro {
+        .is-video-open & {
+            opacity: 0;
+            pointer-events: none;
+        }
+    }
+
+    &--percents {
+        margin-top: 120px;
+    }
+
+
     &--full {
         height: 100vh;
         min-height: 800px;
@@ -29,6 +41,10 @@
 
             }
         }
+    }
+
+    &--video {
+        position: initial;
     }
 
     &--404 {
@@ -141,9 +157,9 @@
         inset: 13% 35px 13% 35px;
         pointer-events: none;
 
-        // @media(max-height: 750px) {
-        //     inset: 13% 35px 13% 35px;
-        // }
+        &-about {
+            inset: 17% 9px 11% 20px;
+        }
 
         svg {
             overflow: visible;

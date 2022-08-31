@@ -210,8 +210,16 @@
         pointer-events: none;
         transition: color .3s $easing, background .3s $easing;
 
+        .module--result & {
+            border-color: rgba($color-dark, .3);
+        }
+
         svg {
             background: $color-white;
+
+            .module--result & {
+                background: $color-dark;
+            }
 
             rect {
                 stroke: none;
@@ -221,6 +229,10 @@
         &.not-empty {
             pointer-events: all;
             background: $color-white;
+
+            .module--result & {
+                background: $color-dark;
+            }
 
             .button__text {
                 color: $color-violet;

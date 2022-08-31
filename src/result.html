@@ -1,0 +1,74 @@
+@@include('html/head.html',{
+    "title":"Result"
+})
+
+    @@include('html/header.html',{})
+
+    <main>
+        <section class="section section--white">
+
+            <div class="module module--result module--start">
+
+                <div class="grid grid-xl">
+
+                    <div class="search-panel js-search">
+                        <div class="search-panel__wrap">
+                            <p>Search SUMO</p>
+                            <form action="">
+                                <input class="js-search-inp" type="text" placeholder="Write what you are looking for...">
+                                <button type="submit" class="button button--search button--with-dot js-search-btn">
+                                    <span class="button__text">find</span>
+                                    <img class="svg-arr-btn" src="arr-btn.svg">
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+
+
+                        <div class="grid grid--end">
+                            <div class="result grid-m">
+                                <h3>0 result</h3>
+                                <p>There are no results matching your filters.</p>
+
+                                <div class="result__quick">
+                                    <p>Quick links</p>
+                                    <ul>
+                                        <li><a href="">Cases</a></li>
+                                        <li><a href="">News</a></li>
+                                        <li><a href="">For bussines</a></li>
+                                        <li><a href="">For patient</a></li>
+                                        <li><a href="">For doctor</a></li>
+                                        <li><a href="">Insurance</a></li>
+                                        <li><a href="">Hospitals</a></li>
+                                        <li><a href="">Manufactures</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                </div>
+
+                <div class="circle circle--violet circle--l js-circle" data-blur="30" data-position="69, 3">
+                    <span></span>
+                    <div class="circle__svg">
+                        <img src="circle-violet.svg">
+                    </div>
+                </div>
+                <div class="circle circle--blue circle--l js-circle" data-blur="30" data-position="-12, 93">
+                    <span></span>
+                    <div class="circle__svg">
+                        <img src="circle-blue.svg">
+                    </div>
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+@@include('html/footer.html',{})

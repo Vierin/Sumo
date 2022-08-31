@@ -1,0 +1,105 @@
+.percents {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1170px;
+    margin: 150px auto 80px;
+
+    &__item {
+        display: flex;
+        align-items: center;
+        z-index: 2;
+        position: relative;
+
+        p {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 130%;
+            margin: 0 12px;
+        }
+
+        .js-enter,
+        .js-out {
+            position: absolute;
+            z-index: -1;
+        }
+
+        .js-enter {
+            top: 20%;
+            left: 20%;
+        }
+
+        .js-out {
+            left: auto;
+            right: 10%;
+            transform: scale(-1, 1);
+        }
+    }
+
+    svg {
+        overflow: visible;
+    }
+
+
+
+    &-round {
+        position: relative;
+        width: 527px;
+        height: 527px;
+        z-index: 4;
+
+        &__desc {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+
+            & > span {
+                font-weight: 700;
+                font-size: 180px;
+                line-height: 110%;
+            }
+        }
+
+        &__circle {
+            position: absolute;
+            left: 2px;
+            top: 2px;
+            right: 2px;
+            bottom: 2px;
+            border-radius: 50%;
+            background: $color-gray-light;
+        }
+
+        &__info {
+            display: flex;
+            align-items: center;
+
+            span {
+                height: 48px;
+                width: 48px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 130%;
+                border: 1px solid rgba($color-dark, .3);
+            }
+
+            p {
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 120%;
+                margin-left: 16px;
+            }
+        }
+
+        &__circle {
+            transform: rotate(-90deg);
+
+        }
+    }
+}

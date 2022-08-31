@@ -1,0 +1,346 @@
+@@include('html/head.html',{
+    "title":"About"
+    })
+
+    @@include('html/header.html',{})
+
+    <main>
+        <section class="section section--white">
+            <div class="module module--start module--full">
+
+                <div class="grid grid--end">
+                    <div class="heading grid-m">
+                        <span class="heading__span">About SUMO</span>
+                        <h2 class="heading__title">In patient and health professional relationships</div>
+                    </div>
+                </div>
+
+
+                <div class="video video--about" data-component="Video">
+                    <div class="circle circle--violet video__circle js-show">
+                        <span></span>
+                        <div class="circle__svg">
+                            <img src="circle-violet.svg">
+                        </div>
+                        <div class="circle__wrap">
+                            <p>about <br> sumo labs</p>
+                            <p>
+                                <img class="svg-play" src="play.svg">
+                                <span>1:32</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="video__wrap">
+                        <div class="player">
+                            <div class="player__info">
+                                <span class="js-player-info">1:32</span>
+                                <h3>ABOUT SUMO <br> Labs</h3>
+                            </div>
+                            <div class="player__video js-player">
+                                <video src="@media/video.mp4"></video>
+                            </div>
+                            <div class="player__play">
+                                <img class="svg-play" src="play.svg">
+                                <i class="pause"></i>
+                            </div>
+                            <div class="player__bottom">
+                                <div class="player__progress js-player-progress">
+                                    <span></span>
+                                </div>
+                                <div class="player-time__curr js-player-curr">0:00</div>
+                                <div class="player-time__all js-player-all">1:32</div>
+                            </div>
+                            <div class="video__close js-video-close">
+                                <i class="cross"></i>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="video__bg js-video-bg">
+                        <picture>
+                            <source srcset="@media/about.webp" type="image/webp">
+                            <source srcset="@media/about.jpg">
+                            <img src="@media/about.jpg" alt="img">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+
+        <div class="section section--white">
+
+            <div class="module module--bubles module--bubles-about" data-component="Bubles">
+                <img src="bubles-2.svg" class="svg-bubles">
+            </div>
+
+            <div class="circle circle--blue circle--l js-circle" data-blur="40" data-position="8, 12">
+                <span></span>
+                <div class="circle__svg">
+                    <img src="circle-blue.svg">
+                </div>
+            </div>
+
+            <div class="module module--percents">
+
+                <div class="grid grid--end">
+                    <div class="grid-m text text--l">
+                        <p><strong>SUMO is a team of industry professionals who operate software to analyse large amounts of real-time data in the healthcare domain.</strong> Our experts have identified a system to connect key medical information together, collating it in one easy-to-read format, and making it available to you in just a few clicks. </p>
+                    </div>
+                </div>
+
+
+                <div class="percents" data-component="Percents">
+                    <div class="percents__item">
+                        <img src="percent-1.svg">
+                        <p>Patient</p>
+                        <img src="buble-patient.svg" class="js-enter">
+                    </div>
+
+
+
+                    <div class="percents-round">
+                        <div class="percents-round__desc">
+                            <span class="js-number">62</span>
+                            <div class="percents-round__info">
+                                <span>%</span>
+                                <p>Upload information <br> in real time</p>
+                            </div>
+                        </div>
+
+                        <div class="percents-round__circle">
+                            <img src="percent-circle.svg" class="js-progress-circle">
+                        </div>
+                    </div>
+
+                    <div class="percents__item">
+                        <p>Industries</p>
+                        <img src="percent-2.svg">
+                        <img src="buble-patient.svg" class="js-out">
+                    </div>
+
+                </div>
+
+
+                <div class="grid grid--end">
+                    <div class="grid-m text text--m">
+                        <p>Through our established relationships within the MSK sector, we are able to automatically upload relevant information onto our secure system. Our industry-leading software examines and identifies links between such data, giving the reader a clear and coherent understanding, and pin pointing connections that may otherwise have gone a miss.</p>
+                    </div>
+                </div>
+
+                <div class="grid">
+                    <div class="text text--with-label text--two-cols">
+                        <span class="text__label">We follow each medical <br> journey from start to finish</span>
+                        <div class="text__wrap">
+                            <p>Whether you are a medical body, an insurance company, a medical manufacturer, a doctor, a scientist, a patient or someone else within the industry, we have the know-how to provide you with essential information to optimise your knowledge and your level of service. </p>
+                            <p>We follow each medical journey from start to finish, including long into recovery, we detail every step of the way, we withdraw each key fact, and we make links, links that we need for continued improvement within the medical sector.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="module module--team-list">
+                <div class="grid grid--end">
+                    <div class="heading grid-m">
+                        <h2 class="heading__title">The SUMO Teams</h2>
+                    </div>
+                </div>
+
+                <div class="circle circle--violet circle--l js-circle" data-blur="40" data-position="6, 78">
+                    <span></span>
+                    <div class="circle__svg">
+                        <img src="circle-violet.svg">
+                    </div>
+                </div>
+
+                <div class="circle circle--blue circle--l js-circle" data-blur="40" data-position="64, 32">
+                    <span></span>
+                    <div class="circle__svg">
+                        <img src="circle-blue.svg">
+                    </div>
+                </div>
+
+                <div class="team-list grid grid--end grid--col">
+                    <div class="team grid-m">
+						<div class="team__desc">
+							<blockquote class="team__quote">
+								<p>“Sumo offers technology that handles tremendous data throughput reliably & securely”</p>
+								<span class="team__name">Jim McAvoy</span>
+								<span class="team__position">CEO and founder SUMO</span>
+							</blockquote>
+						</div>
+						<div class="team__video video video--small">
+							<img class="video__poster" src="@media/team.png" alt="team">
+
+							<button class="video__btn">
+								<img class="svg-play-circle" src="play-circle.svg">
+							</button>
+
+							<div class="video__caption">
+								<p>Data drives effective <br> population health</p>
+								<span class="video__time">1:30</span>
+							</div>
+						</div>
+					</div>
+                    <div class="team grid-m">
+						<div class="team__desc">
+							<blockquote class="team__quote">
+								<p>“Sumo offers technology that handles tremendous data throughput reliably & securely”</p>
+								<span class="team__name">Carlota do Carmo</span>
+								<span class="team__position">Head of Marketing</span>
+							</blockquote>
+						</div>
+						<div class="team__video video video--small">
+							<img class="video__poster" src="@media/team-1.png" alt="team">
+
+							<button class="video__btn">
+								<img class="svg-play-circle" src="play-circle.svg">
+							</button>
+
+							<div class="video__caption">
+								<p>Data drives effective <br> population health</p>
+								<span class="video__time">1:30</span>
+							</div>
+						</div>
+					</div>
+                    <div class="team grid-m">
+						<div class="team__desc">
+							<blockquote class="team__quote">
+								<p>“Sumo offers technology that handles tremendous data throughput reliably & securely”</p>
+								<span class="team__name">Alexandro Oliveira</span>
+								<span class="team__position">Tech Lead Frontend</span>
+							</blockquote>
+						</div>
+						<div class="team__video video video--small">
+							<img class="video__poster" src="@media/team-2.png" alt="team">
+
+							<button class="video__btn">
+								<img class="svg-play-circle" src="play-circle.svg">
+							</button>
+
+							<div class="video__caption">
+								<p>Data drives effective <br> population health</p>
+								<span class="video__time">1:30</span>
+							</div>
+						</div>
+					</div>
+                </div>
+            </div>
+        </div>
+
+        <section class="section section--violet js-dark">
+            <div class="module module--form module--form-cols">
+                <div class="grid grid--end grid--col">
+
+                    <div class="grid grid--row">
+                        <div class="heading">
+                            <h2 class="heading__title">Any Questions? <br> Let Us Know.</h2>
+                            <p class="heading__subtitle">Get in touch with us today and <br> make the change.</p>
+                        </div>
+
+                        <form class="form" id="form" action="" data-component="Form">
+                            <div class="form__item">
+                                <p>Hi! My name is</p>
+                                <div class="form__input">
+                                    <input id="name" type="text" placeholder="Enter your name & last name*">
+                                </div>
+                            </div>
+                            <div class="form__item">
+                                <p>and I work company</p>
+                                <div class="form__input">
+                                    <input id="company" type="text" placeholder="Company name type here*">
+                                </div>
+                            </div>
+                            <div class="form__item">
+                                <p>You can reach me at</p>
+                                <div class="form__input">
+                                    <input id="email" type="email" placeholder="Enter your email*">
+                                </div>
+                            </div>
+                            <div class="form__item">
+                                <p>or my telephone number</p>
+                                <div class="form__input form__input--small">
+                                    <input id="number" type="number" placeholder="Enter your phone*">
+                                </div>
+                            </div>
+                            <div class="form__item">
+                                <p>I'm interested in</p>
+                                <div class="form__input form__input--select">
+                                    <details class="custom-select">
+                                        <summary class="radios">
+                                            <input type="radio" name="inter" id="default" title="Select*" checked>
+                                            <input type="radio" name="inter" id="inter1" title="Medical Facilities">
+                                            <input type="radio" name="inter" id="inter2" title="Insurance Companies">
+                                            <input type="radio" name="inter" id="inter3" title="Manufacturers">
+                                        </summary>
+                                        <ul class="list">
+                                            <li>
+                                                <label class="option" for="inter1">
+                                                    Medical Facilities
+                                                    <span></span>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="option" for="inter2">Insurance Companies</label>
+                                            </li>
+                                            <li>
+                                                <label class="option" for="inter3">Manufacturers</label>
+                                            </li>
+                                        </ul>
+                                    </details>
+                                </div>
+
+
+                            </div>
+                            <div class="form__item">
+                                <p>Best time to contact</p>
+                                <div class="form__input form__input--datepicker">
+                                    <div class="input-group date" id="datepicker">
+                                        <input type="text" placeholder="16 Aug, Tue">
+                                        <span class="input-group-append">
+                                            <span class="input-group-text bg-white d-block">
+                                            </span>
+                                        </span>
+                                    </div>
+                                    <div class="input--time">
+                                        <input type="time" value="00:00">
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="form__item form__item--row">
+                                <div class="form__checkbox">
+                                    <input type="checkbox" name="privacy" id="privacy">
+                                    <label for="privacy">I agree with the Privacy Policy</label>
+                                </div>
+                                <div class="form__btn">
+                                    <button type="submit" class="button button--form button--with-dot">
+                                        <span class="button__text">SEND inquiry</span>
+                                        <span class="button__circle">
+                                            <img class="svg-arr-btn" src="arr-btn.svg">
+                                        </span>
+                                    </button>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+
+
+
+
+
+    </main>
+
+    @@include('html/footer.html',{})
