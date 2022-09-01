@@ -51,7 +51,7 @@
             width: 5px;
             border-radius: 50%;
             background: $color-black;
-            animation: moveX 2s linear infinite;
+            animation: moveX 2s infinite cubic-bezier(.09,.63,.72,.85);
 
             @for $i from 1 through 5 {
                 &:nth-child(#{$i}) {
@@ -74,7 +74,7 @@
         background: $color-gray-light;
 
         &:nth-of-type(3) {
-            box-shadow: 0px 0px 30px 0px rgba(93, 0, 159, 0.6);
+            animation: shadow 1.5s infinite $easing;
         }
 
         p {

@@ -18,8 +18,16 @@ body {
     &.is-scrolling {
         overflow: hidden;
     }
+}
 
-
+.main-curtain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: $color-violet;
+    z-index: 10;
 }
 
 

@@ -14,9 +14,10 @@
 		<link rel="stylesheet" href="./css/main.min.css">
 		<title>Industries</title>
 	</head>
-	<body>
+	<body class="is-loading">
 
-    <header class="header js-header">
+    
+<header class="header js-header">
     <!-- <div class="header__wrap"> -->
     <div class="header__logo">
         <svg width="78" height="86" viewBox="0 0 78 86" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg-logo svg-white">
@@ -207,6 +208,7 @@
 
     </div>
 </header>
+<div class="main-curtain js-main-curtain"></div>
 
     <main>
         <section class="section">
@@ -472,7 +474,19 @@
 
     </main>
 
-    <footer class="footer">
+    <div class="loader js-loader">
+    <div class="loader__wrap">
+        <div class="ball"></div>
+        <div class="ball"></div>
+        <div class="ball"></div>
+        <div class="ball"></div>
+        <div class="ball"></div>
+        <div class="ball"></div>
+        <div class="ball"></div>
+    </div>
+</div>
+
+<footer class="footer">
     <div class="grid grid-xl">
         <div class="footer__wrap">
             <div class="footer__col">
@@ -559,8 +573,8 @@
             <div class="footer__col">
                 <ul>
                     <li><p>Info</p></li>
-                    <li><a href="#">About US</a></li>
-                    <li><a href="#">Blog</a></li>
+                    <li><a href="./about.html">About US</a></li>
+                    <li><a href="./news.html">Blog</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
             </div>
@@ -587,6 +601,8 @@
             </div>
         </div>
     </div>
+
+
 
 </footer>
 <!-- form scripts -- move to js file -->

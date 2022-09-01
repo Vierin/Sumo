@@ -8,13 +8,17 @@
     justify-content: space-between;
 
     &__more {
-        margin: 90px 0 120px;
+        margin: 90px 0 0;
     }
 
     &__item {
         width: $grid-m;
         position: relative;
         margin-bottom: 72px;
+
+        .result & {
+            margin-bottom: 0;
+        }
     }
 
     &__cats {
@@ -59,7 +63,7 @@
     }
 
     &__date {
-        color: $color-dark;
+        color: rgba($color-dark, .6);
         font-weight: 500;
         font-size: 14px;
         line-height: 150%;
@@ -68,6 +72,10 @@
 
     &__btn {
         margin-top: 32px;
+
+        svg rect {
+            stroke: none;
+        }
     }
 
     &__type {

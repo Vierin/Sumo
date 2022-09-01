@@ -8,7 +8,7 @@
         margin-bottom: 16px;
     }
 
-    p {
+    &__text {
         font-weight: 500;
         font-size: 20px;
         line-height: 150%;
@@ -37,5 +37,39 @@
                 opacity: 1;
             }
         }
+    }
+
+    &__list {
+        margin-bottom: 120px;
+    }
+}
+
+.result-item {
+    margin-bottom: 72px;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 130%;
+        margin-bottom: 8px;
+    }
+
+    &__text {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 150%;
+        color: rgba($color-black, .7);
+    }
+
+    &__link {
+        display: block;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 150%;
+        color: $color-violet;
     }
 }
