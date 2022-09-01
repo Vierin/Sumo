@@ -12,6 +12,7 @@ import { Video } from './components/Video.js';
 import { Percents } from './components/Percents.js';
 import { Quest } from './components/Quest.js';
 import { Loader } from './components/Loader.js';
+import { Morph } from './components/Morph.js';
 
 import { gsap } from "gsap";
 // import ScrollTrigger from "gsap/src/ScrollTrigger.js";
@@ -69,6 +70,7 @@ export class Page {
         new Video();
         new Percents();
         new Quest();
+        new Morph();
 
 
         //group in one folder

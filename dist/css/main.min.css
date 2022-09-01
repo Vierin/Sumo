@@ -131,6 +131,13 @@ body.is-scrolling {
   z-index: 10;
 }
 
+.js-morph {
+  overflow: visible;
+}
+.js-morph .mask {
+  display: none;
+}
+
 html.is-menu-open,
 html.is-video-open {
   overflow: hidden;
