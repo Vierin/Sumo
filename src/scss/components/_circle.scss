@@ -77,6 +77,10 @@
 
     }
 
+    &--what {
+        left: 85% !important;
+    }
+
     &.circle--what > span  {
         filter: blur(60px);
     }

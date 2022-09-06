@@ -35,7 +35,7 @@ export class Menu {
 
         if(show) {
             gsap.set(this.curtain, {opacity: 1});
-            gsap.to(this.curtain, {width: 200 + "vw", height: 200 + "vw", duration: .5 })
+            gsap.to(this.curtain, {width: 210 + "vw", height: 210 + "vw", duration: .5 })
         } else {
             this.searchClose()
             gsap.to(this.curtain, {width: 1, height: 1, duration: .5, onComplete: () => {

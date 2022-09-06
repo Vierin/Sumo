@@ -18,7 +18,7 @@ export class Morph {
             const path = el.querySelector('.figure path');
             const pathTo = el.querySelector('.mask path');
 
-            gsap.timeline({repeat: -1})
+            gsap.timeline({repeat: -1, repeatDelay: 0})
                 .to(path, {duration: 2, morphSVG: pathTo})
                 .to(path, {duration: 2, morphSVG: path})
         });

@@ -64,8 +64,8 @@
             // margin-top: 150px;
             margin-top: 16vh;
 
-            @media(min-height: 750px) {
-                margin-bottom: 10vh;
+            @media(max-height: 740px) {
+                margin-top: 10vh;
             }
 
             p {
@@ -210,6 +210,15 @@
 
             .circle {
                 top: 25% !important;
+            }
+        }
+    }
+
+    &--slider-keys:not(.module--mt) {
+        .module--start + & {
+
+            .circle {
+                top: 5% !important;
             }
         }
     }

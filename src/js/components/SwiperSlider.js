@@ -37,6 +37,10 @@ export class SwiperSlider {
         }
 
 
+        if(options.spaceBetween && window.innerWidth < 1450) {
+            options.spaceBetween = options.spaceBetween * 2;
+        }
+
 
         const swiper = new Swiper(view, {
             speed: 400,

@@ -1,5 +1,8 @@
 import { gsap } from "gsap";
 import { Player } from "./Player.js"
+import { ScrollToPlugin } from "gsap/ScrollToPlugin.js";
+
+gsap.registerPlugin(ScrollToPlugin)
 
 export class Video {
     constructor() {
@@ -18,16 +21,22 @@ export class Video {
         this.curtain = this.btnOpen.querySelector('span');
         this.wrap = this.view.querySelector('.video__wrap');
         this.bg = this.view.querySelector('.js-video-bg img');
+        this.back = document.querySelector('.js-back');
 
         this.html = document.documentElement;
 
         this.btnOpen.addEventListener('click', () => {
-            this.html.classList.toggle('is-video-open');
-            gsap.to(this.curtain, {scale: 20, duration: .8, opacity: .8, onComplete: () => {
-                gsap.to(this.wrap, {opacity: 1, duration: .4, pointerEvents: "all"});
-            }});
 
-            gsap.to(this.bg, {filter: "blur(10px)"});
+            gsap.to(window, {duration: 1, scrollTo: this.back, onComplete: () => {
+                this.html.classList.toggle('is-video-open');
+                gsap.to(this.curtain, {scale: 20, duration: .8, opacity: .8, onComplete: () => {
+                    gsap.to(this.wrap, {opacity: 1, duration: .4, pointerEvents: "all"});
+                }});
+
+                gsap.to(this.bg, {filter: "blur(10px)"});
+            }})
+
+
         })
 
         this.btnClose.addEventListener('click', () => {

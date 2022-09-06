@@ -27,10 +27,22 @@
 
         & > svg {
             position: absolute;
-            top: 50%;
-            left: 50%;
-            margin: -50px;
+            top: 0;
+            left: 0;
             z-index: -1;
+        }
+
+        .js-morph:first-of-type {
+            margin: -35px;
+            width: 120px;
+            height: 120px;
+            transform: rotate(320deg);
+        }
+
+        .js-morph:last-of-type {
+            margin: -15px;
+            width: 120px;
+            height: 120px;
         }
     }
 
