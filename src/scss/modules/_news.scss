@@ -25,7 +25,7 @@
         display: flex;
         align-items: flex-start;
 
-        p {
+        a {
             border: 1px solid rgba($color-dark, 0.3);
             border-radius: 100px;
             height: 32px;
@@ -36,11 +36,13 @@
             line-height: 120%;
             margin: 0;
             margin-right: 8px;
+            cursor: pointer;
 
             &.is-active {
                 border-color: $color-dark;
                 background: $color-dark;
                 color: $color-white;
+                pointer-events: none;
             }
         }
     }

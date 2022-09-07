@@ -44,7 +44,7 @@ export class SwiperSlider {
 
         const swiper = new Swiper(view, {
             speed: 400,
-            allowTouchMove: true,
+            allowTouchMove:  options.touchNone ? false : true,
             slidesPerView: options.slidesPerView ? +options.slidesPerView : 1,
             spaceBetween: options.spaceBetween ? +options.spaceBetween : 0,
             initialSlide: options.initialSlide ? +options.initialSlide : 0,
@@ -82,8 +82,11 @@ export class SwiperSlider {
                     }
 
                     if(options.imageOutside) {
-                        if(slides[e.activeIndex].classList.contains('swiper-slide--img-out') ) {
-                            gsap.fromTo(this.imgs[0], {opacity: 0, x: -20}, {opacity: 1, x: 0,  duration: .4});
+                        console.log(slides[e.activeIndex]);
+                        if(slides[e.activeIndex].hasAttribute('data-image') ) {
+                            const id = slides[e.activeIndex].getAttribute('data-image');
+                            console.log(id);
+                            gsap.fromTo(this.imgs[id], {opacity: 0, x: -20}, {opacity: 1, x: 0,  duration: .4});
                         } else {
                             this.imgs.forEach(img => {
                                 gsap.to(img, {opacity: 0, x: 20, duration: .4});

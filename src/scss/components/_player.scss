@@ -8,6 +8,11 @@
     width: 1170px;
     height: 660px;
 
+    @media(max-width: 1450px) {
+        width: 998px;
+        height: 550px;
+    }
+
     &__info {
         position: absolute;
         top: 24px;

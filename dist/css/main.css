@@ -12552,6 +12552,12 @@ fieldset:disabled .btn {
   color: #fff;
 }
 
+a.button {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
 .chip {
   position: relative;
   top: -80px;
@@ -13722,6 +13728,12 @@ input[type=radio]:after {
   overflow: hidden;
   width: 1170px;
   height: 660px;
+}
+@media (max-width: 1450px) {
+  .player {
+    width: 998px;
+    height: 550px;
+  }
 }
 .player__info {
   position: absolute;
@@ -15825,7 +15837,7 @@ button.swiper-pagination-bullet {
   -ms-flex-align: start;
   align-items: flex-start;
 }
-.news__cats p {
+.news__cats a {
   border: 1px solid rgba(14, 14, 14, 0.3);
   border-radius: 100px;
   height: 32px;
@@ -15836,11 +15848,13 @@ button.swiper-pagination-bullet {
   line-height: 120%;
   margin: 0;
   margin-right: 8px;
+  cursor: pointer;
 }
-.news__cats p.is-active {
+.news__cats a.is-active {
   border-color: #0E0E0E;
   background: #0E0E0E;
   color: #fff;
+  pointer-events: none;
 }
 .news__img {
   border-radius: 10px;

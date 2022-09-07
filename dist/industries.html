@@ -247,9 +247,9 @@
 
                 <div class="swiper swiper--keys swiper--padding-l swiper--mb-none">
                     <p class="swiper__caption">Key factors of <br> about work SUMO</p>
-                    <div class="swiper__box" data-component="SwiperSlider" data-options="navigationNone: true, imageOutside: true">
+                    <div class="swiper__box" data-component="SwiperSlider" data-options="navigationNone: true, imageOutside: true, touchNone: true">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide key-slide swiper-slide--img-out">
+                            <div class="swiper-slide key-slide" data-image="0">
                                 <div class="key-slide__wrap">
                                     <p class="key-slide__title">
                                         Hospitals, Clinics, and Other Medical Facilities
@@ -257,13 +257,13 @@
                                     <div class="key-slide__text">
                                         <p>Need to track the pain scores of patients more accurately? Want better tracking for staying up to date with patient symptoms and their healing journeys? Would it perhaps be much easier to be informed on all patient visits even if not at your establishments for better assessment?</p><p>This is just a small fraction of the possibilities hospitals, clinics, and more can experience with SUMO.</p>
                                     </div>
-                                    <button class="key-slide__btn button button--with-dot button--black">
+                                    <a href="#" class="key-slide__btn button button--with-dot button--black">
                                         <span class="button__text">Read more</span>
                                         <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg-arr-btn">
 <path d="M17.6062 17.6083H28.3896V28.3917H27.2582V19.5529L18.0128 28.7983L17.1996 27.9851L26.445 18.7397L17.6062 18.7397L17.6062 17.6083Z" fill="white"/>
 <rect x="0.5" y="0.5" width="45" height="45" rx="22.5" stroke="white"/>
 </svg>
-                                    </button>
+                                    </a>
                                 </div>
                             </div>
                             <div class="swiper-slide key-slide">
@@ -312,7 +312,7 @@
                     </div>
 
                     <div class="swiper-imgs">
-                        <div class="swiper__img key-slide__img js-swiper-img">
+                        <div class="swiper__img key-slide__img js-swiper-img" data-id="1">
                             <img src="./media/key.png" alt="key">
                         </div>
                     </div>
@@ -590,7 +590,9 @@
             <a href>Term of use</a>
             <a href>Privacy</a>
             <div class="footer__create">
-                <img src="./media/brab.png" alt="brab logo">
+                <a href>
+                    <img src="./media/brab.png" alt="brab logo">
+                </a>
             </div>
         </div>
     </div>

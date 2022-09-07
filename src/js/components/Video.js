@@ -26,8 +26,8 @@ export class Video {
         this.html = document.documentElement;
 
         this.btnOpen.addEventListener('click', () => {
-
-            gsap.to(window, {duration: 1, scrollTo: this.back, onComplete: () => {
+            const fast = this.back.classList.contains('scroll-fast')
+            gsap.to(window, {duration: fast ? 0 : .7, scrollTo: this.back, onComplete: () => {
                 this.html.classList.toggle('is-video-open');
                 gsap.to(this.curtain, {scale: 20, duration: .8, opacity: .8, onComplete: () => {
                     gsap.to(this.wrap, {opacity: 1, duration: .4, pointerEvents: "all"});
