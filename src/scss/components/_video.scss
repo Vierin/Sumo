@@ -7,6 +7,24 @@
         position: relative;
     }
 
+    .team & span.js-video-curtain {
+        position: absolute;
+        top: calc(50% - 100px);
+        left: calc(50% - 100px);
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        pointer-events: none;
+        background: $color-violet;
+        opacity: 0;
+        z-index: -1;
+
+        .is-video-open & {
+            z-index: 5;
+        }
+
+    }
+
     &__wrap {
         z-index: 2;
         position: absolute;
@@ -16,6 +34,16 @@
         height: 100vh;
         opacity: 0;
         pointer-events: none;
+
+        .team & {
+            z-index: 6;
+
+            .is-video-open & {
+                position: fixed;
+            }
+        }
+
+
     }
 
     &__close {
@@ -175,12 +203,17 @@
     }
 
     &__poster {
-        transition: transform .3s $easing;
+        overflow: hidden;
+        border-radius: 20px;
+
+        img {
+            transition: transform .3s $easing;
+        }
     }
 
     &.team__video {
         @include hover {
-            .video__poster {
+            .video__poster img {
                 transform: scale(1.1);
             }
 

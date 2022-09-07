@@ -13,7 +13,6 @@ export class Player {
         this.video = this.view.querySelector('video');
         this.player = this.view.querySelector('.js-player');
 
-
         this.setTime();
 
         this.player.addEventListener("click", () => {

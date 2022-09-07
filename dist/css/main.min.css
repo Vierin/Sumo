@@ -12608,6 +12608,21 @@ a.button {
 .video--small {
   position: relative;
 }
+.team .video span.js-video-curtain {
+  position: absolute;
+  top: calc(50% - 100px);
+  left: calc(50% - 100px);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  pointer-events: none;
+  background: #5D009F;
+  opacity: 0;
+  z-index: -1;
+}
+.is-video-open .team .video span.js-video-curtain {
+  z-index: 5;
+}
 .video__wrap {
   z-index: 2;
   position: absolute;
@@ -12617,6 +12632,12 @@ a.button {
   height: 100vh;
   opacity: 0;
   pointer-events: none;
+}
+.team .video__wrap {
+  z-index: 6;
+}
+.is-video-open .team .video__wrap {
+  position: fixed;
 }
 .video__close {
   position: absolute;
@@ -12764,13 +12785,17 @@ a.button {
   transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
 }
 .video__poster {
+  overflow: hidden;
+  border-radius: 20px;
+}
+.video__poster img {
   -webkit-transition: -webkit-transform 0.3s ease-out;
   transition: -webkit-transform 0.3s ease-out;
   -o-transition: transform 0.3s ease-out;
   transition: transform 0.3s ease-out;
   transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
 }
-.mod_no-touchevents .video.team__video:hover .video__poster {
+.mod_no-touchevents .video.team__video:hover .video__poster img {
   -webkit-transform: scale(1.1);
   -ms-transform: scale(1.1);
   transform: scale(1.1);
@@ -15705,9 +15730,18 @@ button.swiper-pagination-bullet {
   width: 278px;
 }
 .team__video {
-  overflow: hidden;
-  border-radius: 20px;
+  height: 368px;
+}
+.team__video > div.js-show {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   cursor: pointer;
+}
+.team__video > div.js-show > * {
+  pointer-events: none;
 }
 .team__desc > span {
   display: block;
