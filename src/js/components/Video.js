@@ -29,7 +29,7 @@ export class Video {
             const fast = this.back.classList.contains('scroll-fast')
             gsap.to(window, {duration: fast ? 0 : .7, scrollTo: this.back, onComplete: () => {
                 this.html.classList.toggle('is-video-open');
-                gsap.to(this.curtain, {scale: 20, duration: .8, opacity: .8, onComplete: () => {
+                gsap.to(this.curtain, {scale: 35, duration: 1, opacity: .8, onComplete: () => {
                     gsap.to(this.wrap, {opacity: 1, duration: .4, pointerEvents: "all"});
                 }});
 
