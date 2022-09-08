@@ -82,11 +82,23 @@ export class SwiperSlider {
                     }
 
                     if(options.imageOutside) {
-                        console.log(slides[e.activeIndex]);
-                        if(slides[e.activeIndex].hasAttribute('data-image') ) {
+                        if(slides[e.activeIndex].hasAttribute('data-image')) {
+                            this.imgs.forEach(img => {
+                                gsap.to(img, {opacity: 0, x: 20, duration: .4});
+                            });
+
                             const id = slides[e.activeIndex].getAttribute('data-image');
-                            console.log(id);
-                            gsap.fromTo(this.imgs[id], {opacity: 0, x: -20}, {opacity: 1, x: 0,  duration: .4});
+
+
+                            let imgForSlide;
+
+                            this.imgs.forEach(img => {
+                                if(img.dataset.id === id) {
+                                    imgForSlide = img;
+                                }
+                            });
+
+                            gsap.fromTo(imgForSlide, {opacity: 0, x: -20}, {opacity: 1, x: 0,  duration: .4});
                         } else {
                             this.imgs.forEach(img => {
                                 gsap.to(img, {opacity: 0, x: 20, duration: .4});
