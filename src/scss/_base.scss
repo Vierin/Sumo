@@ -56,10 +56,15 @@ p {
     line-height: 150%;
     letter-spacing: 0.02em;
 
+    @include breakpoint(phone) {
+        font-size: 13px;
+    }
+
     & + & {
         margin-top: 16px;
     }
 }
+
 
 img {
     width: 100%;
@@ -79,6 +84,7 @@ img {
 }
 
 input,
+textarea,
 select {
     outline: none;
     border: none;
@@ -87,6 +93,10 @@ select {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+
+textarea {
+    resize: none;
 }
 
 .datepicker__time {
