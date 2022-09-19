@@ -6,12 +6,34 @@
     justify-content: space-between;
     align-items: flex-start;
 
+    @include breakpoint(phone) {
+        flex-direction: column;
+        margin-bottom: 80px;
+    }
+
+    &__info {
+        @include breakpoint(phone) {
+            display: flex;
+            width: 100%;
+            align-items: flex-start;
+            justify-content: space-between;
+
+            p {
+                flex-basis: 48%;
+            }
+        }
+    }
+
     p {
         color: #383838;
         font-weight: 500;
 
         & + p {
             margin-top: 24px;
+
+            @include breakpoint(phone) {
+                margin-top: 0;
+            }
         }
     }
 }

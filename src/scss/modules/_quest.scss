@@ -9,8 +9,27 @@
         width: 600px;
     }
 
+    @include breakpoint(phone) {
+        width: 367px;
+        height: 367px;
+        margin: 120px auto 95px;
+    }
+
     &__wrap {
         border-bottom: 1px solid rgba($color-white, .3);
+
+        @include breakpoint(phone) {
+            border: none;
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: 16px;
+                bottom: -96px;
+                width: calc(100% - 32px);
+                border-bottom: 1px solid rgba($color-white, .3);
+            }
+        }
     }
 
     &__circle {
@@ -19,6 +38,11 @@
         @media(max-height: 750px) {
             height: 600px;
             width: 600px;
+        }
+
+        @include breakpoint(phone) {
+            width: 367px;
+            height: 367px;
         }
 
         svg {
@@ -48,6 +72,10 @@
         position: absolute;
         z-index: 3;
         cursor: pointer;
+
+        @include breakpoint(phone) {
+            display: none;
+        }
 
         &--1 {
             top: 28%;
@@ -91,6 +119,11 @@
         line-height: 120%;
         color: #F1F1F1;
         text-align: center;
+
+        @include breakpoint(phone) {
+            font-size: 36px;
+            line-height: 130%;
+        }
     }
 
     &__restart {
@@ -147,16 +180,31 @@
         &--1 {
             top: -3%;
             left: 34%;
+
+            @include breakpoint(phone) {
+                top: -6%;
+                left: 28%;
+            }
         }
 
         &--2 {
             top: 68%;
             right: -9%;
+
+            @include breakpoint(phone) {
+                top: 94%;
+                left: 56%;
+            }
         }
 
         &--3 {
             top: 68%;
             left: -12%;
+
+            @include breakpoint(phone) {
+                top: 94%;
+                left: 3%;
+            }
         }
 
         a {
@@ -169,6 +217,11 @@
             font-weight: 600;
             font-size: 16px;
             line-height: 150%;
+
+            @include breakpoint(phone) {
+                font-size: 13px;
+                font-weight: 500;
+            }
         }
 
         svg {

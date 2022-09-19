@@ -152,6 +152,10 @@ input[type=radio] {
 	-o-appearance: none;
 	appearance: none;
 
+	@include breakpoint(phone) {
+		text-align: left;
+	}
+
 	.section--violet & {
 		color: rgba($color-white, .3);
 	}

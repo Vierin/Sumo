@@ -7,6 +7,66 @@
     align-items: center;
     position: relative;
 
+    @include breakpoint(phone) {
+        pointer-events: none;
+
+        .module--text & {
+            display: none;
+        }
+
+        &[data-position="5, 85"] {
+            left: 80% !important;
+            top: 3% !important;
+        }
+
+        &[data-position="10, -3"] {
+            top: 0 !important;
+            left: -47% !important;
+        }
+
+        &[data-position="50, 5"] {
+            top: 83% !important;
+            left: 65% !important;
+            opacity: .8;
+        }
+
+        &[data-position="17, -15"] {
+            top: 88% !important;
+            left: 59% !important;
+            opacity: .7;
+        }
+
+        &[data-position="12, -2"] {
+            top: 80% !important;
+            left: 63% !important;
+            opacity: .7;
+        }
+
+        &[data-position="69, 3"] {
+            top: 73% !important;
+            left: -47% !important;
+            opacity: .7;
+        }
+
+        .module--contacts &[data-position="22, 85"] {
+            top: 4% !important;
+            left: 82% !important;
+            opacity: .7;
+        }
+
+        .module--contacts &[data-position="60, -2"] {
+            top: 60% !important;
+            left: -55% !important;
+            opacity: .7;
+        }
+
+        &[data-position="55, 17"],
+        &[data-position="12, -1"] {
+            display: none;
+        }
+    }
+
+
     &[data-position] {
         position: absolute;
     }
@@ -35,6 +95,11 @@
         position: absolute;
         left: 77%;
         top: 22%;
+
+        @include breakpoint(phone) {
+            left: 76%;
+            top: 14%;
+        }
     }
 
     &__wrap {

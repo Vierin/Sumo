@@ -2,10 +2,29 @@
     display: flex;
     margin-top: 41px;
 
+    @include breakpoint(phone) {
+        .footer & {
+            position: absolute;
+            bottom: 32%;
+            margin-top: 0;
+        }
+    }
+
     &--menu {
         position: absolute;
         right: 0;
         bottom: 0;
+
+        @include breakpoint(phone) {
+            right: auto;
+            left: 0;
+            bottom: auto;
+            top: 80%;
+
+            .is-search-open & {
+                top: 110%;
+            }
+        }
     }
 
     &--article {
@@ -42,6 +61,11 @@
             .socials--menu & {
                 border: 1px solid rgba($color-white, .3);
                 margin-left: 8px;
+
+                @include breakpoint(phone) {
+                    margin-left: 0;
+                    margin-right: 8px;
+                }
 
                 @include hover {
                     background-color: $color-white;

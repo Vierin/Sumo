@@ -13,6 +13,7 @@ import { Percents } from './components/Percents.js';
 import { Quest } from './components/Quest.js';
 import { Loader } from './components/Loader.js';
 import { Morph } from './components/Morph.js';
+import { Search } from './components/Search.js';
 
 import { gsap } from "gsap";
 // import ScrollTrigger from "gsap/src/ScrollTrigger.js";
@@ -40,6 +41,7 @@ export class Page {
 
     }
 
+
     curtain() {
 
         document.querySelectorAll('a[href]').forEach(link => {
@@ -56,6 +58,7 @@ export class Page {
 
     setComponents() {
         getBrowser();
+        // checkBreakpoint();
 
         //components
         new SwiperSlider();
@@ -71,6 +74,7 @@ export class Page {
         new Percents();
         new Quest();
         new Morph();
+        new Search();
 
 
         //group in one folder

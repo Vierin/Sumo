@@ -7,6 +7,10 @@
         line-height: 130%;
         color: $color-violet;
         margin-bottom: 16px;
+
+        @include breakpoint(phone) {
+            font-size: 28px;
+        }
     }
 
     &__text {
@@ -36,9 +40,17 @@
     &__wrap {
         width: $grid-m;
         margin-left: auto;
+
+        @include breakpoint(phone) {
+            width: 100%;
+        }
     }
 
     &__btn {
         margin-top: 48px;
+
+        @include breakpoint(phone) {
+            margin-top: 24px;
+        }
     }
 }

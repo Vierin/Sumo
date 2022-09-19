@@ -9,6 +9,15 @@ $grid-xl: 1170px;
     max-width: $grid;
     position: relative;
 
+    @include breakpoint(phone) {
+        max-width: 100%;
+        padding: 0 16px;
+
+        .grid {
+            padding: 0;
+        }
+    }
+
 
     // sizes
     &-xl {
@@ -42,6 +51,10 @@ $grid-xl: 1170px;
     &--row {
         display: flex;
         justify-content: space-between;
+
+        @include breakpoint(phone) {
+            flex-direction: column;
+        }
     }
 
     &--end {

@@ -1,11 +1,19 @@
 .list {
     margin: 50px 0 40px;
 
+    @include breakpoint(phone) {
+        margin: 0 0 80px;
+    }
+
     &__item {
         display: flex;
         justify-content: space-between;
         padding: 32px 0;
         border-top: 1px solid rgba($color-dark, .3);
+
+        @include breakpoint(phone) {
+            padding: 28px 0;
+        }
 
         span {
             font-weight: 500;
@@ -13,6 +21,10 @@
             line-height: 130%;
             color: rgba($color-dark, .6);
             text-transform: uppercase;
+
+            @include breakpoint(phone) {
+                width: 120px;
+            }
         }
 
         p {
@@ -20,6 +32,11 @@
             font-weight: 500;
             font-size: 14px;
             line-height: 150%;
+
+            @include breakpoint(phone) {
+                width: 65%;
+                font-size: 13px;
+            }
         }
     }
 }

@@ -14,12 +14,24 @@
         display: flex;
         justify-content: flex-end;
         margin-bottom: 64px;
+
+        @include breakpoint(phone) {
+            padding-bottom: 45px;
+            flex-direction: column-reverse;
+            margin-bottom: 0;
+        }
     }
 
     &__info {
         position: absolute;
         bottom: 64px;
         left: 0;
+
+        @include breakpoint(phone) {
+            position: relative;
+            bottom: 0;
+            padding-bottom: 25px;
+        }
 
         strong {
             font-weight: 600;
@@ -43,10 +55,20 @@
         font-size: 64px;
         line-height: 110%;
 
+        @include breakpoint(phone) {
+            font-size: 36px;
+            line-height: 130%;
+            letter-spacing: 0.02em;
+        }
+
         .module--form-cols & {
             font-weight: 600;
             font-size: 48px;
             line-height: 110%;
+
+            @include breakpoint(phone) {
+                font-size: 28px;
+            }
         }
 
         & + p {
@@ -60,6 +82,10 @@
         font-size: 20px;
         line-height: 150%;
         letter-spacing: 0.02em;
+
+        @include breakpoint(phone) {
+            font-size: 16px;
+        }
     }
 
     &__cols {
@@ -82,6 +108,11 @@
         line-height: 130%;
         letter-spacing: 0.02em;
 
+        @include breakpoint(phone) {
+            font-size: 14px;
+            line-height: 150%;
+        }
+
         svg {
             height: 25px;
             width: 25px;
@@ -90,6 +121,10 @@
 
         & + .heading__title {
             margin-top: 32px;
+
+            @include breakpoint(phone) {
+                margin-top: 15px;
+            }
         }
     }
 

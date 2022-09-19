@@ -39,9 +39,14 @@
         position: relative;
         width: $grid;
         margin: 52px auto 150px;
-
         padding-top: 100px;
         border-top: 1px solid rgba($color-dark, .1);
+
+        @include breakpoint(phone) {
+            margin-top: 0;
+            margin-bottom: 300px !important;
+            width: 100%;
+        }
 
         .swiper-wrapper {
             order: 2;
@@ -53,6 +58,13 @@
         top: 5%;
         left: -10%;
         width: 50%;
+        pointer-events: none;
+
+        @include breakpoint(phone) {
+            top: 100%;
+            width: 74%;
+            left: 13%;
+        }
 
         .swiper__img {
             position: absolute;
@@ -67,6 +79,11 @@
         width: $grid-m;
         overflow: hidden;
         margin-left: auto;
+
+        @include breakpoint(phone) {
+            width: 100%;
+            margin-left: 0;
+        }
     }
 
     &--what {
@@ -82,6 +99,10 @@
 
     &--padding-l {
         padding-top: 170px;
+
+        @include breakpoint(phone) {
+            padding-top: 260px;
+        }
     }
 
     &-btns {
@@ -155,6 +176,12 @@
             position: absolute;
             top: 17px;
             right: 0;
+
+            @include breakpoint(phone) {
+                width: 100%;
+                top: 110px;
+                padding-bottom: 0;
+            }
         }
 
         .js-progress {
@@ -186,9 +213,17 @@
             cursor: pointer;
             transition: opacity .4s $easing;
 
+            @include breakpoint(phone) {
+                font-size: 14px;
+            }
+
             span {
                 display: block;
                 margin-top: 25px;
+
+                @include breakpoint(phone) {
+                    margin-top: 15px;
+                }
             }
 
             &:nth-of-type(3) {
@@ -276,6 +311,11 @@
         font-weight: 600;
         color: rgba($color-dark, .6);
         z-index: 2;
+
+        @include breakpoint(phone) {
+            font-size: 13px;
+            font-weight: 500;
+        }
     }
 
 }

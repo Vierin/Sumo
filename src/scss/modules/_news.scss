@@ -16,6 +16,10 @@
         position: relative;
         margin-bottom: 72px;
 
+        @include breakpoint(phone) {
+            width: 100%;
+        }
+
         .result & {
             margin-bottom: 0;
         }
@@ -53,6 +57,10 @@
 
         .news__item & {
             height: 250px;
+
+            @include breakpoint(phone) {
+                height: 230px;
+            }
         }
     }
 
@@ -62,6 +70,11 @@
         line-height: 130%;
         letter-spacing: 0.02em;
         margin: 16px 0;
+
+        @include breakpoint(phone) {
+            font-size: 24px;
+            margin: 26px 0 -4px;
+        }
     }
 
     &__date {
@@ -70,6 +83,10 @@
         font-size: 14px;
         line-height: 150%;
         letter-spacing: 0.02em;
+
+        @include breakpoint(phone) {
+            font-size: 13px;
+        }
     }
 
     &__btn {

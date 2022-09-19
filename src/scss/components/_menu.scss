@@ -9,6 +9,10 @@
     overflow: hidden;
     pointer-events: none;
 
+    @include breakpoint(phone) {
+        padding: 18px 16px;
+    }
+
     .is-menu-open & {
         pointer-events: all;
     }
@@ -29,6 +33,11 @@
         @media(max-width: 1450px) {
             right: 145px;
         }
+
+        @include breakpoint(phone) {
+            right: 64px;
+            top: 30px;
+        }
     }
 
     &__wrap {
@@ -42,6 +51,17 @@
         transition: transform .4s $easing, opacity .4s $easing;
         transition-delay: .4s;
        }
+
+        .is-search-open & {
+            overflow-y: scroll;
+            height: 100vh;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
     }
 
     &__search {
@@ -67,9 +87,20 @@
     &__list {
         margin: 40px 0 64px;
 
+        @include breakpoint(phone) {
+            margin: 15px 0 0;
+            padding-bottom: 70px;
+        }
+
         & > li {
             display: flex;
             align-items: flex-end;
+
+            @include breakpoint(phone) {
+                flex-wrap: wrap;
+                flex-basis: 100%;
+                padding-bottom: 20px;
+            }
         }
 
         &--submenu {
@@ -78,8 +109,23 @@
             margin-left: 27px;
             padding-bottom: 10px;
 
+            @include breakpoint(phone) {
+                margin: 0;
+                width: 98%;
+                display: flex;
+                justify-content: space-between;
+                padding-bottom: 0;
+                padding-top: 10px;
+            }
+
             li {
                 margin-right: 22px;
+
+                @include breakpoint(phone) {
+                    padding-left: 5px;
+                    margin: 0;
+                    min-width: 100px;
+                }
             }
         }
     }
@@ -104,6 +150,13 @@
         color: $color-white;
         margin-bottom: 4px;
         counter-increment: section;
+
+        @include breakpoint(phone) {
+            font-weight: 500;
+            font-size: 28px;
+            line-height: 130%;
+            letter-spacing: 0.02em;
+        }
 
         .menu__list--submenu & {
             font-weight: 500;

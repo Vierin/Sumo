@@ -1,5 +1,5 @@
 import { gsap } from "gsap";
-
+import { browser } from './Browsers.js';
 export class Menu {
     constructor() {
         this.view = document.querySelector('.js-menu');
@@ -33,9 +33,11 @@ export class Menu {
     toggleMenu(show) {
         document.documentElement.classList.toggle('is-menu-open', show);
 
+        const size = browser.mobile ? 400 : 210;
+
         if(show) {
             gsap.set(this.curtain, {opacity: 1});
-            gsap.to(this.curtain, {width: 210 + "vw", height: 210 + "vw", duration: .5 })
+            gsap.to(this.curtain, {width: size + "vw", height: size + "vw", duration: .5 })
         } else {
             this.searchClose()
             gsap.to(this.curtain, {width: 1, height: 1, duration: .5, onComplete: () => {
@@ -51,14 +53,14 @@ export class Menu {
         this.searchBtn = this.view.querySelector('.js-search-btn');
 
         this.searchInp.addEventListener('input', e => {
-            this.searchBtn.classList.toggle("not-empty", e.target.value != "")
+            this.searchBtn.parentElement.classList.toggle("not-empty", e.target.value != "")
         })
 
         this.startHeight = this.search.clientHeight;
         gsap.set(this.search, {height: 0, opacity: 0, pointerEvents: "none"});
         this.btnSearch.addEventListener('click', () => {
             this.btnSearch.classList.toggle('is-search-open');
-
+            document.body.classList.toggle('is-search-open');
 
             if(this.btnSearch.classList.contains('is-search-open')) {
                 gsap.timeline()
@@ -73,7 +75,8 @@ export class Menu {
 
     searchClose() {
         this.btnSearch.classList.remove('is-search-open');
-        this.searchBtn.classList.remove('not-empty');
+        document.body.classList.remove('is-search-open');
+        this.searchBtn.parentElement.classList.remove('not-empty');
         this.searchInp.value = '';
         gsap.timeline()
             .to(this.search.children, { opacity: 0, duration: .2})

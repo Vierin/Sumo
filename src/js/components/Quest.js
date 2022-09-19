@@ -1,5 +1,8 @@
 import { gsap } from "gsap";
+import { browser } from './Browsers.js';
+import ScrollTrigger from "gsap/src/ScrollTrigger.js";
 
+gsap.registerPlugin(ScrollTrigger)
 export class Quest {
     constructor() {
         this.view = document.querySelector('[data-component="Quest"]');
@@ -22,7 +25,6 @@ export class Quest {
 
 
         const percents = [ 0, 0.82, 0.66, 0.5, 0.33, 0.18];
-        console.log(items);
 
         items.forEach((el, id) => {
             el.addEventListener('mouseenter', () => {
@@ -32,8 +34,17 @@ export class Quest {
             })
         });
 
+        if(browser.mobile) {
+            gsap.to(circle, {
+                scrollTrigger: {
+                    trigger: circle
+                },
+                strokeDashoffset: 0, duration: 2, transformOrigin: "50% 50%", ease: "linear"
+            })
+        }
+
         btnRestart.addEventListener('click', () => {
-            gsap.to(circle, {strokeDashoffset: l, duration: 1, transformOrigin: "50% 50%", ease: "linear"})
+            gsap.to(circle, {strokeDashoffset: l, duration: 1, transformOrigin: "50% 50%", ease: "linear"});
         })
     }
 }

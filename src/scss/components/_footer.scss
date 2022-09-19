@@ -7,6 +7,18 @@
     &__wrap {
         display: flex;
         justify-content: space-between;
+
+        @include breakpoint(phone) {
+            flex-wrap: wrap;
+            padding-bottom: 100px;
+        }
+    }
+
+    &__create {
+        @include breakpoint(phone) {
+            order: 3;
+            flex-basis: 48%;
+        }
     }
 
     &__arr {
@@ -32,6 +44,12 @@
 
     }
 
+    &__links {
+        @include breakpoint(phone) {
+            margin-bottom: 45px;
+        }
+    }
+
     &__col {
         display: flex;
         flex-direction: column;
@@ -39,14 +57,34 @@
 
         &:first-of-type {
             flex-basis: 34%;
+
+            @include breakpoint(phone) {
+                flex-basis: 100%;
+            }
         }
 
         &:nth-child(2) {
             flex-basis: 17%;
+
+            @include breakpoint(phone) {
+                flex-basis: 48%;
+            }
         }
 
         &:nth-child(3) {
             flex-basis: 20%;
+
+            @include breakpoint(phone) {
+                flex-basis: 48%;
+            }
+        }
+
+        &:last-of-type {
+            @include breakpoint(phone) {
+                position: absolute;
+                top: 0;
+                right: 30px;
+            }
         }
 
         a {
@@ -74,8 +112,30 @@
         color: rgba($color-white, .6);
         margin-top: 70px;
 
+        @include breakpoint(phone) {
+            margin-top: 40px;
+            flex-wrap: wrap;
+            padding-bottom: 30px;
+        }
+
         p {
             flex-basis: 25.5%;
+
+            @include breakpoint(phone) {
+                order: 2;
+                flex-basis: 50%;
+
+                span {
+                    display: block;
+                }
+            }
+        }
+
+        a {
+            @include breakpoint(phone) {
+                flex-basis: 48% !important;
+                padding-bottom: 40px;
+            }
         }
 
         a:nth-child(2) {

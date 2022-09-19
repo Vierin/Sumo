@@ -18,6 +18,17 @@
         font-weight: 500;
         font-size: 16px;
         line-height: 150%;
+        letter-spacing: 0.02em;
+
+        @include breakpoint(phone) {
+            font-size: 14px;
+            line-height: 150%;
+            letter-spacing: 0.02em;
+
+            & + p {
+                margin-top: 20px;
+            }
+        }
     }
 
     &__sources {
@@ -28,6 +39,12 @@
             font-size: 16px;
             line-height: 150%;
             color: $color-violet;
+
+            @include breakpoint(phone) {
+                font-size: 14px;
+                line-height: 150%;
+                letter-spacing: 0.02em;
+            }
         }
     }
 
@@ -40,14 +57,25 @@
         font-size: 48px;
         line-height: 110%;
         margin-bottom: 32px;
+
+        @include breakpoint(phone) {
+            font-weight: 500;
+            font-size: 28px;
+            line-height: 130%;
+            letter-spacing: 0.02em;
+            margin-bottom: 25px;
+        }
     }
 
     .module--contacts & {
         margin-top: 64px;
-
         font-weight: 500;
         font-size: 20px;
         line-height: 150%;
+
+        @include breakpoint(phone) {
+            margin-top: 100px;
+        }
 
 
         a {

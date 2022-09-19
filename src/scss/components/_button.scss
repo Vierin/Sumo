@@ -57,6 +57,16 @@
             }
         }
 
+        .contact & {
+            @include breakpoint(phone) {
+                margin-top: 45px;
+
+                .button__text {
+                    font-size: 16px;
+                }
+            }
+        }
+
     }
 
     .text + & {
@@ -67,6 +77,14 @@
         background: rgba(14, 14, 14, 0.2);
         border: none !important;
         position: relative;
+
+        @include breakpoint(phone) {
+            padding: 20px 80px 20px 32px !important;
+
+            .button__text {
+                font-size: 16px !important;
+            }
+        }
 
         .button__circle {
             position: absolute;
@@ -111,6 +129,13 @@
         line-height: 130%;
         transition: background .3s $easing;
 
+        @include breakpoint(phone) {
+            padding: 5px 15px;
+            position: fixed;
+            right: 16px;
+            top: 10px;
+        }
+
         .button__text {
             color: $color-dark;
             transition: color .3s $easing;
@@ -130,6 +155,14 @@
         border-radius: 100px;
         padding: 20px 80px 20px 32px;
 
+        @include breakpoint(phone) {
+            padding: 12px 46px 12px 24px;
+
+            &.news__btn {
+                padding: 20px 80px 20px 32px;
+            }
+        }
+
         svg {
             position: absolute;
             right: 10px;
@@ -137,6 +170,11 @@
             border-radius: 50%;
             transform: scale(0.24);
             transition: transform .4s $elastic;
+
+            @include breakpoint(phone) {
+                transform: scale(0.22);
+                right: 0;
+            }
 
             .module--news & rect {
                 stroke: $color-black;
@@ -212,6 +250,14 @@
 
         .module--result & {
             border-color: rgba($color-dark, .3);
+
+            @include breakpoint(phone) {
+                padding: 20px 80px 20px 32px;
+
+                .button__text {
+                    font-size: 16px;
+                }
+            }
         }
 
         svg {
@@ -219,6 +265,10 @@
 
             .module--result & {
                 background: $color-dark;
+
+                @include breakpoint(phone) {
+                    right: 10px;
+                }
             }
 
             rect {
@@ -226,12 +276,12 @@
             }
         }
 
-        &.not-empty {
+        .not-empty & {
             pointer-events: all;
             background: $color-white;
 
             .module--result & {
-                background: $color-dark;
+                // background: $color-dark;
             }
 
             .button__text {
@@ -283,6 +333,14 @@
         pointer-events: none;
         transition: color .3s $easing, background .3s $easing;
 
+        @include breakpoint(phone) {
+            font-size: 13px;
+
+            .news__btn & {
+                font-size: 16px;
+            }
+        }
+
         .button--with-arr &,
         .menu__top & {
             border: 1px solid $color-white;
@@ -311,6 +369,14 @@
 
         .button--black &,
         .menu & {
+            color: $color-white;
+        }
+
+        .form & {
+            color: $color-black;
+        }
+
+        .section--violet .form & {
             color: $color-white;
         }
     }
