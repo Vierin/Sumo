@@ -28,12 +28,13 @@ export class Video {
         const bg = view.querySelector('.js-video-bg img');
         const back = view.parentElement.querySelector('.js-back');
 
+        new Player(view.querySelector('.player'));
+
         const isSmall = view.classList.contains('video--small');
 
         const html = document.documentElement;
 
         btnOpen.addEventListener('click', () => {
-            new Player(view.querySelector('.player'));
 
             if(back) {
                 const fast = back.classList.contains('scroll-fast');

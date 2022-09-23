@@ -8,6 +8,10 @@
         padding-bottom: 8vh;
     }
 
+    @include breakpoint(phone) {
+        padding-bottom: 11vh;
+    }
+
     &__title {
         font-weight: 700;
         font-size: 64px;
@@ -15,6 +19,10 @@
         max-width: $grid-m;
         margin-left: auto;
         margin-bottom: 40px;
+
+        @include breakpoint(phone) {
+            font-size: 36px;
+        }
 
         @media(max-height: 790px) {
             margin-bottom: 30px;
@@ -29,6 +37,12 @@
         position: relative;
         padding-top: 32px;
         display: flex;
+
+        @include breakpoint(phone) {
+            flex-wrap: wrap;
+            padding-top: 25px;
+            justify-content: space-between;
+        }
     }
 
     &__info {
@@ -38,10 +52,21 @@
         letter-spacing: 0.02em;
         color: rgba($color-white, .6);
         margin-right: auto;
+
+        @include breakpoint(phone) {
+            flex-basis: 100%;
+            margin-bottom: 24px;
+        }
     }
 
     &__txt {
         margin-left: 20px;
         max-width: $grid-s;
+
+        @include breakpoint(phone) {
+            margin: 0;
+            width: 49%;
+            line-height: 130%;
+        }
     }
 }

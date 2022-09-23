@@ -8,7 +8,12 @@
     position: relative;
 
     @include breakpoint(phone) {
-        pointer-events: none;
+        width: 130px;
+        height: 130px;
+
+        &:not(.video__circle) {
+            pointer-events: none;
+        }
 
         .module--text & {
             display: none;
@@ -36,6 +41,11 @@
             opacity: .7;
         }
 
+        &[data-position="53, 5"] {
+            left: 88% !important;
+            opacity: .7;
+        }
+
         &[data-position="12, -2"] {
             top: 80% !important;
             left: 63% !important;
@@ -43,8 +53,60 @@
         }
 
         &[data-position="69, 3"] {
-            top: 73% !important;
+            top: 62% !important;
             left: -47% !important;
+            opacity: .7;
+        }
+
+        &[data-position="8, 12"] {
+            top: 16% !important;
+            left: -56% !important;
+            opacity: .7;
+        }
+
+        &[data-position="-5, 10"] {
+            top: 73% !important;
+            left: -50% !important;
+            opacity: .7;
+        }
+
+        &[data-position="6, 82"] {
+            top: 8% !important;
+            left: -80% !important;
+            opacity: .7;
+        }
+
+        &[data-position="64, 27"] {
+            top: 86% !important;
+            left: -35% !important;
+            opacity: .7;
+        }
+
+        &.circle--form.circle--animate {
+            top: 110% !important;
+            left: 60% !important;
+            opacity: .7;
+        }
+
+        .module--article &[data-position="-7, 28"] {
+            top: 126% !important;
+            left: 52% !important;
+            opacity: .7;
+        }
+
+        .module--news &.circle--bottom {
+            display: none;
+        }
+
+        .module--news &[data-position="16, 3"] {
+            top: 26% !important;
+            left: -55% !important;
+            opacity: .7;
+        }
+
+        .module--news &[data-position="82, 75"] {
+            top: 87% !important;
+            left: 80% !important;
             opacity: .7;
         }
 
@@ -61,6 +123,7 @@
         }
 
         &[data-position="55, 17"],
+        &[data-position="30, 80"],
         &[data-position="12, -1"] {
             display: none;
         }
@@ -106,6 +169,15 @@
         pointer-events: none;
         opacity: 0;
         transition: opacity .4s $easing;
+
+        @include breakpoint(phone) {
+            p svg {
+                position: absolute;
+                right: auto;
+                left: 0;
+                top: -5px;
+            }
+        }
 
         .video--about & {
             opacity: 1;
@@ -163,6 +235,11 @@
         // transform: translateY(-50%);
         z-index: 0;
 
+        @include breakpoint(phone) {
+            left: -70%;
+            top: calc(50% - 180px);
+        }
+
         span {
             filter: blur(40px);
         }
@@ -172,6 +249,12 @@
         position: relative;
         left: 40px;
         top: 20px;
+
+        @include breakpoint(phone) {
+            position: absolute;
+            top: 14%;
+            left: -33%;
+        }
 
         span {
             filter: blur(40px);
@@ -229,6 +312,10 @@
             transform: scale(1.3);
             width: 100%;
             height: 100%;
+
+            @include breakpoint(phone) {
+                transform: scale(1.6);
+            }
         }
 
         .safari & {
@@ -247,8 +334,24 @@
         align-items: center;
         justify-content: space-between;
 
+        @include breakpoint(phone) {
+            font-size: 10px;
+        }
+
         &:first-of-type {
             margin-bottom: 10px;
+        }
+
+        &:last-of-type {
+            @include breakpoint(phone) {
+                flex-direction: row-reverse;
+
+                span {
+                    display: block;
+                    margin-left: auto;
+                    margin-top: 5px;
+                }
+            }
         }
     }
 

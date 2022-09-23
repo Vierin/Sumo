@@ -3,19 +3,37 @@
     justify-content: space-between;
     margin-left: auto;
 
+    @include breakpoint(phone) {
+        flex-direction: column;
+    }
+
     & + & {
         margin-top: 72px;
         padding-top: 72px;
         border-top: 1px solid rgba($color-dark, .1);
+
+        @include breakpoint(phone) {
+            margin-top: 42px;
+            padding-top: 50px;
+        }
     }
 
     & > * {
         max-width: $grid-s;
         width: $grid-s;
+
+        @include breakpoint(phone) {
+            width: 100%;
+            max-width: 100%;
+        }
     }
 
     &__video {
         height: 368px;
+
+        @include breakpoint(phone) {
+            height: 460px;
+        }
 
         & > div.js-show {
             position: absolute;
@@ -33,6 +51,15 @@
 
 
     &__desc {
+
+        @include breakpoint(phone) {
+            margin-bottom: 30px;
+
+            .module--team & {
+                margin-bottom: 70px;
+            }
+        }
+
         & > span {
             display: block;
             font-weight: 500;
@@ -60,8 +87,21 @@
             letter-spacing: 0.02em;
             color: rgba($color-white, .6);
 
+            @include breakpoint(phone) {
+                font-size: 13px;
+            }
+
             &.team__name {
                 font-weight: 600;
+
+                @include breakpoint(phone) {
+                    font-size: 16px;
+
+                    .module--team & {
+                        font-size: 13px;
+                        font-weight: 500;
+                    }
+                }
             }
         }
 
@@ -88,4 +128,9 @@
     border-top: 1px solid rgba($color-dark, .1);
     padding-top: 72px;
     margin: 72px auto 150px;
+
+    @include breakpoint(phone) {
+        margin: 47px auto 120px;
+        padding-top: 50px;
+    }
 }

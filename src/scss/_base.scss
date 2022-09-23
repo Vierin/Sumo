@@ -81,6 +81,14 @@ img {
     max-width: $grid;
     height: 1px;
     background: rgba($color-white, .3);
+
+    @include breakpoint(phone) {
+        width: calc(100% - 32px);
+
+        .intro & {
+            width: 100%;
+        }
+    }
 }
 
 input,

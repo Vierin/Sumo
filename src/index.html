@@ -117,6 +117,8 @@
 
 				<div class="video__bg js-video-bg">
 					<picture>
+						<source media="(max-width: 800px)" srcset="@media/bg-video-m.webp" type="image/webp">
+						<source media="(max-width: 800px)" srcset="@media/bg-video-m.jpg">
 						<source srcset="@media/bg-video.webp" type="image/webp">
 						<source srcset="@media/bg-video.jpg">
 						<img src="@media/bg-video.jpg" alt="img">
@@ -270,6 +272,7 @@
 				<div class="chip">
 					<div class="chip__lines" data-component="Lines">
 						<img class="svg-chip-lines" src="chip-lines.svg">
+						<img class="svg-chip-lines-m" src="chip-lines-m.svg">
 					</div>
 					<div class="chip__item">
 						<img class="svg-chip" src="chip.svg">

@@ -19,6 +19,10 @@
         cursor: pointer;
         z-index: 2;
 
+        @include breakpoint(phone) {
+            font-size: 14px;
+        }
+
         .more:not(.is-open) & {
             @include hover {
                 .cross {

@@ -7,8 +7,18 @@
     display: flex;
     justify-content: space-between;
 
+    @include breakpoint(phone) {
+        flex-direction: column;
+        margin-top: -20px;
+        padding-top: 35px;
+    }
+
     &__more {
         margin: 90px 0 0;
+
+        @include breakpoint(phone) {
+            margin-top: 100px;
+        }
     }
 
     &__item {
@@ -28,6 +38,10 @@
     &__cats {
         display: flex;
         align-items: flex-start;
+
+        @include breakpoint(phone) {
+            margin-bottom: 70px;
+        }
 
         a {
             border: 1px solid rgba($color-dark, 0.3);
@@ -54,6 +68,10 @@
     &__img {
         border-radius: 10px;
         overflow: hidden;
+
+        @include breakpoint(phone) {
+            height: 230px;
+        }
 
         .news__item & {
             height: 250px;
@@ -105,6 +123,12 @@
         padding: 7px 12px;
         border-radius: 100px;
         text-transform: uppercase;
+
+        @include breakpoint(phone) {
+            top: 8px;
+            left: 8px;
+            font-size: 13px;
+        }
 
         &--cases {
             background: #5D009F;

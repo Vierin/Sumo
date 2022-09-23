@@ -1,5 +1,6 @@
 import { gsap } from "gsap";
 import { Swiper } from "swiper";
+import { browser } from './Browsers.js';
 // import { breakpoint } from './Breakpoint.js';
 
 export class SwiperSlider {
@@ -27,7 +28,6 @@ export class SwiperSlider {
         }
 
 
-
         const btnPrev = view.parentElement.querySelector('.swiper-button-prev');
         const btnNext = view.parentElement.querySelector('.swiper-button-next');
         const slides = view.querySelectorAll('.swiper-slide');
@@ -41,6 +41,13 @@ export class SwiperSlider {
             options.spaceBetween = options.spaceBetween * 2;
         }
 
+        if(options.slidesPerView && browser.mobile) {
+            options.slidesPerView = 1
+        }
+
+        if(options.spaceBetween && browser.mobile) {
+            options.spaceBetween = options.spaceBetween * .5
+        }
 
         const swiper = new Swiper(view, {
             speed: 400,
@@ -65,20 +72,34 @@ export class SwiperSlider {
                             btnNext.classList.remove('swiper-button-disabled')
                         }
                     } else if(!options.navigationNone) {
+
                         if(e.activeIndex != 0) {
-                            gsap.to(view, { x: -205, duration: .2 });
-                            gsap.to([btnPrev, btnNext], { x: 125, duration: .2 });
+                            if(!browser.mobile) {
+                                gsap.to(view, { x: -205, duration: .2 });
+                                gsap.to([btnPrev, btnNext], { x: 125, duration: .2 });
+                            } else {
+                                gsap.to(view, { x: 50, duration: .2 });
+                                gsap.to([btnPrev, btnNext], { x: -50, duration: .2 });
+                            }
+
 
                             btnPrev.classList.remove('swiper-button-disabled')
                             btnNext.classList.remove('swiper-button-disabled')
 
-                            if(e.activeIndex === 2) {
+                            if(e.activeIndex === 2 && !browser.mobile) {
+                                btnNext.classList.add('swiper-button-disabled')
+                            } else if(e.activeIndex === 3 && browser.mobile) {
                                 btnNext.classList.add('swiper-button-disabled')
                             }
                         } else {
+                            if(browser.mobile) {
+                                gsap.to([btnPrev, btnNext], { x: 0, duration: .2 });
+                            }
                             gsap.to(view, { x: 0 });
                             btnPrev.classList.add('swiper-button-disabled')
                         }
+
+
                     }
 
                     if(options.imageOutside) {
@@ -105,7 +126,6 @@ export class SwiperSlider {
                             });
                         }
                     }
-
 
                 },
               },

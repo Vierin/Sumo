@@ -4,6 +4,10 @@
     margin-bottom: -160px;
     pointer-events: none;
 
+    @include breakpoint(phone) {
+        top: -55px;
+    }
+
     .mac + & {
         position: absolute;
         top: 50%;
@@ -16,9 +20,32 @@
         display: flex;
         justify-content: center;
 
+        // @include breakpoint(phone) {
+        //     position: relative;
+        // }
+
         svg {
             width: 100%;
             height: 455px;
+
+            @include breakpoint(phone) {
+                width: 100%;
+
+                & > g {
+                    opacity: 1 !important;
+                }
+
+                .motion-path {
+                    opacity: .6;
+                }
+
+            }
+        }
+
+        @include breakpoint(phone) {
+            .svg-chip-lines-m g.motion-group:last-of-type path.motion-path {
+                transform: translateY(-1px);
+            }
         }
     }
 
@@ -31,6 +58,10 @@
         height: 140px;
         background: $color-white;
         border-radius: 25px;
+
+        @include breakpoint(phone) {
+            border-radius: 30px;
+        }
     }
 
     .svg-chip-lines g g:nth-child(3) path:last-child {

@@ -15,8 +15,12 @@ export class Player {
 
         this.setTime();
 
+
+
         this.player.addEventListener("click", () => {
             this.view.classList.toggle('is-playing');
+
+            console.log('click');
 
             if(this.view.classList.contains('is-playing')) {
                 this.video.play();

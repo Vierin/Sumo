@@ -15,3 +15,23 @@
         transform: rotate(225deg);
     }
 }
+
+.svg-play {
+    @include breakpoint(phone) {
+        width: 20px;
+    }
+}
+
+.svg-chip-lines {
+    @include breakpoint(phone) {
+        display: none;
+    }
+
+    &-m {
+        display: none;
+
+        @include breakpoint(phone) {
+            display: block;
+        }
+    }
+}

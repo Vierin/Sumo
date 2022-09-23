@@ -83,7 +83,13 @@
 
                     <div class="swiper-imgs">
                         <div class="swiper__img key-slide__img js-swiper-img" data-id="0">
-                            <img src="@media/key.png" alt="key">
+                            <picture>
+                                <source media="(max-width: 800px)" srcset="@media/key-m.png" type="image/webp">
+                                <source media="(max-width: 800px)" srcset="@media/key-m.png">
+                                <source srcset="@media/key.png" type="image/webp">
+                                <source srcset="@media/key.png">
+                                <img src="@media/key.png" alt="img">
+                            </picture>
                         </div>
                     </div>
                 </div>

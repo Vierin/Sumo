@@ -1,12 +1,20 @@
 import { gsap } from "gsap";
 import MotionPathPlugin from "gsap/src/MotionPathPlugin.js";
+import { browser } from './Browsers.js';
 
 gsap.registerPlugin(MotionPathPlugin);
 
 export class Lines {
     constructor() {
-        this.view = document.querySelector('[data-component="Lines"]');
 
+        if(!browser.mobile) {
+            this.view = document.querySelector('[data-component="Lines"] .svg-chip-lines');
+        } else {
+            this.view = document.querySelector('[data-component="Lines"] .svg-chip-lines-m');
+        }
+
+
+        console.log(this.view);
         if(this.view) {
             this.init();
         }
@@ -18,9 +26,14 @@ export class Lines {
     init() {
         this.groups = this.view.querySelectorAll('.motion-group');
 
+
         this.groups.forEach((group, i) => {
             const path = group.querySelector('.motion-path');
             const line = group.querySelector('.motion-line');
+
+            console.log(line);
+
+            gsap.to(line, {x: 100})
 
             const tl = gsap.timeline({repeat: -1, delay: i * .8});
             tl

@@ -1,15 +1,40 @@
 .steps {
+
+    @include breakpoint(phone) {
+        .module--slider + .module--steps & {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
     &__info {
         font-weight: 500;
         font-size: 20px;
         line-height: 150%;
         letter-spacing: 0.02em;
         margin-bottom: 40px;
+
+        @include breakpoint(phone) {
+            font-size: 13px;
+
+            .module--slider + .module--steps & {
+                width: 47%;
+            }
+        }
     }
 
     &__list {
         display: flex;
         justify-content: space-between;
+
+        @include breakpoint(phone) {
+            flex-direction: column;
+
+            .module--slider + .module--steps & {
+                width: 47%;
+            }
+
+        }
     }
 }
 
@@ -19,6 +44,19 @@
     line-height: 150%;
     letter-spacing: 0.02em;
     margin-right: 19px;
+
+    @include breakpoint(phone) {
+        margin-right: 0;
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 16px;
+
+        @include breakpoint(phone) {
+            .module--slider + .module--steps & {
+                flex-direction: column;
+            }
+        }
+    }
 
     &:last-of-type {
         margin-right: 0;
@@ -32,11 +70,26 @@
         padding: 5px 14px;
         border-radius: 100px;
         margin-bottom: 16px;
+
+        @include breakpoint(phone) {
+            margin-right: 22px;
+            font-size: 12px;
+        }
     }
 
     &__text {
         color: rgba($color-white, .6);
         max-width: 179px;
+
+        @include breakpoint(phone) {
+            max-width: 70%;
+
+            @include breakpoint(phone) {
+                .module--slider + .module--steps & {
+                    max-width: 100%;
+                }
+            }
+        }
 
         .section--white & {
             color: $color-dark;

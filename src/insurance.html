@@ -6,7 +6,7 @@
 
     <main>
         <section class="section section--white">
-            <div class="module module--start">
+            <div class="module module--start module--padding-m">
                 <div class="grid grid--end">
                     <div class="heading grid-m">
                         <p class="heading__span">
@@ -32,6 +32,8 @@
 
                 <div class="module__bg module__bg--not-full">
                     <picture>
+						<source media="(max-width: 800px)" srcset="@media/bg-insu-m.webp" type="image/webp">
+						<source media="(max-width: 800px)" srcset="@media/bg-insu-m.png">
 						<source srcset="@media/bg-insu.webp" type="image/webp">
 						<source srcset="@media/bg-insu.png">
 						<img src="@media/bg-insu.png" alt="img">
@@ -50,8 +52,9 @@
 
 
 				<div class="chip chip--violet">
-					<div class="chip__lines" data-component="Lines">
+					<div class="chip__lines chip__lines-desktop" data-component="Lines">
 						<img class="svg-chip-lines" src="chip-lines-violet.svg">
+						<img class="svg-chip-lines-m" src="chip-lines-violet-m.svg">
 					</div>
 				</div>
 

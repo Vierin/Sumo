@@ -11,6 +11,13 @@
         @include breakpoint(phone) {
             padding-top: 140px;
 
+            &.js-back {
+                display: flex;
+                .grid {
+                    margin-top: auto;
+                }
+            }
+
             &.module--result {
                 padding-top: 40px;
             }
@@ -32,6 +39,10 @@
     &--full {
         height: 100vh;
         min-height: 800px;
+
+        @include breakpoint(phone) {
+            min-height: 100vh;
+        }
     }
 
     &__bg {
@@ -45,8 +56,8 @@
             z-index: 0;
             max-width: 45vw;
 
-            @media(max-width: 1500px) {
-
+            @include breakpoint(phone) {
+                max-width: 100%;
             }
         }
     }
@@ -225,6 +236,13 @@
 
     &--slider {
         overflow: hidden;
+
+        @include breakpoint(phone) {
+            overflow: visible;
+            .module--works + & {
+                margin-top: 50px;
+            }
+        }
     }
 
     &--quest {
@@ -241,6 +259,18 @@
         @media(max-height: 720px) {
             padding-top: 50px;
         }
+
+        @include breakpoint(phone) {
+            #circles & {
+                padding: 50px 16px 150px;
+            }
+        }
+    }
+
+    &--team {
+        @include breakpoint(phone) {
+            margin-top: 55px;
+        }
     }
 
     &--text {
@@ -249,6 +279,10 @@
 
     &--steps {
         padding: 32px 0 $padding;
+
+        @include breakpoint(phone) {
+            padding-bottom: 0;
+        }
     }
 
     &--bubles {
@@ -258,6 +292,17 @@
 
         &-about {
             inset: 17% 9px 11% 20px;
+
+            @include breakpoint(phone) {
+                top: 100vh;
+                left: 10vw;
+                width: 300vw;
+                right: auto;
+
+                svg {
+                    width: 100%;
+                }
+            }
         }
 
         svg {
@@ -267,10 +312,20 @@
 
     &--padding {
         padding: $padding 0;
+
+        &-m {
+            @include breakpoint(phone) {
+                padding-top: 500px;
+            }
+        }
     }
 
     &--news {
         padding: 102px 0 120px;
+
+        @include breakpoint(phone) {
+            padding-bottom: 65px;
+        }
 
         .module--start + & {
             padding-top: 0;
@@ -283,6 +338,10 @@
 
     &--keys {
         padding-bottom: 48px;
+
+        @include breakpoint(phone) {
+            padding-top: 48px;
+        }
     }
 
     &--bg-box {
@@ -290,10 +349,19 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+
+        @include breakpoint(phone) {
+            padding: 55px 0;
+            height: auto;
+        }
     }
 
     &--lines {
         margin-top: 150px;
+
+        @include breakpoint(phone) {
+            margin-top: 30px;
+        }
 
         .mac {
             z-index: 2;
@@ -306,10 +374,18 @@
 
         @include breakpoint(phone) {
             padding: 0 16px;
+
+            .grid--end {
+                padding: 0;
+            }
         }
 
         .module--start + & {
             margin-top: 150px;
+
+            @include breakpoint(phone) {
+                margin-top: 50px;
+            }
 
             .circle {
                 top: 25% !important;

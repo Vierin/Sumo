@@ -13,6 +13,11 @@
         height: 550px;
     }
 
+    @include breakpoint(phone) {
+        width: calc(100% - 32px);
+        height: calc(100vh - 80px);
+    }
+
     &__info {
         position: absolute;
         top: 24px;
@@ -86,8 +91,16 @@
     &__video {
         cursor: pointer;
 
+        @include breakpoint(phone) {
+            height: 100%;
+        }
+
         video {
             pointer-events: none;
+
+            @include breakpoint(phone) {
+                height: 100%;
+            }
         }
 
         @include hover {
@@ -139,6 +152,11 @@
             width: 100%;
             height: 100%;
             object-fit: contain;
+
+            @include breakpoint(phone) {
+                object-fit: cover;
+                object-position: 50% 50%;
+            }
         }
     }
 }

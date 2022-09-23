@@ -17,9 +17,24 @@
         display: flex;
         justify-content: space-between;
 
+        @include breakpoint(phone) {
+            .swiper--keys-1 & {
+                flex-direction: column;
+            }
+        }
+
         p {
             width: $grid-s;
             margin: 0;
+
+
+
+            @include breakpoint(phone) {
+                .swiper--keys-1 & {
+                    width: 100%;
+                    margin-bottom: 16px;
+                }
+            }
         }
 
         .key-slide__title + & {
@@ -50,7 +65,9 @@
         margin-top: 48px;
 
         @include breakpoint(phone) {
-            margin-top: 24px;
+            svg {
+                right: 10px !important;
+            }
         }
     }
 }

@@ -9,17 +9,29 @@
         flex-wrap: wrap;
         z-index: 2;
         pointer-events: none;
+
+        @include breakpoint(phone) {
+            width: 74%;
+        }
     }
 
     &__title {
         font-size: 16px;
         line-height: 150%;
+
+        @include breakpoint(phone) {
+            font-size: 13px;
+        }
     }
 }
 
 .key {
     width: $grid-s;
     margin-bottom: $padding;
+
+    @include breakpoint(phone) {
+        margin-bottom: 60px;
+    }
 
     &__title {
         font-weight: 700;
@@ -47,5 +59,9 @@
         font-size: 14px;
         line-height: 150%;
         letter-spacing: 0.02em;
+
+        @include breakpoint(phone) {
+            font-size: 13px;
+        }
     }
 }

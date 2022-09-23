@@ -1,12 +1,13 @@
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/src/ScrollTrigger.js";
+import { browser } from './Browsers.js';
 
 export class Sticky {
     constructor() {
         this.els = document.querySelectorAll('[data-sticky]');
 
 
-        if(this.els.length > 0) {
+        if(this.els.length > 0 && !browser.mobile) {
             this.init();
         }
     }

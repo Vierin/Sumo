@@ -10,6 +10,10 @@
     justify-content: space-between;
     margin-right: 20px;
 
+    @include breakpoint(phone) {
+        width: 253px;
+    }
+
     &__num {
         position: absolute;
         top: 24px;
@@ -26,6 +30,10 @@
         font-weight: 500;
         font-size: 16px;
         line-height: 150%;
+
+        @include breakpoint(phone) {
+            font-size: 14px;
+        }
     }
 
     strong {

@@ -1,12 +1,26 @@
 .bg-box {
     position: relative;
 
+    @include breakpoint(phone) {
+        margin-top: 130px;
+        padding: 0 16px;
+    }
+
     &__wrap {
         display: flex;
         padding-top: 32px;
 
+        @include breakpoint(phone) {
+            flex-wrap: wrap;
+            padding: 22px 0 0;
+        }
+
         & > * {
             max-width: 178px;
+
+            @include breakpoint(phone) {
+                max-width: 49%;
+            }
         }
     }
 
@@ -27,6 +41,16 @@
         font-size: 14px;
         line-height: 150%;
         letter-spacing: 0.02em;
+
+        @include breakpoint(phone) {
+            margin-left: 0;
+            font-size: 13px;
+            margin-bottom: 35px;
+
+            &:nth-child(odd) {
+                margin-right: 5px;
+            }
+        }
     }
 
 }

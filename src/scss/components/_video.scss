@@ -3,6 +3,12 @@
     top: 0;
     left: 0;
 
+    @include breakpoint(phone) {
+        &.video--about {
+            position: absolute;
+        }
+    }
+
     &--small {
         position: relative;
     }
@@ -95,10 +101,22 @@
         left: 64vw;
         top: 17vh;
 
+        @include breakpoint(phone) {
+            .hero-intro ~ .video & {
+                left: 210px !important;
+                top: 80px !important;
+            }
+        }
+
         .video--about & {
             top: 32vh;
             left: 27vw;
             cursor: pointer;
+
+            @include breakpoint(phone) {
+                left: 5vw;
+                top: 23vh;
+            }
         }
 
         .is-video-open & {
@@ -110,6 +128,10 @@
 
             & > span {
                 display: none;
+
+                @include breakpoint(phone) {
+                    display: block;
+                }
             }
 
             .circle__svg {
@@ -197,8 +219,17 @@
         width: 60px;
         padding: 0;
 
+
         .team__video & {
             transition: transform .3s $easing;
+
+            @include breakpoint(phone) {
+                svg {
+                    width: 70px;
+                    height: 70px;
+                    margin: -5px;
+                }
+            }
         }
     }
 
@@ -228,10 +259,19 @@
         inset: auto 0 0 0;
         padding: 14px 16px;
 
+        @include breakpoint(phone) {
+            bottom: 15px;
+            padding: 14px 20px;
+        }
+
         p {
             font-weight: 500;
             font-size: 16px;
             line-height: 150%;
+
+            @include breakpoint(phone) {
+                padding-bottom: 12px;
+            }
 
             .section--white & {
                 color: $color-white;
