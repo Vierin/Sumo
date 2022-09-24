@@ -177,6 +177,18 @@
                 left: 0;
                 top: -5px;
             }
+
+            .slider-start & {
+                opacity: 1;
+            }
+
+            .section--hero & {
+                position: relative;
+                p svg {
+                    bottom: -10px;
+                    top: auto !important;
+                }
+            }
         }
 
         .video--about & {
@@ -287,6 +299,8 @@
 
     &--animate {
         animation: pulse 3s infinite linear;
+
+        
     }
 
 
@@ -315,6 +329,7 @@
 
             @include breakpoint(phone) {
                 transform: scale(1.6);
+                overflow: visible;
             }
         }
 
