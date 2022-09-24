@@ -37,7 +37,7 @@ $theme-color: $color-black !default;
     flex-direction: column;
 }
 
-.swiper-wrapper {
+.swiper-wrapper:not(.swiper-wrapper--phone) {
     position: relative;
     width: 100%;
     height: 100%;
@@ -45,7 +45,27 @@ $theme-color: $color-black !default;
     display: flex;
     transition-property: transform;
     box-sizing: content-box;
+}
 
+.swiper-wrapper--phone {
+    @include breakpoint(desktop) {
+        transform: none !important;
+    }
+
+    @include breakpoint(phone) {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        transition-property: transform;
+        box-sizing: content-box;
+
+        .slider-finished & {
+            pointer-events: none;
+        }
+    }
 }
 
 .swiper-android .swiper-slide,

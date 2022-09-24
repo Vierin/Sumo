@@ -13,8 +13,6 @@ export class Lines {
             this.view = document.querySelector('[data-component="Lines"] .svg-chip-lines-m');
         }
 
-
-        console.log(this.view);
         if(this.view) {
             this.init();
         }
@@ -30,8 +28,6 @@ export class Lines {
         this.groups.forEach((group, i) => {
             const path = group.querySelector('.motion-path');
             const line = group.querySelector('.motion-line');
-
-            console.log(line);
 
             gsap.to(line, {x: 100})
 

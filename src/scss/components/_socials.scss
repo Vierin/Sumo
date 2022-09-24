@@ -23,6 +23,10 @@
 
             .is-search-open & {
                 top: 110%;
+
+                .safari & {
+                    top: 100%;
+                }
             }
         }
     }

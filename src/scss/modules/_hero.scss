@@ -1,12 +1,35 @@
 .hero {
     // height: 100vh;
     position: relative;
+    // overflow-y: scroll;
+    // scroll-snap-type: y mandatory;
+
+    // .module--hero-head,
+    // .module--hero-intro {
+    //     height: 100vh;
+    // }
 
     &-head,
     &-intro {
         height: 100vh;
         z-index: 2;
     }
+
+   &-head {
+    @include breakpoint(phone) {
+        position: relative;
+
+        &::before {
+            content: "";
+            background: $color-gray-light;
+            width: 100%;
+            height: 30vh;
+            bottom: 100%;
+            left: 0;
+            position: absolute;
+        }
+    }
+   }
 
     .js-area {
         width: calc(100vw - 500px);
@@ -45,6 +68,10 @@
         bottom: 0;
         z-index: 2;
         pointer-events: none;
+
+        @include breakpoint(phone) {
+            pointer-events: all;
+        }
     }
 
     &__circle {
@@ -137,6 +164,15 @@
         }
     }
 
+    &__point {
+        position: absolute;
+        left: 65vw;
+        top: -17vh;
+        height: 160px;
+        width: 160px;
+        border-radius: 50%;
+    }
+
     &__scroll {
         position: fixed;
         bottom: 40px;
@@ -152,6 +188,19 @@
 
         @media(max-height: 790px) {
             bottom: 25px;
+        }
+
+        &--phone {
+            display: none;
+
+            @include breakpoint(phone) {
+                display: block;
+            }
+        }
+
+        @include breakpoint(phone) {
+            bottom: 60px;
+            position: absolute;
         }
 
         span {

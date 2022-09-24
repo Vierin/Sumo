@@ -21,12 +21,26 @@
         padding-top: 120px;
     }
 
+    &#circles {
+        @include breakpoint(phone) {
+            margin-bottom: calc(-100vh - 20px);
+
+            .safari & {
+                margin-bottom: calc(-100vh + 20px);
+            }
+        }
+    }
+
+    &--hero {
+        .slider-finished & {
+            opacity: 0;
+        }
+    }
+
 }
 
 .panel {
     height: 100vh;
     position: sticky;
     top: 0;
-
-
-  }
+}

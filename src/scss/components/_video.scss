@@ -2,10 +2,15 @@
     position: fixed;
     top: 0;
     left: 0;
+    pointer-events: none;
 
     @include breakpoint(phone) {
         &.video--about {
             position: absolute;
+        }
+
+        .slider-start & {
+            pointer-events: all;
         }
     }
 

@@ -72,6 +72,21 @@ img {
     object-fit: cover;
 }
 
+body.is-scrolling {
+    touch-action: none;
+}
+
+@include breakpoint(phone) {
+    input, input:before, input:after {
+        -webkit-user-select: initial;
+        -khtml-user-select: initial;
+        -moz-user-select: initial;
+        -ms-user-select: initial;
+        user-select: initial;
+       }
+}
+
+
 .line {
     position: absolute;
     top: 0;
@@ -97,10 +112,13 @@ select {
     outline: none;
     border: none;
     background: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+
+    @include breakpoint(desktop) {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
 }
 
 textarea {
@@ -108,10 +126,28 @@ textarea {
 }
 
 .datepicker__time {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+    @include breakpoint(desktop) {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    @include breakpoint(phone) {
+        input.time {
+            max-width: 85px;
+        }
+
+        input[type="time"] {
+            appearance: none;
+        }
+
+        input[type="time"]::-webkit-date-and-time-value {
+            margin: 0; // By default Android renders this as 1px 24px 1px 1px
+            width: 100%; // Let the flex element take the full width of the input
+            text-align: center; // Control your text alignment here
+        }
+    }
 }
 
 ul {

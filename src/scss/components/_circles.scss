@@ -16,6 +16,7 @@
         width: 100%;
         height: 200px;
         margin: 50px 0;
+        padding-bottom: 30px;
     }
 
     .circle__svg {
@@ -166,6 +167,16 @@
             height: calc(100% + 40px);
             margin: -20px;
             z-index: 0;
+
+            @include breakpoint(phone) {
+                width: 100%;
+                height: 100%;
+                margin: 0px;
+
+                .safari & {
+                    transform: scale(.97);
+                }
+            }
 
             // .safari & {
             //     display: none;

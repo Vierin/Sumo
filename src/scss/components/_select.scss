@@ -11,6 +11,13 @@ details[open] {
 summary {
 	cursor: pointer;
 	list-style: none;
+
+	@include breakpoint(phone) {
+		height: 36px;
+		input {
+			height: 36px;
+		}
+	}
 }
 
 summary::-webkit-details-marker {

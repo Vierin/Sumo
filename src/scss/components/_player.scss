@@ -15,7 +15,8 @@
 
     @include breakpoint(phone) {
         width: calc(100% - 32px);
-        height: calc(100vh - 80px);
+        height: calc(100vh - 120px);
+        top: calc(50% - 25px);
     }
 
     &__info {
@@ -146,7 +147,6 @@
     }
 
     &__video {
-
 
         video {
             width: 100%;

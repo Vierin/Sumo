@@ -211,10 +211,11 @@
 <div class="main-curtain js-main-curtain"></div>
 
 <main>
-	<section class="section section--hero">
-		<div class="hero" data-component="Hero">
-			<div class="js-area"></div>
-			<div class="module module--hero-head hero-head js-hero-head js-section">
+	<section class="section section--hero hero" data-component="Hero">
+
+		<div class="swiper-wrapper swiper-wrapper--phone">
+			<div class="module module--hero-head hero-head js-hero-head js-section swiper-slide" id="hero1">
+				<div class="js-area"></div>
 				<div class="hero__top"></div>
 				<div class="grid grid-xl grid--end">
 					<div class="hero__title">
@@ -263,10 +264,19 @@
 </svg>
 					</div>
 				</div>
+
+				<div class="hero__scroll hero__scroll--phone js-arr-down">
+					<span></span>
+					<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg-arr-scroll">
+<circle opacity="0.6" cx="20" cy="20" r="19.5" stroke="white"/>
+
+<path d="M19.9974 25.3332L14.6641 19.9998L15.5974 19.0498L19.3307 22.7832V14.6665H20.6641V22.7832L24.3974 19.0498L25.3307 19.9998L19.9974 25.3332Z" fill="white"/>
+
+</svg>
+				</div>
 			</div>
 
-
-			<div class="module module--hero-intro hero-intro js-hero-intro js-section js-dark">
+			<div class="module module--hero-intro hero-intro js-hero-intro js-section js-dark swiper-slide" id="hero2">
 				<div class="grid">
 
 					<div class="intro">
@@ -284,18 +294,33 @@
 
 					</div>
 
+					<span class="hero__point js-show-m"></span>
+
+				</div>
+
+				<div class="hero__scroll js-arr-down">
+					<span></span>
+					<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg-arr-scroll">
+<circle opacity="0.6" cx="20" cy="20" r="19.5" stroke="white"/>
+
+<path d="M19.9974 25.3332L14.6641 19.9998L15.5974 19.0498L19.3307 22.7832V14.6665H20.6641V22.7832L24.3974 19.0498L25.3307 19.9998L19.9974 25.3332Z" fill="white"/>
+
+</svg>
 				</div>
 
 
 			</div>
 
+			<div class="module module--empty swiper-slide"></div>
+
+		</div>
 
 
-			<div class="video" data-component="Video">
-				<div class="circle circle--violet video__circle js-circle-area js-show">
-					<span class="js-video-curtain"></span>
-					<div class="circle__svg">
-						<svg width="720" height="720" viewBox="0 0 720 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<div class="video" data-component="Video">
+			<div class="circle circle--violet video__circle js-circle-area js-show">
+				<span class="js-video-curtain"></span>
+				<div class="circle__svg">
+					<svg width="720" height="720" viewBox="0 0 720 720" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g style="mix-blend-mode:multiply" filter="url(#filter0_f_1117_422)">
 <circle cx="360" cy="360" r="220" fill="#5D009F"/>
 </g>
@@ -307,69 +332,60 @@
 </filter>
 </defs>
 </svg>
-					</div>
-					<div class="circle__wrap">
-						<p>about <br> sumo labs</p>
-						<p>
-							<svg width="28" height="32" viewBox="0 0 28 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg-play">
+				</div>
+				<div class="circle__wrap">
+					<p>about <br> sumo labs</p>
+					<p>
+						<svg width="28" height="32" viewBox="0 0 28 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg-play">
 <path d="M25.9281 14.7182C26.8894 15.3024 26.8894 16.6976 25.928 17.2818L3.27902 31.0465C2.2794 31.654 0.999998 30.9344 0.999999 29.7647L1 2.23535C1 1.0656 2.27941 0.345996 3.27902 0.953501L25.9281 14.7182Z" stroke="white"/>
 </svg>
-							<span>1:32</span>
-						</p>
-					</div>
-				</div>
-				<div class="video__wrap js-back scroll-fast">
-					<div class="player">
-						<div class="player__info">
-							<span class="js-player-info">1:32</span>
-							<h3>ABOUT SUMO <br> Labs</h3>
-						</div>
-						<div class="player__video js-player">
-							<video src="./media/video.mp4"></video>
-						</div>
-						<div class="player__play">
-							<svg width="28" height="32" viewBox="0 0 28 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg-play">
-<path d="M25.9281 14.7182C26.8894 15.3024 26.8894 16.6976 25.928 17.2818L3.27902 31.0465C2.2794 31.654 0.999998 30.9344 0.999999 29.7647L1 2.23535C1 1.0656 2.27941 0.345996 3.27902 0.953501L25.9281 14.7182Z" stroke="white"/>
-</svg>
-							<i class="pause"></i>
-						</div>
-						<div class="player__bottom">
-							<div class="player__progress js-player-progress">
-								<span></span>
-							</div>
-							<div class="player-time__curr js-player-curr">0:00</div>
-							<div class="player-time__all js-player-all">1:32</div>
-						</div>
-						<div class="video__close js-video-close">
-							<i class="cross"></i>
-						</div>
-					</div>
-
-				</div>
-
-				<div class="video__bg js-video-bg">
-					<picture>
-						<source media="(max-width: 800px)" srcset="./media/bg-video-m.webp" type="image/webp">
-						<source media="(max-width: 800px)" srcset="./media/bg-video-m.jpg">
-						<source srcset="./media/bg-video.webp" type="image/webp">
-						<source srcset="./media/bg-video.jpg">
-						<img src="./media/bg-video.jpg" alt="img">
-					</picture>
+						<span>1:32</span>
+					</p>
 				</div>
 			</div>
-
-			<div class="hero__scroll js-arr-down">
-				<span></span>
-				<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg-arr-scroll">
-<circle opacity="0.6" cx="20" cy="20" r="19.5" stroke="white"/>
-
-<path d="M19.9974 25.3332L14.6641 19.9998L15.5974 19.0498L19.3307 22.7832V14.6665H20.6641V22.7832L24.3974 19.0498L25.3307 19.9998L19.9974 25.3332Z" fill="white"/>
-
+			<div class="video__wrap js-back scroll-fast">
+				<div class="player">
+					<div class="player__info">
+						<span class="js-player-info">1:32</span>
+						<h3>ABOUT SUMO <br> Labs</h3>
+					</div>
+					<div class="player__video js-player">
+						<video src="./media/video.mp4"></video>
+					</div>
+					<div class="player__play">
+						<svg width="28" height="32" viewBox="0 0 28 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg-play">
+<path d="M25.9281 14.7182C26.8894 15.3024 26.8894 16.6976 25.928 17.2818L3.27902 31.0465C2.2794 31.654 0.999998 30.9344 0.999999 29.7647L1 2.23535C1 1.0656 2.27941 0.345996 3.27902 0.953501L25.9281 14.7182Z" stroke="white"/>
 </svg>
+						<i class="pause"></i>
+					</div>
+					<div class="player__bottom">
+						<div class="player__progress js-player-progress">
+							<span></span>
+						</div>
+						<div class="player-time__curr js-player-curr">0:00</div>
+						<div class="player-time__all js-player-all">1:32</div>
+					</div>
+					<div class="video__close js-video-close">
+						<i class="cross"></i>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="video__bg js-video-bg">
+				<picture>
+					<source media="(max-width: 800px)" srcset="./media/bg-video-m.webp" type="image/webp">
+					<source media="(max-width: 800px)" srcset="./media/bg-video-m.jpg">
+					<source srcset="./media/bg-video.webp" type="image/webp">
+					<source srcset="./media/bg-video.jpg">
+					<img src="./media/bg-video.jpg" alt="img">
+				</picture>
 			</div>
 		</div>
 
+
 	</section>
+
 
 	<section class="section section--white js-section" id="circles">
 		<div class="module module--circles grid grid--end">

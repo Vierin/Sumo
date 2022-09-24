@@ -1,4 +1,7 @@
 import { gsap } from "gsap";
+import { browser } from './Browsers.js';
+import { Swiper } from "swiper";
+
 import ScrollTrigger from "gsap/src/ScrollTrigger.js";
 import ScrollToPlugin from 'gsap/src/ScrollToPlugin.js'
 
@@ -23,12 +26,21 @@ export class Hero {
         const duration = .5;
         const html = document.documentElement;
 
+
+        if(browser.mobile) {
+            this.snapOnMobile();
+        }
         this.moveCircle();
 
         const target = this.view.querySelector('.js-hero-intro').offsetTop;
 
         let panels = gsap.utils.toArray(".js-section"),
             scrollTween;
+
+        console.log(panels);
+
+
+        let id;
 
         panels.forEach((panel, i) => {
             ScrollTrigger.create({
@@ -49,18 +61,91 @@ export class Hero {
                             this.view.classList.remove('is-active');
                         }
 
-                        scrollTween = gsap.to(window, {
-                                scrollTo: {y: i * innerHeight, autoKill: false},
+                        if(!browser.mobile) {
+                            scrollTween = gsap.to(window, {
+                                scrollTo: `#${panel.id}`,
                                 duration: 1,
-                                onComplete: () => scrollTween = null,
+                                onComplete: () => {
+                                    scrollTween = null
+                                },
                                 overwrite: true
-                        });
+                            });
+                        }
+
                     }
                 }
             });
         });
+    }
 
 
+    checkTop() {
+        window.addEventListener('scroll', e => {
+
+            if(window.scrollY==0) {
+
+                gsap.to(this.lastSection, {y: 0, delay: .4, duration: 1});
+                setTimeout(()=> {
+                    this.swiper.slideTo(1, 1000);
+                },400)
+            }
+
+        })
+    }
+
+    checkTap() {
+        let start;
+        window.addEventListener('touchstart', e => {
+            start = e.touches[0].clientY;
+        })
+
+        window.addEventListener('touchend', e => {
+            console.log('touch');
+
+            if(e.changedTouches[0].clientY - start > 0 && document.body.classList.contains('slider-finished') && window.scrollY <= 50) {
+                gsap.to(this.lastSection, {y: 0, duration: 1});
+                setTimeout(()=> {
+                    this.swiper.slideTo(1, 1000);
+                },200)
+            }
+        })
+    }
+
+    snapOnMobile() {
+
+        this.lastSection = document.querySelector('.js-section#circles');
+
+        this.swiper = new Swiper(this.view, {
+            speed: 1000,
+            direction: "vertical",
+            on: {
+                slideChange: (e) => {
+                    console.log(e.activeIndex);
+
+
+
+                    if(e.activeIndex >= 2) {
+
+                        gsap.to(this.lastSection, {y: - (window.innerHeight + 60), delay: .4, duration: 1, onComplete: () => {
+                            document.body.classList.add('slider-finished');
+                        }})
+
+                        this.checkTop();
+                        this.checkTap()
+                    } else {
+                        document.body.classList.remove('slider-finished');
+                    }
+
+                    if(e.activeIndex > 0) {
+                        document.body.classList.add('slider-start');
+                        document.body.classList.remove('slider-ready');
+                    } else {
+                        document.body.classList.remove('slider-start');
+                        document.body.classList.add('slider-ready');
+                    }
+                },
+            }
+        })
     }
 
 

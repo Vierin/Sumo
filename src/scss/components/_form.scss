@@ -169,6 +169,9 @@
             transition: border .3s $easing;
             text-align: center;
             position: relative;
+            border-radius: 0 !important;
+
+
 
             @include breakpoint(phone) {
                 text-align: left;

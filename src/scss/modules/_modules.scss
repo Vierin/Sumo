@@ -262,7 +262,7 @@
 
         @include breakpoint(phone) {
             #circles & {
-                padding: 50px 16px 150px;
+                padding: 70px 16px 120px;
             }
         }
     }
@@ -365,6 +365,16 @@
 
         .mac {
             z-index: 2;
+        }
+    }
+
+    &--empty {
+        display: none;
+
+        @include breakpoint(phone) {
+            display: block;
+            height: 100vh;
+            width: 100%;
         }
     }
 

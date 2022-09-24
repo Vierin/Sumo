@@ -28,6 +28,16 @@
 
     &__logo {
         position: relative;
+        transition: opacity .4s $easing;
+
+        @include breakpoint(phone) {
+            .slider-start & {
+                opacity: 0;
+            }
+        }
+
+
+
 
         .svg-black,
         .svg-white {
@@ -55,7 +65,16 @@
             }
         }
 
-
+        @include breakpoint(phone) {
+            .slider-ready & {
+                .svg-black {
+                    opacity: 1 !important;
+                }
+                .svg-white {
+                    opacity: 0 !important;
+                }
+            }
+        }
 
     }
 

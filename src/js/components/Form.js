@@ -1,6 +1,7 @@
 import { gsap } from "gsap";
 // import { breakpoint } from './Breakpoint.js';
 import $ from "jquery";
+import { browser } from './Browsers.js';
 // import * as datapicker from "bootstrap-datepicker";
 
 export class Form {
@@ -27,9 +28,26 @@ export class Form {
         this.picker = document.querySelector('#datepicker');
         if(this.picker) {
             this.picker.querySelector('input').addEventListener('click', () => {
-                this.insertTime();
+                if(!browser.mobile) {
+                    this.insertTime();
+                }
                 this.picker.classList.add('is-started');
             });
+        }
+
+        const time = document.querySelector('.input--time input');
+        if(browser.mobile && time) {
+            const timeInside = document.querySelector('.datepicker__time .time');
+
+            time.addEventListener('click', () => {
+                time.parentElement.classList.add('is-active');
+            })
+
+
+
+            // timeInside.addEventListener('click', () => {
+            //     time.click();
+            // })
         }
     }
 
@@ -44,15 +62,27 @@ export class Form {
         const date = document.querySelector('#datepicker input');
         const time = document.querySelector('.input--time input');
 
+
+
         if(time) {
+
             time.addEventListener('click', (e) => {
-                document.querySelector('#datepicker input').focus();
-                this.insertTime();
+
+                if(!browser.mobile) {
+                    this.insertTime();
+                }
+
                 setTimeout(() => {
                     this.timeInput.focus();
                 }, 10)
                 this.picker.classList.add('is-started');
+                document.querySelector('#datepicker input').focus();
+
             })
+
+
+
+
         }
 
 
@@ -161,6 +191,10 @@ export class Form {
                     </div>
                 </div>
             `)
+        }
+
+        if(browser.mobile && document.querySelector('.input--time input').value) {
+            document.querySelector('.input--time input').value
         }
 
         this.setTime();

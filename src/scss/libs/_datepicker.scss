@@ -69,12 +69,15 @@
         padding: 0;
         display: flex;
 
+        @include breakpoint(phone) {
+            .safari & {
+                max-width: 80px;
+            }
+        }
 
         input[type=radio] {
             // display: none;
         }
-
-
 
 
 

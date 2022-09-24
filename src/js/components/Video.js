@@ -1,6 +1,7 @@
 import { gsap } from "gsap";
 import { Player } from "./Player.js"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin.js";
+import { browser } from "./Browsers.js";
 
 gsap.registerPlugin(ScrollToPlugin)
 
@@ -20,7 +21,11 @@ export class Video {
 
 
     init(view) {
-        const btnOpen = view.querySelector('.js-show');
+        let btnOpen = view.querySelector('.js-show');
+
+        if(browser.mobile && view.parentElement.classList.contains('section--hero')) {
+            btnOpen = document.querySelector('.js-show-m');
+        }
 
         const btnClose = view.querySelector('.js-video-close');
         const curtain = view.querySelector('.js-video-curtain');
